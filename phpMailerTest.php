@@ -14,7 +14,7 @@ if (array_key_exists('email', $_POST)) {
     require '../vendor/autoload.php';
 
     //Create a new PHPMailer instance
-    $mail = new PHPMailer;
+    $mail = new PHPMailer(true);
     //Tell PHPMailer to use SMTP - requires a local mail server
     //Faster and safer than using mail()
     $mail->isSMTP();
