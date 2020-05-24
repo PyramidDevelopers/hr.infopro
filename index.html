@@ -5,14 +5,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    
+
         <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="index.css" />
         <style>
             html{
                 scroll-behavior: smooth;
             }
             .topnav {
- 
+
  overflow: hidden;
 }
 .small{
@@ -65,7 +65,7 @@
 .dropdown-content {
  display: none;
  position: absolute;
- 
+
  min-width: 160px;
  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
  z-index: 1;
@@ -181,12 +181,12 @@
        .p3s2{
            width: 2%;
            margin-left:48%;
-           
+
        }
        .p3s3{
            float: left;
            width: 50%;
-           
+
        }
        .p3s4{
            float: right;
@@ -198,28 +198,31 @@
        .inno{
            padding: 50px 50px 50px 100px;
        }
-       
+
 
             #p2 {
-                background-color: #0D1252;               
-                font-size: 1.7vw; 
+                background-color: #0D1252;
+                font-size: 1.7vw;
                 font-family: Poppins;
-                color: white;              
+                color: white;
             }
             #p2s1{
                 display: flex;
             }
             #p2s11{
-                padding-top: 9%;
-                width: 50%;               
+                padding-top: 3%;
+                width: 50.25%;
+                margin-left: 10.5%;
+                margin-right: 0;
+                
             }
             #p2s12{
-                width: 50%; 
-                padding: 5%;              
+                width: 25.25%;
+                padding-top: 3%;
             }
             #p2s111{
                 height: 8%;
-                margin-left:20%;
+                margin-left:16%;
             }
             #p2s111 > img{
                 margin: auto;
@@ -231,6 +234,7 @@
                 position: relative;
                 max-width: 80%;
                 padding-right: 20%;
+                font-size: 20px;
             }
             #p2s112 > div{
                 position: absolute;
@@ -245,30 +249,39 @@
             #p2s12 > img{
                 width: 100%;
             }
-            
+
             #p2s2{
                 display: flex;
                 justify-content: center;
             }
             .p2s21{
-                width: 23%;
-                margin: 4%;
+                width: 20%;
+                margin-top: 0%;
+                margin-left: 3%;
+                margin-right: 3%;
+                margin-bottom: 3%;
+               
+                
             }
             .p2s211{
                 text-align: center;
+                font-size: 15;
                 position: relative;
-            }                          
+            }
             .p2s211>img{
-                width: 100%;
-                
+                width: 60%;
+
             }
             .p2s213{
                 padding: 3%;
                 text-align: center;
+                font-size: 15;
             }
             .p2s212{
                 position: absolute;
-                bottom: 16%;
+                bottom: 15%;
+                font-size: 20;
+                top:65%;
                 left: 0;
                 right: 0;
             }
@@ -276,19 +289,19 @@
             margin: 0;
             padding: 0;
         }
-        
+
             @media screen and (max-width: 900px){
                 .big{
-    display: none;
+                display: none;
 }
                 .small{
                     display: block;
-                    
+
                 }
                 #homeparent{
                     overflow:auto;
-                    
-                    
+
+
                 }
                 #p2{
                     font-size: 3.7vw;
@@ -305,33 +318,37 @@
                 #p2s12{
                     width: 90%;
                     padding: 5%;
+                   
                     margin-left: 10%;
                     margin-bottom: 10px;
                 }
                 #p2s111{
                     height: 3%;
                 }
+                #p2s112{
+                     font-size: 15px;
+                }
                 #p2s2{
                     display: block;
                 }
                 .p2s21{
-                    width: 70%;
+                    width: 80%;
                     padding: 5%;
                     margin:auto;
                 }
                 .p3s1{
                     padding-top: 0px;
-                 font-size: 25;   
+                 font-size: 25;
                 }
                 .p3s2{
-                   
+
                      width: 6%;
            margin-left:48%;
                 }
                  .p3s3{
            float: left;
            width: 100%;
-           
+
        }
        .p3s4{
            float: right;
@@ -343,13 +360,13 @@
        .inno{
            padding: 0px 100px 100px 100px;
        }
-                
+
 
             }
         </style>
     </head>
     <body>
-        
+
     <nav class="navbar" id="nav">
 
         <ul>
@@ -364,32 +381,32 @@
           <div id="myDropdown" class="dropdown-content">
             <a href="whatwedo.html#staffing">Staffing Solutions</a>
             <a href="whatwedo.html#hrm">Human Resource Management</a>
-            <a href="whatwedo.html#epo">Professional Employer Organization</a>
+            <a href="whatwedo.html#epo">Professional Employee Organization</a>
           </div>
-        </div> 
+        </div>
         </li>
                 <div id="dropdown1" style="display:none">
                          <a onclick="my_close()" href="whatwedo.html#staffing" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
-                         
+
                           <a onclick="my_close()" href="whatwedo.html#hrm" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
-                           <a onclick="my_close()" href="whatwedo.html#epo" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Professional Employer Organization</a>
+                           <a onclick="my_close()" href="whatwedo.html#epo" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Professional Employee Organization</a>
                     </div>
-                <li><a class="active" href="index.html">Home</a></li>
+                <li><a class="active" href="home.html">Home</a></li>
             </div>
             <div class="small">
                 <li> <button class="side" onclick="my_open()" style=" color:white;padding: 16px 28px 16px 15px; width: 50%;background-color: rgb(12, 20, 117);">☰</button></li>
-                
+
                 <div class="w3-dropdown w3-bar " style="display:none; background-color:rgb(12, 20, 117)" id="mySidebar">
 
-                    <a onclick="my_close()" href="index.html" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Home</a>
+                    <a onclick="my_close()" href="home.html" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Home</a>
                     <a onclick="my_closeemp2()" class="w3-bar-item w3-button" id="l2" style="width: 100% ;color: white;font-family: Poppins; ">Employers</a>
                     <div id="dropdown2" style="display:none">
                          <a onclick="my_close()" href="whatwedo.html#staffing" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
-                         
+
                           <a onclick="my_close()" href="whatwedo.html#hrm" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
-                           <a onclick="my_close()" href="whatwedo.html#epo" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Professional Employer Organization</a>
+                           <a onclick="my_close()" href="whatwedo.html#epo" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Professional Employee Organization</a>
                     </div>
-                    
+
                     <a onclick="my_close()" href="hiring.html" class="w3-bar-item w3-button" id="l3" style="width: 100% ;color: white;font-family: Poppins">Job Seekers</a>
                     <a onclick="my_close()" href="page3.html" class="w3-bar-item w3-button" id="l4" style="width: 100% ;color: white;font-family: Poppins">About Us</a>
                     <a onclick="my_close()" href="contactus.html" class="w3-bar-item w3-button" id="l5" style="width: 100% ;color: white;font-family: Poppins">Contact us</a>
@@ -397,13 +414,38 @@
             </div>
         </ul>
     </nav>
-    <div class="main">
-       
+        <table class="coretable">
+        <tr>
+            <td>
+            <img src="Landing.png">
+            </td>
+            </tr>
+        <tr>
+            <td>
+            <div id="p2s1">
+                <div id="p2s11">
+                    <div id="p2s111">
+                        <img src="Page2/Orange2.svg"/>  
+                    </div>
+                    <div id="p2s112">
+                        <img src="Page2/RectBoxes2.png"/>
+                        <div id="t1">Whether you need to find top talent, your next great opportunity or a HR solution for managing your business and resourcing challenges, we can help.</div>
+                    </div>
+                </div>
+                <div id="p2s12">
+                    <img src="Page2/p2Illustration.svg" />
+                </div>
+            </div>
+            </td>
+            </tr>
+        </table>-->
+  <div class="main">
+
         <div id="homeparent" style="width: auto;  overflow: hidden;">
 <br>
             <img id="home" src="Landing.png" style="width: 100%;height: auto">
         </div>
-       
+
         <div id="p2">
             <div id="p2s1">
                 <div id="p2s11">
@@ -423,9 +465,9 @@
                 <div class="p2s21">
                     <div class="p2s211">
                         <img src="Page2/Staffing%20Illustration%20woT.svg"/>
-                        <div class="p2s212">STAFFING</div>
+                        <div class="p2s212">STAFFING<br><br></div>
                     </div>
-                    
+
                     <div class="p2s213">We are a fast growing IT staffing company. We  bridge the gap between talent demand and supply using expert search techniques, innovative processes and many years of experience.</div>
                 </div>
                 <div class="p2s21">
@@ -448,7 +490,7 @@
             <div class="p3s1">
                 <br><br>
                 Our Top Clients
-                
+
             </div>
             <div class="p3s2">
                 <br>
@@ -501,7 +543,7 @@
   } else {
     x.className = "topnav";
   }
-} 
+}
 function my_closeemp1() {
     if(document.getElementById("dropdown1").style.display == "block"){
          document.getElementById("dropdown1").style.display = "none";
@@ -510,7 +552,7 @@ function my_closeemp1() {
     {
        document.getElementById("dropdown1").style.display = "block" ;
     }
-    
+
 }
 function my_closeemp2() {
     if(document.getElementById("dropdown2").style.display == "block"){
@@ -520,7 +562,7 @@ function my_closeemp2() {
     {
        document.getElementById("dropdown2").style.display = "block" ;
     }
-    
+
 }
 function my_open() {
             if (document.getElementById("mySidebar").style.display == "block") {
