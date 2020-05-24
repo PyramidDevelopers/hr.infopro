@@ -14,7 +14,7 @@
 </head>
 <!DOCTYPE html>
 
-<body>
+<body onload="changeSize()">
 
 
     <nav class="navbar" id="nav">
@@ -79,7 +79,7 @@
                     <div class="tab">
                         <input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch" value=1 onclick=changeSize()>
                         <label for="tab-1" class="tab-label"> <img src="PageWiseAssets/Page8/JobSeeker/meetus.svg" class="hiring-images" />
-                            <br /> <b>Connect Us</b></label>
+                            <br /> <b>Connect With Us</b></label>
                         <div class="tab-content" id="meetus">
                             <div class="tab-content-image"><img src="PageWiseAssets/Page8/JobSeeker/Content.svg" /></div>
                             <div class="tab-content-text">
@@ -90,23 +90,24 @@
                         </div>
 
                     </div>
+                    
                     <div class="tab">
-                        <input type="radio" name="css-tabs" id="tab-2" class="tab-switch" value=2 onclick=changeSize()>
-                        <label for="tab-2" class="tab-label"> <img src="PageWiseAssets/Page8/JobSeeker/opportunities.svg" class="hiring-images" />
-                            <br /> <b>Opportunities</b></label>
-                        <div class="tab-content" id="opportunities">
-
-
-                        </div>
-                    </div>
-                    <div class="tab">
-                        <input type="radio" name="css-tabs" id="tab-3" class="tab-switch" value=3 onclick=changeSize()>
+                        <input type="radio" name="css-tabs" id="tab-3" class="tab-switch" value=2 onclick=changeSize()>
                         <label for="tab-3" class="tab-label"> <img src="PageWiseAssets/Page8/JobSeeker/openpositions.svg" class="hiring-images" />
                             <br /> <b>Open Positions</b></label>
                         <div class="tab-content" id="openpos">
                             <div id="OpenPosloading">Loading...</div>
                         </div>
 
+                    </div>
+                    <div class="tab">
+                        <input type="radio" name="css-tabs" id="tab-2" class="tab-switch" value=3 onclick=changeSize()>
+                        <label for="tab-2" class="tab-label"> <img src="PageWiseAssets/Page8/JobSeeker/opportunities.svg" class="hiring-images" />
+                            <br /> <b>Opportunities</b></label>
+                        <div class="tab-content" id="opportunities">
+
+
+                        </div>
                     </div>
                     <div class="tab">
                         <input type="radio" name="css-tabs" id="tab-4" class="tab-switch" value=4 onclick=changeSize()>
@@ -120,12 +121,12 @@
 
                 </div>
             </div>
-            <div class="blue" style="background-color:rgb(12, 20, 117) ; height: 35%;clear:both; ">
+            <div class="blue" style="background-color:rgb(12, 20, 117) ; height: auto;clear:both; ">
                 <div class="data" style="overflow: auto;top:5vh; margin-top: 10vh;">
-                    <div class="ph" style="color: white;font-family: Poppins;font-size: 1.2em;float:left; margin-left: 30%; text-align: center;">
+                    <div class="footer1" id="f11" >
                         <div style="text-align: center; color: rgba(99, 180, 250, 1) ;">CONTACT</div> hr@infoprosol.com
                     </div>
-                    <div class="add" style="color: white;font-family: Poppins;font-size: 1.2em ;float:right;margin-right: 30%;text-align:center;">
+                    <div class="footer1"  id="f12" >
                         <div style="text-align: center; color: rgba(99, 180, 250, 1) ;">ADDRESS</div> InfoPro Solutions Pvt Ltd.<br>#9, Krishna Kasthuri<br> 2nd Floor, Ashwathnagar<br> Sanjaynagar Main Road,<br> Bangalore-560094
                     </div>
                 </div>
@@ -139,10 +140,10 @@
                         <br>
                         Follow Us On
                     </div>
-                    <div style="float: left;margin-left: 45%; padding:0.2em;"><a href="#">
-                            <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon-awesome-facebook.png" width="30px" height="30px"></a></div>
-                    <div style="float: right;margin-right: 45%;padding:0.2em;"> <a href="#">
-                            <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon-awesome-linkedin-in.png" width="30px" height="30px">
+                    <div class="footer2" id="f21" ><a href="#">
+                            <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon%20awesome-facebook.png" width="30px" height="30px"></a></div>
+                    <div class="footer2"  id="f22" > <a href="#">
+                            <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon%20awesome-linkedin-in.png" width="30px" height="30px">
 
                         </a></div>
                 </div>

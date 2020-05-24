@@ -117,7 +117,7 @@ function changeSize() {
 }
 var JST = document.getElementById('interview');
 var dataFromSheet;
-var URL = 'https://spreadsheets.google.com/feeds/cells/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/osl6nlo/public/basic?alt=json';
+var URL = 'https://spreadsheets.google.com/feeds/cells/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/od6/public/basic?alt=json';
 fetch(URL)
     .then(function (response) {
         return response.json();
@@ -150,6 +150,7 @@ fetch(URL)
             var aNew = document.createElement('a');
             var JSTName = document.createElement('div');
             var JSTDesc = document.createElement('div');
+            aNew.setAttribute("style","text-decoration:none;");
             aNew.href = fullData[i][2]
             divNew.innerHTML = "";
             JSTName.className = "interview-1";
@@ -160,7 +161,8 @@ fetch(URL)
             aNew.appendChild(JSTDesc);
             divNew.appendChild(aNew);
             JST.appendChild(divNew);
-            Jload.innerHTML = "";
+            Jload.setAttribute("style","display:none");
+
         }
 
     })
@@ -223,7 +225,7 @@ fetch(URL)
             OSection.appendChild(OName);
             OSection.appendChild(OClickA);
             Opp.appendChild(OSection);
-            OPload.innerHTML = "";
+            OPload.setAttribute("style","display:none");
             divNew.innerHTML = "";
             OPName.className = "OPName";
             OPDesc.className = "OPDesc";

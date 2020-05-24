@@ -83,6 +83,18 @@ background-color: rgb(12, 20, 117);
 color: white;
 display: block;
 }
+#f11{
+    color: white;font-family: Poppins;font-size: 1.2em;float:left; margin-left: 30%; text-align: center;
+}
+#f12{
+    color: white;font-family: Poppins;font-size: 1.2em ;float:right;margin-right: 30%;text-align:center;
+}
+#f21{
+    float: left;margin-left: 45%; padding:0.2em;
+}
+#f22{
+    float: right;margin-right: 45%;padding:0.2em;
+}
 
   
   /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
@@ -694,7 +706,6 @@ display: block;
               width: 50%;
               float: left;
               padding-top: 2vh;
-              font-size: 1.2em;
           }
   
           .tab-content-image {
@@ -776,6 +787,7 @@ display: block;
               opacity: 0;
               /* transition: all 5s; */
               margin: 0 0.5rem;
+              display: none;
           }
   
           .sizecheck {
@@ -803,34 +815,30 @@ display: block;
           .tab-switch:checked+label+.tab-content {
               z-index: 2;
               opacity: 1;
+              display: block;
               /* transition: all 0.35s; */
           }
   
           #interview>div {
               background-color: rgb(12, 20, 117);
               padding: 1%;
-              height: 12vh;
-              font-size: 0.35em;
               margin: 1%;
-              text-align: center;
+              text-align: left;
               border-radius: 1rem;
   
           }
   
           .interview-1 {
-              width: 25%;
-              float: left;
               margin: auto;
-              padding: 2vh;
-              font-size: 3.5em;
+                padding: 1vh;
+                color: rgb(97, 180, 250);
+                font-weight: bolder;
+                font-size: larger;
           }
   
           .interview-2 {
-              width: 70%;
-              float: right;
-              margin: auto;
-              padding: 1vh;
-              font-size: 3.7em;
+            margin: auto;
+            padding: 1vh;
           }
   
           #openpos {
@@ -857,7 +865,8 @@ display: block;
               /* font-size: 1.2em; */
               font-weight: bold;
               padding: 1vh;
-              color:rgb(99, 180, 250); 
+              color:rgb(99, 180, 250);
+              width: 65%; 
 
           }
           .OPSpec{
@@ -1526,7 +1535,9 @@ display: block;
               padding: 0;
               margin: 6vw;
           }
-  
+          .hiring-header{
+              margin-top:5em;
+          }
           .tab-label {
               height: 15vh;
               font-size: 2vw;
@@ -1544,7 +1555,7 @@ display: block;
               margin: 1vw;
               top: 17.5vh;
               height: auto;
-              font-size: 3vmax;
+              font-size: 15px;
               padding: 3vw;
           }
   
@@ -1576,7 +1587,6 @@ display: block;
           }
   
           #interview>div {
-              font-size: 0.35em;
               margin: 3vh 1vh;
           }
   
@@ -1589,10 +1599,26 @@ display: block;
           }
   
           #openpos>div {
-              font-size: 0.5em;
+              font-size: 0.6em;
               margin: 2%;
               width: 90%;
               /* height: 21vh; */
+          }
+          .OPApply{
+            right: 2%;
+            top: 2%;
+            height: 2.5em;
+            width: 7em;
+            width: 35%;
+          }
+          .OPAnchor{
+              font-size: 1.5em;
+          }
+          .opps-1{
+              padding: 2%;
+          }
+          .opps-2{
+              padding: 5%;
           }
   
           .RbtnAll {
@@ -1619,5 +1645,17 @@ display: block;
               top: 1vh;
               padding-top: 0.5em;
               padding-bottom: 0.5em;
-  }
+            }
+            #f11,#f12{
+                float: unset;
+                margin: auto;
+                padding: 1em;
+                font-size: 1em;
+            }
+            #f21,#f22{
+                float: unset;
+                margin: auto;
+                padding: 1em;
+                text-align: center;
+            }
 }
