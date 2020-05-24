@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="98.063" height="98.985" viewBox="0 0 98.063 98.985">
+  <g id="DedicatedRimg" transform="translate(-198.438 -83.792)">
+    <g id="Rectangle_897" data-name="Rectangle 897" transform="translate(200 83.792)" fill="#152668" stroke="#233187" stroke-width="5">
+      <rect width="94" height="93" rx="9" stroke="none"/>
+      <rect x="2.5" y="2.5" width="89" height="88" rx="6.5" fill="none"/>
+    </g>
+    <path id="Path_907" data-name="Path 907" d="M6478.654,11705.255h-36.88v36.3" transform="translate(-6240.837 -11614.643)" fill="none" stroke="#63b4fa" stroke-linecap="round" stroke-width="5"/>
+    <path id="Path_908" data-name="Path 908" d="M6478.654,11741.548h-36.88v-36.293" transform="translate(-6240.837 -11561.271)" fill="none" stroke="#63b4fa" stroke-linecap="round" stroke-width="5"/>
+    <path id="Path_909" data-name="Path 909" d="M6441.774,11705.255h36.88v36.3" transform="translate(-6184.654 -11614.643)" fill="none" stroke="#63b4fa" stroke-linecap="round" stroke-width="5"/>
+    <path id="Path_910" data-name="Path 910" d="M6441.774,11741.548h36.88v-36.293" transform="translate(-6184.654 -11561.271)" fill="none" stroke="#63b4fa" stroke-linecap="round" stroke-width="5"/>
+    <g id="Path_911" data-name="Path 911" transform="translate(230.652 120.581)" fill="#152668">
+      <path d="M 29.7602367401123 29.75979614257813 L 2.49999737739563 29.75979614257813 L 2.49999737739563 2.499996185302734 L 29.7602367401123 2.499996185302734 L 29.7602367401123 29.75979614257813 Z" stroke="none"/>
+      <path d="M 4.999998092651367 4.999996185302734 L 4.999998092651367 27.25979614257813 L 27.2602367401123 27.25979614257813 L 27.2602367401123 4.999996185302734 L 4.999998092651367 4.999996185302734 M -3.814697265625e-06 -3.814697265625e-06 L 32.26023864746094 -3.814697265625e-06 L 32.26023864746094 32.25979614257813 L -3.814697265625e-06 32.25979614257813 L -3.814697265625e-06 -3.814697265625e-06 Z" stroke="none" fill="#63b4fa"/>
+    </g>
+  </g>
+</svg>
