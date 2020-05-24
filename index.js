@@ -168,6 +168,8 @@ fetch(URL)
 console.log(dataFromSheet);
 
 var divExist = document.getElementById('openpos');
+
+var Opp = document.getElementById('opportunities');
 // var numOfColumns = 3;
 var dataFromSheet;
 var URL = 'https://spreadsheets.google.com/feeds/cells/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/od6/public/basic?alt=json';
@@ -194,7 +196,7 @@ fetch(URL)
             }
             fullData.push(subData);
         }
-
+        var OPload = document.getElementById('OpenPosloading');
         for (var i = 1; i < fullData.length; i++) {
             var divNew = document.createElement('div');
             var OPAnchor = document.createElement('a');
@@ -203,7 +205,25 @@ fetch(URL)
             var OPSpec = document.createElement('div');
             var OPDate = document.createElement('div');
             var OPApply = document.createElement('button');
-
+            var OSection = document.createElement('div');
+            var OName = document.createElement('div');
+            var OClick = document.createElement('div');
+            var OClickA = document.createElement('a');
+            OName.className = "opps-1";
+            OName.innerHTML = fullData[i][1].toString();
+            OClick.className = "opps-2";
+            OClick.innerHTML = "We are hiring >"
+            OSection.className = "opportunities-1";
+            OClickA.setAttribute("id", i);
+            OClickA.setAttribute('href', "OPos.html")
+            OClickA.addEventListener('click', function (event) {
+                localStorage.setItem("i value", this.id);
+            });
+            OClickA.appendChild(OClick);
+            OSection.appendChild(OName);
+            OSection.appendChild(OClickA);
+            Opp.appendChild(OSection);
+            OPload.innerHTML = "";
             divNew.innerHTML = "";
             OPName.className = "OPName";
             OPDesc.className = "OPDesc";
@@ -211,7 +231,6 @@ fetch(URL)
             OPDate.className = "OPDate";
             OPApply.className = "OPApply";
             OPAnchor.className = "OPAnchor";
-
             OPAnchor.setAttribute("id", i);
             OPAnchor.setAttribute('href', "OPos.html")
             OPApply.setAttribute("value", i);
