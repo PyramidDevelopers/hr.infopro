@@ -150,10 +150,12 @@ fetch(URL)
             var aNew = document.createElement('a');
             var JSTName = document.createElement('div');
             var JSTDesc = document.createElement('div');
-            a.href = fullData[i][2]
+            aNew.href = fullData[i][2]
             divNew.innerHTML = "";
             JSTName.className = "interview-1";
             JSTDesc.className = "interview-2";
+            JSTName.innerHTML = fullData[i][0].toString();
+            JSTDesc.innerHTML = fullData[i][1].toString();
             aNew.appendChild(JSTName);
             aNew.appendChild(JSTDesc);
             divNew.appendChild(aNew);
