@@ -11,6 +11,7 @@
   * OPos.html
   * Alignment of footer in mobile view
 * Reducing size of Employers 
+* Responsive Design for OPPos.html
 * Reduce size of logo in navbar in mobile view
 * Correct the scrolling position for What WE do
 * Removing overlap in What We DO mobile view
