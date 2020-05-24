@@ -11,4 +11,5 @@
 * Including third logo on home page
 * Adding OnHover for the three boxes in Employers
 * Restyling Job Seeker Tips 
+* Fixing images in all the pages
 * Cleanup the Repo
