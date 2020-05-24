@@ -18,7 +18,7 @@ if (array_key_exists('email', $_POST)) {
     //Tell PHPMailer to use SMTP - requires a local mail server
     //Faster and safer than using mail()
     $mail->isSMTP();
-    $mail->Host = 'smtpout.secureserver.net';
+    $mail->Host = 'localhost';
     $mail->Port = 25;
 
     //Use a fixed address in your own domain as the from address
