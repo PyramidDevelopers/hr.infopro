@@ -769,7 +769,7 @@ display: block;
           }
   
           .tab-label:hover {
-              top: -0.5rem;
+              top: -0.5vh;
               transition: all 0.25s;
               border-top: 0.5rem solid #fff;
           }
@@ -805,7 +805,7 @@ display: block;
           }
   
           .tab-switch:checked+.tab-label {
-              height: 30vh;
+              height: 33vh;
               border-top: 0.5rem solid #fff;
               transition: all 0.35s;
               z-index: 1;
