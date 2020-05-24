@@ -11,45 +11,47 @@
         InfoPro HR
     </title>
     <style>
-        .opheader{
-            color: white;
-            width: 100vw;
+        .jobleft{
+            width: 60%;
+            display: inline-block;
+            color: rgba(12, 20, 117, 1);
+            padding: 5%;
+            font-size: 1.3em;
+        }
+        .jobleft>h1{
+            color: rgba(12, 20, 117, 1);
             font-weight: bolder;
-            text-align: center;
-            background-color: rgb(12, 20, 117);
-            font-size: 5em;
-            padding: 2em;
+            font-size: -webkit-xxx-large;
+            margin-bottom: 5%;
         }
-        .opheader>h1{
-            font-family: "Playfair Display";
+        .opHeading{
+            color: rgb(99, 180, 250);
+            font-weight: bolder;
+        }
+        .orange{
+           height: 2em;
+           margin: 1vh;
+       }
+        .jobright{
+            font-size: 1.3em;
+            width: 40%;
+            display: inline-block;
+            position: fixed;
+            padding: 5%;
+            color: rgb(99, 180, 250);
+            bottom: 0;
+        }
+        .dblue{
+            color: rgba(12, 20, 117, 1);
+        }
 
-        }
-        .opjob{
-            align-self: center;
-            width: 75%;
-            border: 6px solid  rgba(12, 20, 117, 1);
-            margin: auto;
-            margin-top: 3em;
-            height: auto;
-        }
-        .opjob>div{
-            padding: 1vh;
-        }
-        .opjob>h1{
+        .OPApply {
+            position: initial;
+            border: white;
+            width: 60%;
             text-align: center;
-        }
-        .opjob>div>h2{
-            color:  rgba(12, 20, 117, 1);
-        }
-        .opapply{
-            position: relative;
-            margin: auto;
-            margin-bottom: 1em;
-        }
-        .opapply>button{
-            right: 0;
-            top:0;
-            position: absolute;
+            color: white;
+            background-color: rgba(12, 20, 117, 1);;
         }
     </style>
 </head>
@@ -106,19 +108,57 @@
     </nav>
 
     <div class="main">
-    
-       <div class="opheader"><h1>Job Opening</h1></div> 
-       <div class = "opjob">
+        <div class="jobleft">
+            <img src="PageWiseAssets/Page3/Orange1.png" class="orange"/>
             <h1 class="opname"></h1>
-            <div class="opdate"></div>
-            <div class="opspec"></div>
-            <div class="opqual"> <h2>Qualifications: </h2></div>
-            <div class="opdesc"> <h2>Job Description:</h2></div>
-            <div class="oproles"><h2>Roles and Responsibilities:</h2></div>
-            <div class="opskills"><h2>Key Competencies and Skills</h2></div>
+            <div class="opdesc"> <h2 class="opHeading">Description</h2></div>
+            <div class="oproles"><h2 class="opHeading">Roles and Responsibilities</h2></div>
+            <div class="opskills"><h2 class="opHeading">Key Competencies and Skills</h2></div>
+
+        </div>
+       <div class = "jobright">
+            <h2 class="opHeading">Details </h2>
+            <div class="oploc"><span class="dblue">Location: </span></div>
+            <div class="opexp"><span class="dblue">Experience: </span></div>
+            <div class="optype"><span class="dblue">Type: </span></div>
+            <div class="oppackage"><span class="dblue">Package: </span></div>
+            <div class="opqual"><span class="dblue">Qualification: </span></div>
+            <br><br>
+            <div class="opdate">Posted on </div>
+            <br>
             <div class="opapply"></div>
        </div>
-        
+       <div class="blue" style="background-color:rgb(12, 20, 117) ; height: auto;clear:both; position: sticky;  ">
+        <div class="data" style="overflow: auto;top:5vh; margin-top: 10vh;">
+            <div class="ph" style="color: white;font-family: Poppins;font-size: 1.2em;float:left; margin-left: 30%; text-align: center;">
+                <div style="text-align: center; color: rgba(99, 180, 250, 1) ;">CONTACT</div> hr@infoprosol.com
+            </div>
+            <div class="add" style="color: white;font-family: Poppins;font-size: 1.2em ;float:right;margin-right: 30%;text-align:center;">
+               <div style="text-align: center; color: rgba(99, 180, 250, 1) ;">ADDRESS</div> InfoPro Solutions Pvt Ltd.<br>#9, Krishna Kasthuri<br> 2nd Floor, Ashwathnagar<br> Sanjaynagar Main Road,<br> Bangalore-560094
+            </div>
+        </div>
+        <div class="blue" style="overflow: auto;float: left;width: 20%;height: auto;background-color:rgb(12, 20, 117)">
+            <img src="PageWiseAssets/Page8/Footer/design.png" style="max-height: 100%;max-width: 100%; "/>
+        </div>
+
+        <div class="blue" style="overflow: auto; float: left;width: 60%; height:auto;background-color:rgb(12, 20, 117)">
+            <div style="color: white; text-align: center">
+                <br>
+                <br>
+                Follow Us On
+            </div>
+            <div style="float: left;margin-left: 45%; padding:0.2em;"><a href="#">
+                    <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon-awesome-facebook.png" width="30px" height="30px"></a></div>
+            <div style="float: right;margin-right: 45%;padding:0.2em;"> <a href="#">
+                    <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon-awesome-linkedin-in.png" width="30px" height="30px">
+
+                </a></div>
+        </div>
+
+        <div class="blue" style="overflow: auto; float: right;width: 20%;background-color:rgb(12, 20, 117)">
+            <img src="PageWiseAssets/Page8/Footer/design.png" style="max-height: 100%;max-width: 100%;" />
+        </div>
+    </div>
     </div>
 
     <div class="form-popup" id="myForm">
