@@ -1,0 +1,199 @@
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="index.css" />
+    <title>
+        InfoPro HR
+    </title>
+</head>
+<!DOCTYPE html>
+
+<body>
+<nav class="navbar" id="nav">
+
+        <ul>
+
+           <a href="home.html"> <li class="logo"><img src="InfoProLogo.png" style="width: 200px;padding:10px 10px 10px 10px;"></li></a>
+            <div class="big" style="padding-top:10px">
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="page3.html">About Us</a></li>
+                <li><a href="hiring.html">Job Seekers</a></li>
+                        <li> <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Employers</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="whatwedo.html#staffing">Staffing Solutions</a>
+            <a href="whatwedo.html#hrm">Human Resource Management</a>
+            <a href="whatwedo.html#epo">Professional Employee Organization</a>
+          </div>
+        </div> 
+        </li>
+                <div id="dropdown1" style="display:none">
+                         <a onclick="my_close()" href="whatwedo.html#staffing" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
+                         
+                          <a onclick="my_close()" href="whatwedo.html#hrm" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
+                           <a onclick="my_close()" href="whatwedo.html#epo" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Professional Employee Organization</a>
+                    </div>
+                <li><a class="active" href="home.html">Home</a></li>
+            </div>
+            <div class="small">
+                <li> <button class="side" onclick="my_open()" style=" color:white;padding: 16px 28px 16px 15px; width: 50%;background-color: rgb(12, 20, 117);">☰</button></li>
+                
+                <div class="w3-dropdown w3-bar " style="display:none; background-color:rgb(12, 20, 117)" id="mySidebar">
+
+                    <a onclick="my_close()" href="home.html" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Home</a>
+                    <a onclick="my_closeemp2()" class="w3-bar-item w3-button" id="l2" style="width: 100% ;color: white;font-family: Poppins; ">Employers</a>
+                    <div id="dropdown2" style="display:none">
+                         <a onclick="my_close()" href="whatwedo.html#staffing" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
+                         
+                          <a onclick="my_close()" href="whatwedo.html#hrm" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
+                           <a onclick="my_close()" href="whatwedo.html#epo" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Professional Employee Organization</a>
+                    </div>
+                    
+                    <a onclick="my_close()" href="hiring.html" class="w3-bar-item w3-button" id="l3" style="width: 100% ;color: white;font-family: Poppins">Job Seekers</a>
+                    <a onclick="my_close()" href="page3.html" class="w3-bar-item w3-button" id="l4" style="width: 100% ;color: white;font-family: Poppins">About Us</a>
+                    <a onclick="my_close()" href="contactus.html" class="w3-bar-item w3-button" id="l5" style="width: 100% ;color: white;font-family: Poppins">Contact us</a>
+                </div>
+            </div>
+        </ul>
+    </nav>
+    <div class="main">
+    
+
+        <div style="width: auto">
+
+            <img id="home" src="PageWiseAssets\Page1\Landing.png" style="width: 100%;height: auto">
+        </div>
+        <div id="pg8">
+            
+            <div id="Contact">
+                <form action = "mailingScript.php" method = "post" >
+                    <div style="font-family: Playfair Display ; font-size: 3em ; font-weight: 800; color:rgba(242, 242, 242, 1);text-align: center;">Contact Us</div>
+
+
+                    <div class=ContactForm>
+                        
+                        
+                        <div class="Details">
+                            <div id="Details1">
+
+                                <div class="textbox">
+                                    <label class="textName" for="positionHiringFor">Name</label>
+                                    <input type="text" class="textinput" id="positionHiringFor" name="positionHiringFor">
+                                </div>
+                                <div class="textbox">
+                                    <label class="textName" for="skill">Company</label>
+                                    <input type="text" class="textinput" id="skill" name="skill">
+                                </div>
+                            </div><br>
+
+                            <div id="Details2">
+
+                                <div class="textbox">
+                                    <label class="textName" for="positionType"> Email ID</label>
+                                    <input type="text" class="textinput" name="positionType">
+                                </div>
+                                <div class="textbox">
+                                    <label class="textName" for="prospectiveClientName" name = "prospectiveClientName">  Phone no.</label>
+                                    <input type="text" class="textinput" id="prospectiveClientname" name = "prospectiveClientName">
+                                </div>
+                                
+                            </div>
+                            <div id="Details3">
+                            <div class="textbox">
+                                <label class="textName" for="prospectiveClientName" name = "prospectiveClientName">  Interested in </label><br>
+                            
+                            <!-- <div id="Requirement_type">Interested in</div> -->
+                        <div class="RbtnAll">
+                            
+
+                            <div class="RBtn" class="texbox">
+                                <label class="RadioButtons" id="StaffingSolutions">
+                                    Staffing Solutions
+                                    <input type="radio" name="FormChoice" value="StaffingSolutions">
+                                    <span class="Radio"></span>
+
+                                </label>
+                            </div>
+                            <div class="RBtn">
+                                <label class="RadioButtons" id="HRM">HRM
+                                    <input type="radio" name="FormChoice" value="HRM">
+                                    <span class="Radio"></span>
+                                </label>
+                            </div>
+                            <div class="RBtn">
+                                <label class="RadioButtons">PEO
+                                    <input type="radio" name="FormChoice" value="PEO">
+
+                                    <span class="Radio"></span>
+                                </label>
+                            </div>
+                        </div></div>
+                        <div class="textbox">
+                                    <label class="textName" for="Comments">Country</label>
+                                    <input type="text" class="textinput" id="positionType" name="comments">
+                                </div>
+                                    </div>
+                            <div id="Details4">
+
+                                <div class="textbox">
+                                    <label class="textName" for="Comments">Message</label>
+                                    <input type="text" class="textinput" id="positionType" name="comments">
+                                </div>
+                                
+                            </div>
+                            <div class="SubmitBtn">
+                                <input type = "submit" name = "submit" class="submit" value="SUBMIT    > "> 
+                                    <!--Submit <i class="fa fa-angle-right"></i></button>-->
+    
+                            </div><br/>
+                        </div>
+                        
+
+                    </div>
+                </form>
+                <div class="blue" style="background-color:rgb(12, 20, 117) ; height: 35%;clear:both; ">
+                    <div class="data" style="overflow: auto;top:5vh; margin-top: 10vh;">
+                        <div class="ph" style="color: white;font-family: Poppins;font-size: 1.2em;float:left; margin-left: 30%; text-align: center;">
+                            <div style="text-align: center; color: rgba(99, 180, 250, 1) ;">CONTACT</div> hr@infoprosol.com
+                        </div>
+                        <div class="add" style="color: white;font-family: Poppins;font-size: 1.2em ;float:right;margin-right: 30%;text-align:center;">
+                           <div style="text-align: center; color: rgba(99, 180, 250, 1) ;">ADDRESS</div> InfoPro Solutions Pvt Ltd.<br>#9, Krishna Kasthuri<br> 2nd Floor, Ashwathnagar<br> Sanjaynagar Main Road,<br> Bangalore-560094
+                        </div>
+                    </div>
+                    <div class="blue" style="overflow: auto;float: left;width: 20%;height: auto;background-color:rgb(12, 20, 117)">
+                        <img src="PageWiseAssets/Page8/Footer/design.png" style="max-height: 100%;max-width: 100%; "/>
+                    </div>
+
+                    <div class="blue" style="overflow: auto; float: left;width: 60%; height:auto;background-color:rgb(12, 20, 117)">
+                        <div style="color: white; text-align: center">
+                            <br>
+                            <br>
+                            Follow Us On
+                        </div>
+                        <div style="float: left;margin-left: 45%; padding:0.2em;"><a href="#">
+                                <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon-awesome-facebook.png" width="30px" height="30px"></a></div>
+                        <div style="float: right;margin-right: 45%;padding:0.2em;"> <a href="#">
+                                <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon-awesome-linkedin-in.png" width="30px" height="30px">
+
+                            </a></div>
+                    </div>
+
+                    <div class="blue" style="overflow: auto; float: right;width: 20%;background-color:rgb(12, 20, 117)">
+                        <img src="PageWiseAssets/Page8/Footer/design.png" style="max-height: 100%;max-width: 100%;" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        
+    </div>
+
+    <script id="applicationScript" type="text/javascript" src="index.js"></script> 
+</body></html>

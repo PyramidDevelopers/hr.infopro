@@ -1,0 +1,149 @@
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="index.css" />
+    <title>
+        InfoPro HR
+    </title>
+    <style>
+        .opheader{
+            color: white;
+            width: 100vw;
+            font-weight: bolder;
+            text-align: center;
+            background-color: rgb(12, 20, 117);
+            font-size: 5em;
+            padding: 2em;
+        }
+        .opheader>h1{
+            font-family: "Playfair Display";
+
+        }
+        .opjob{
+            align-self: center;
+            width: 75%;
+            border: 6px solid  rgba(12, 20, 117, 1);
+            margin: auto;
+            margin-top: 3em;
+            height: auto;
+        }
+        .opjob>div{
+            padding: 1vh;
+        }
+        .opjob>h1{
+            text-align: center;
+        }
+        .opjob>div>h2{
+            color:  rgba(12, 20, 117, 1);
+        }
+        .opapply{
+            position: relative;
+            margin: auto;
+            margin-bottom: 1em;
+        }
+        .opapply>button{
+            right: 0;
+            top:0;
+            position: absolute;
+        }
+    </style>
+</head>
+<!DOCTYPE html>
+
+<body onload="loadOPosPage()">
+
+
+    <nav class="navbar" id="nav">
+
+        <ul>
+
+            <li class="logo"><img src="InfoProLogo.png" style="width: 250px;"></li>
+            <div class="big" style="padding-top:10px">
+                <li><a href="#Contact">Contact Us</a></li>
+                <li><a href="#about1">About Us</a></li>
+                <li><a href="#hiring">Job Seekers</a></li>
+                        <li> <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Employers</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#ss">Staffing Solutions</a>
+            <a href="#hrm">Human Resource Management</a>
+            <a href="#epo">Employee Professional Organization</a>
+          </div>
+        </div> 
+        </li>
+                <div id="dropdown1" style="display:none">
+                         <a onclick="my_close()" href="#ss" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
+                         
+                          <a onclick="my_close()" href="#hrm" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
+                           <a onclick="my_close()" href="#epo" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Employee Professional Organization</a>
+                    </div>
+                <li><a class="active" href="#home">Home</a></li>
+            </div>
+            <div class="small">
+                <li> <button class="side" onclick="my_open()" style="color:white; background-color: rgb(12, 20, 117);">☰</button></li>
+                <div class="w3-dropdown w3-bar " style="display:none; background-color:rgb(12, 20, 117)" id="mySidebar">
+
+                    <a onclick="my_close()" href="#home" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Home</a>
+                    <a onclick="my_closeemp2()" href="#employers" class="w3-bar-item w3-button" id="l2" style="width: 100% ;color: white;font-family: Poppins">Employers</a>
+                    <div id="dropdown2" style="display:none">
+                         <a onclick="my_close()" href="#ss" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
+                         
+                          <a onclick="my_close()" href="#hrm" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
+                           <a onclick="my_close()" href="#epo" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Employee Professional Organization</a>
+                    </div>
+                    
+                    <a onclick="my_close()" href="#hiring" class="w3-bar-item w3-button" id="l3" style="width: 100% ;color: white;font-family: Poppins">Job Seekers</a>
+                    <a onclick="my_close()" href="#about" class="w3-bar-item w3-button" id="l4" style="width: 100% ;color: white;font-family: Poppins">About Us</a>
+                    <a onclick="my_close()" href="#Contact" class="w3-bar-item w3-button" id="l5" style="width: 100% ;color: white;font-family: Poppins">Contact us</a>
+                </div>
+            </div>
+        </ul>
+    </nav>
+
+    <div class="main">
+    
+       <div class="opheader"><h1>Job Opening</h1></div> 
+       <div class = "opjob">
+            <h1 class="opname"></h1>
+            <div class="opdate"></div>
+            <div class="opspec"></div>
+            <div class="opqual"> <h2>Qualifications: </h2></div>
+            <div class="opdesc"> <h2>Job Description:</h2></div>
+            <div class="oproles"><h2>Roles and Responsibilities:</h2></div>
+            <div class="opskills"><h2>Key Competencies and Skills</h2></div>
+            <div class="opapply"></div>
+       </div>
+        
+    </div>
+
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1 id="JobTitleA"></h1>
+
+            <label for="name"><b>First Name</b></label>
+            <input type="text" name="FName" required>
+
+            <label for="name"><b>Last Name</b></label>
+            <input type="text" name="LName" required>
+
+            <label for="email"><b>Email ID Name</b></label>
+            <input type="text" name="Email" required>
+
+            <label for="pno"><b>Phone No</b></label>
+            <input type="text" name="PhNo" required>
+
+            <label for="psw"><b>Upload Resume</b></label>
+            <button type="button" value="Choose  File" name="Resume" > Choose File  </button> <br> <br>
+
+            <button type="submit" class="btn">Apply</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <script id="applicationScript" type="text/javascript" src="index.js"></script> 
+</body></html>

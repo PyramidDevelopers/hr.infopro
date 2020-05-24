@@ -1,0 +1,1036 @@
+<html>
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet'>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+        <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="index.css" />
+        <style>
+            html{
+                scroll-behavior: smooth;
+            }
+            .topnav {
+ 
+ overflow: hidden;
+}
+.small{
+                    display: none;
+                }
+.big{
+    display: block;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+ float: left;
+ display: block;
+ color: #f2f2f2;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+ font-size: 17px;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+
+ color: rgb(12, 20, 117);
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+ display: none;
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown {
+ float: left;
+ overflow: hidden;
+}
+
+/* Style the dropdown button to fit inside the topnav */
+.dropdown .dropbtn {
+ font-size: 15px;
+ border: none;
+ outline: none;
+ color: rgb(12, 20, 117);
+ padding: 14px 16px;
+ background-color: inherit;
+ font-family: inherit;
+ margin: 0;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+ display: none;
+ position: absolute;
+ 
+ min-width: 160px;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ z-index: 1;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+ float: none;
+ color: white;
+ padding: 12px 16px;
+ text-decoration: none;
+ display: block;
+ text-align: left;
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover, .dropdown:hover .dropbtn {
+ background-color: rgb(12, 20, 117);
+ color: white;
+}
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content a:hover {
+ background-color:white;
+ color: black;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+    background-color: rgb(12, 20, 117);
+    color: white;
+ display: block;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+ .topnav a:not(:first-child), .dropdown .dropbtn {
+   display: none;
+ }
+ .topnav a.icon {
+   float: right;
+   display: block;
+ }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+ .topnav.responsive {position: relative;}
+ .topnav.responsive a.icon {
+   position: absolute;
+   right: 0;
+   top: 0;
+ }
+ .topnav.responsive a {
+   float: none;
+   display: block;
+   text-align: left;
+ }
+ .topnav.responsive .dropdown {float: none;}
+ .topnav.responsive .dropdown-content {position: relative;}
+ .topnav.responsive .dropdown .dropbtn {
+   display: block;
+   width: 100%;
+   text-align: left;
+ }
+}
+.navbar {
+           position: fixed;
+           top: 0;
+           left: 0;
+           z-index: 9999;
+           width: 100%;
+           height: 50px;
+           background-color: #ffffff;
+       }
+
+       ul {
+           list-style-type: none;
+           margin: 0;
+           padding: 0;
+           overflow: hidden;
+           background-color: rgb(255, 255, 255);
+       }
+
+       li {
+           float: right;
+       }
+
+       .logo {
+           float: left;
+       }
+
+       li a {
+           display: block;
+           color: rgb(12, 20, 117);
+           font-family: 'Poppins';
+           text-align: center;
+           padding: 14px 16px;
+           text-decoration: none;
+       }
+
+       li a:hover {
+           color: rgb(11, 18, 88);
+       }
+      
+            #p2 {
+                background-color: #0D1252;               
+                font-size: 1.7vw; 
+                font-family: Poppins;
+                color: white;              
+            }
+            .heading{
+            text-align: center;
+            padding-top: 100px;
+            }
+            .tiles{
+                width: 70%;
+                margin-left: 15%;
+            }
+            .tiles img{
+                width: 30%;
+                margin-left: 2.5%;
+                margin-top: 5%;
+                
+            }
+            #p3{
+                width: 70%;
+                margin-left: 15%;
+            }
+            .heading2{
+                font-family: Playfair Display;
+                font-size: 40;
+                color:  #0D1252;
+                font-weight: bolder;
+                text-align: center;
+                margin-top: 30px;
+                margin-bottom: 50px;
+            }
+            #body1{
+                font-family: Poppins;
+                font-size: 20;
+                width: 56%;
+                color: #0D1252;
+                font-weight: bold;
+                float: left;
+            }
+            #list{
+                color:#63B4FA;
+            }
+            .text1{
+                font-family: Poppins;
+                font-size: 15;
+                color: #0D1252;
+                float:right;
+                width: 35%;
+                position: absolute;
+                left: 15%;
+                top: 580px;
+            }
+            .text2{
+                font-family: Poppins;
+                font-size: 15;
+                color: #0D1252;
+                float:right;
+                width: 35%;
+                position: absolute;
+                left: 20%;
+                top: 680px;
+            }
+            .text3{
+                font-family: Poppins;
+                font-size: 15;
+                color: #0D1252;
+                float:right;
+                width: 40%;
+                position: absolute;
+                left: 15%;
+                top: 780px;
+            }
+            .circles{
+                width: 20%;
+                position: absolute;
+                left: 0%;
+                top: 550px;
+            }
+            .img2{
+                position: absolute;
+                left: 80%;
+                top: 550px;
+                width: 35%;
+            }
+            #part1{
+                position: relative;
+                top:1%;
+                left:0%;
+            }
+            .img1{
+                width: 44% ;
+                position: relative;
+                left: 20%; 
+                top: 50px;
+                float: right;
+            }
+            .last1{
+                font-family: Playfair Display;
+                font-size: 25;
+                font-weight: bold;
+                font-style: italic; 
+                color: #63B4FA;
+                position: absolute;
+                left: 0%;
+                top: 900px;
+                text-align: center;
+            }
+            
+        .btn {
+            position: absolute;
+            top:950px;
+            left: 40%;
+            display: block;
+            margin: 30px auto;
+            padding: 0;
+            font-size: 16;
+            overflow: hidden;
+
+            border-width: 0;
+            outline: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, .6);
+
+            background-color: rgb(35, 49, 135);
+            color: #ecf0f1;
+
+            transition: background-color .3s;
+        }
+
+        .btn:hover,
+        .btn:focus {
+            background-color: rgb(29, 40, 112);
+        }
+
+        .btn>* {
+            position: relative;
+        }
+
+        .btn span {
+            display: block;
+            padding: 12px 24px;
+        }
+
+        .btn:before {
+            content: "";
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            display: block;
+            width: 0;
+            padding-top: 0;
+
+            border-radius: 100%;
+
+            background-color: rgba(236, 240, 241, .3);
+
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+            #part2{
+                width: 100%;
+               position: relative;
+                top: 600px;
+                left:0px;
+            }
+            .text4{
+                font-family: Poppins;
+                font-size: 20;
+                color: #0D1252;
+                float:right;
+                width: 50%;
+                position: absolute;
+                left: 0%;
+                top: 100px;
+            }
+            .text5{
+                font-family: Poppins;
+                font-size: 20;
+                color:#63B4FA;
+                float:right;
+                width: 50%;
+                position: absolute;
+                left: 0%;
+                top: 240px;
+            }
+            .text6{
+                font-family: Poppins;
+                font-size: 20;
+                color: #0D1252;
+                float:right;
+                width: 50%;
+                position: absolute;
+                left: 0%;
+                top: 320px;
+            }
+            .img3{
+                position: absolute;
+                left: 78%;
+                top: 50px;
+                width: 40%;
+            }
+            .img3 img{
+                width: 90%;
+            }
+              .btn2 {
+            position: absolute;
+            top:570px;
+            left: 40%;
+            display: block;
+            margin: 30px auto;
+            padding: 0;
+            font-size: 16;
+            overflow: hidden;
+
+            border-width: 0;
+            outline: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, .6);
+
+            background-color: rgb(35, 49, 135);
+            color: #ecf0f1;
+
+            transition: background-color .3s;
+        }
+
+        .btn2:hover,
+        .btn2:focus {
+            background-color: rgb(29, 40, 112);
+        }
+
+        .btn2>* {
+            position: relative;
+        }
+
+        .btn2 span {
+            display: block;
+            padding: 12px 24px;
+        }
+
+        .btn2:before {
+            content: "";
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            display: block;
+            width: 0;
+            padding-top: 0;
+
+            border-radius: 100%;
+
+            background-color: rgba(236, 240, 241, .3);
+
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+            #part3{
+                 width: 100%;
+               position: relative;
+                top: 1200px;
+                left:0px;
+            }
+             .img4{
+                position: absolute;
+                left: 0%;
+                top: 150px;
+                width: 40%;
+            }
+            .img4 img{
+                width: 90%;
+            }
+             .img5{
+                position: absolute;
+                left: 78%;
+                top: 500px;
+                width: 40%;
+            }
+            .img5 img{
+                width: 90%;
+            }
+            .btn3 {
+            position: absolute;
+            top:900px;
+            left: 40%;
+            display: block;
+            margin: 30px auto;
+            padding: 0;
+            font-size: 16;
+            overflow: hidden;
+
+            border-width: 0;
+            outline: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, .6);
+
+            background-color: rgb(35, 49, 135);
+            color: #ecf0f1;
+
+            transition: background-color .3s;
+        }
+
+        .btn3:hover,
+        .btn3:focus {
+            background-color: rgb(29, 40, 112);
+        }
+
+        .btn3>* {
+            position: relative;
+        }
+
+        .btn3 span {
+            display: block;
+            padding: 12px 24px;
+        }
+
+        .btn3:before {
+            content: "";
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            display: block;
+            width: 0;
+            padding-top: 0;
+
+            border-radius: 100%;
+
+            background-color: rgba(236, 240, 241, .3);
+
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+            .text7{
+                font-family: Poppins;
+                font-size: 20;
+                color: #0D1252;
+                float:right;
+                width: 60%;
+                position: absolute;
+                left: 40%;
+                top: 150px;
+            }
+            .text8{
+                font-family: Poppins;
+                font-size: 20;
+                color:#63B4FA;
+                float:right;
+                width: 60%;
+                position: absolute;
+                left: 40%;
+                top: 300px;
+            }
+            .text9{
+                font-family: Poppins;
+                font-size: 20;
+                color: #0D1252;
+                float:right;
+                width: 50%;
+                position: absolute;
+                left: 0%;
+                top: 550px;
+            }
+            #landingtext{
+                width: 50%;position: absolute;top: 40%;left: 25%;
+            }
+        .btn:active:before {
+            width: 120%;
+            padding-top: 120%;
+
+            transition: width .2s ease-out, padding-top .2s ease-out;
+        }
+.btn2:active:before {
+            width: 120%;
+            padding-top: 120%;
+
+            transition: width .2s ease-out, padding-top .2s ease-out;
+        }
+            .btn3:active:before {
+            width: 120%;
+            padding-top: 120%;
+
+            transition: width .2s ease-out, padding-top .2s ease-out;
+        }
+            @media screen and (max-width: 900px){
+                .big{
+    display: none;
+}
+                .small{
+                    display: block;
+                }
+                #landingtext{
+                    position: absolute;
+                    top: 150px;
+                    width: 80%;
+                    left: 11%;
+                }
+               #p2 {
+                background-color: #0D1252;               
+                font-size: 1.7vw; 
+                font-family: Poppins;
+                color: white; 
+                overflow: auto;
+                padding-bottom: 50px;
+            }
+            .heading{
+            text-align: center;
+            padding-top: 50px;
+            font-size: 15;
+            }
+            .tiles{
+                width: 70%;
+                margin-left: 15%;
+            }
+            .tiles img{
+                width: 70%;
+                margin-left: 15%;
+                margin-top: 5%;
+                
+            }
+            #p3{
+                width: 70%;
+                margin-left: 15%;
+            }
+            .heading2{
+                font-family: Playfair Display;
+                font-size: 30;
+                color:  #0D1252;
+                font-weight: bolder;
+                text-align: center;
+                margin-top: 30px;
+                margin-bottom: 50px;
+            }
+            #body1{
+                font-family: Poppins;
+                font-size: 15;
+                width: 100%;
+                color: #0D1252;
+                font-weight: bold;
+                float: left;
+            }
+            #list{
+                color:#63B4FA;
+            }
+                
+            .text1{
+                font-family: Poppins;
+                font-size: 15;
+                color: #0D1252;
+                float:right;
+                width: 80%;
+                position: absolute;
+                left: 15%;
+                top: 800px;
+            }
+            .text2{
+                font-family: Poppins;
+                font-size: 15;
+                color: #0D1252;
+                float:right;
+                width: 80%;
+                position: absolute;
+                left: 20%;
+                top: 900px;
+            }
+            .text3{
+                font-family: Poppins;
+                font-size: 15;
+                color: #0D1252;
+                float:right;
+                width: 80%;
+                position: absolute;
+                left: 15%;
+                top: 1000px;
+            }
+            .circles{
+                display: none;
+            }
+            .img2{
+                position: absolute;
+                left: 10%;
+                top: 1150px;
+                width: 90%;
+            }
+                .btn {
+            position: absolute;
+            top:1450px;
+            left: 20%;
+            width: 60%;
+                }
+            #part1{
+                position: relative;
+                top:1%;
+                left:0%;
+            }
+            .img1{
+                width: 100% ;
+                position: relative;
+                left: 10%; 
+                top: 50px;
+                float: right;
+            }
+            .last1{
+                font-family: Playfair Display;
+                font-size: 25;
+                font-weight: bold;
+                font-style: italic; 
+                color: #63B4FA;
+                position: absolute;
+                left: 0%;
+                top: 1600px;
+                text-align: center;
+            }
+             #part2{
+                width: 100%;
+               position: relative;
+                top: 1100px;
+                left:0px;
+            }
+            .text4{
+                font-family: Poppins;
+                font-size: 15;
+                color: #0D1252;
+                
+                width: 100%;
+                position: absolute;
+                left: 0px;
+                top: 130px;
+            }
+            .text5{
+                font-family: Poppins;
+                font-size: 15;
+                color:#63B4FA;
+                
+                width: 100%;
+                position: absolute;
+                left: 0%;
+                top: 270px;
+            }
+            .text6{
+                font-family: Poppins;
+                font-size: 15;
+                color: #0D1252;
+                
+                width: 100%;
+                position: absolute;
+                left: 0%;
+                top: 330px;
+            }
+            .img3{
+                position: absolute;
+                left: 15%;
+                top: 550px;
+                width: 70%;
+            }
+            .img3 img{
+                width: 90%;
+            }
+              .btn2 {
+            position: absolute;
+            top:770px;
+            left: 23%;
+                }
+               #part3{
+                 width: 100%;
+               position: relative;
+                top: 1900px;
+                left:0px;
+            }
+             .img4{
+                position: absolute;
+                left: 15%;
+                top: 150px;
+                width: 70%;
+            }
+            .img4 img{
+                width: 90%;
+            }
+             .img5{
+                position: absolute;
+                left: 20%;
+                top: 1050px;
+                width: 70%;
+            }
+            .img5 img{
+                width: 90%;
+            }
+                .text7{
+                font-family: Poppins;
+                font-size: 15;
+                color: #0D1252;
+                
+                width: 100%;
+                position: absolute;
+                left:0px;
+                top: 400px;
+            }
+            .text8{
+                font-family: Poppins;
+                font-size: 15;
+                color:#63B4FA;
+                float:right;
+                width: 100%;
+                position: absolute;
+                left:0px;
+                top: 550px;
+            }
+            .text9{
+                font-family: Poppins;
+                font-size: 15;
+                color: #0D1252;
+                float:right;
+                width: 100%;
+                position: absolute;
+               
+                top: 750px;
+            }
+            .btn3 {
+            position: absolute;
+            top:1250px;
+            left: 25%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        
+  <nav class="navbar" id="nav">
+
+        <ul>
+
+           <a href="home.html"> <li class="logo"><img src="InfoProLogo.png" style="width: 200px;padding:10px 10px 10px 10px;"></li></a>
+            <div class="big" style="padding-top:10px">
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="page3.html">About Us</a></li>
+                <li><a href="hiring.html">Job Seekers</a></li>
+                        <li> <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Employers</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="whatwedo.html#staffing">Staffing Solutions</a>
+            <a href="whatwedo.html#hrm">Human Resource Management</a>
+            <a href="whatwedo.html#epo">Professional Employee Organization</a>
+          </div>
+        </div> 
+        </li>
+                <div id="dropdown1" style="display:none">
+                         <a onclick="my_close()" href="whatwedo.html#staffing" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
+                         
+                          <a onclick="my_close()" href="whatwedo.html#hrm" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
+                           <a onclick="my_close()" href="whatwedo.html#epo" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Professional Employee Organization</a>
+                    </div>
+                <li><a class="active" href="home.html">Home</a></li>
+            </div>
+            <div class="small">
+                <li> <button class="side" onclick="my_open()" style=" color:white;padding: 16px 28px 16px 15px; width: 50%;background-color: rgb(12, 20, 117);">☰</button></li>
+                
+                <div class="w3-dropdown w3-bar " style="display:none; background-color:rgb(12, 20, 117)" id="mySidebar">
+
+                    <a onclick="my_close()" href="home.html" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Home</a>
+                    <a onclick="my_closeemp2()" class="w3-bar-item w3-button" id="l2" style="width: 100% ;color: white;font-family: Poppins; ">Employers</a>
+                    <div id="dropdown2" style="display:none">
+                         <a onclick="my_close()" href="whatwedo.html#staffing" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
+                         
+                          <a onclick="my_close()" href="whatwedo.html#hrm" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
+                           <a onclick="my_close()" href="whatwedo.html#epo" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Professional Employee Organization</a>
+                    </div>
+                    
+                    <a onclick="my_close()" href="hiring.html" class="w3-bar-item w3-button" id="l3" style="width: 100% ;color: white;font-family: Poppins">Job Seekers</a>
+                    <a onclick="my_close()" href="page3.html" class="w3-bar-item w3-button" id="l4" style="width: 100% ;color: white;font-family: Poppins">About Us</a>
+                    <a onclick="my_close()" href="contactus.html" class="w3-bar-item w3-button" id="l5" style="width: 100% ;color: white;font-family: Poppins">Contact us</a>
+                </div>
+            </div>
+        </ul>
+    </nav>
+    <div class="main">
+        <br><br>
+        <img src="Landing2.png" style="width: 100%;height:auto+50px;position: relative;top: 0;left: 0;"/>
+        <img id="landingtext" src="landingtxt.png" style=""/>
+        <div id="p2" style="height:720px">
+            <div class="heading">
+            Our expert recruiters specialize in the following verticals
+            </div>
+            <div class="tiles"  >
+            <img src="tech.png"/>
+            <img src="exe.png"/>
+            <img src="supp.png"/>
+            </div>
+        </div>
+        <div id="p3">
+        <div class="heading2">
+            What we do
+            </div>
+            <div id="part0">
+            <div id="body1">
+                <img src="diamond.png" style="width: 5%"/>
+        <div id="staffing" style="font-family: Playfair Display; font-size: 30;color: #0D1252;font-weight: bold;">
+            Staffing Solutions<br><br>
+            </div>
+                An effective recruitment selection process clearly identifies your company's needs and to match the job requirement with the right set of candidates for:<br><br><br>
+                <div id="list" >
+                  <div id="list1" style="float: left">
+                 <li  style="float: left">Educational qualification</li><br> 
+                        <li  style="float: left">Technical Abilities</li> <br>
+                        <li  style="float: left">Prior related experience</li><br>
+                </div>
+                <div id="list2" style="float: right">
+                <li  style="float: left">Credibility and Integrity</li><br>
+                   <li  style="float: left">Communication skills</li><br>
+                   <li  style="float: left">Professionalism</li><br>
+                </div>
+                    </div>       
+                <br>
+                    
+                <div id="extra">
+                <br><br><br><br>
+                The focus of the selection process is not just about finding someone to do the job, but about finding the person who is the best possible fit for the open position.
+                </div>    
+            </div>
+            
+            <img class="img1" style="" src="img1.png" />
+           </div>
+        <div id="part1" >
+             <img class="circles" src="circles.png" />
+            
+                <div class="text1">
+            The demand for technical and professional 
+            employees continues to grow, we fulfil the 
+            need within a short time
+                </div>
+                <div class="text2">
+            If your resource need is for a week, month 
+            or years, we are committed to meet your 
+            demand of temporary staffing for that duration.
+            </div>
+            <div class="text3">
+            Not sure of the effectiveness of remote workforce? 
+            Don’t worry. Try our PEO model as an intermediary step. 
+            After you are satisfied with the quality, you hire them on 
+            your rolls.
+            </div>
+             <img class="img2" src="img2.png" />
+           
+            <div class="last1">
+            Let us screen and eliminate the wrong candidates to select the right one for you!
+            </div>
+             <button class="btn" type="button" onclick="location.href='hiring.html"><span><a href="hiring.html">Become a Client</a></span></button>
+            </div>
+            
+        <div id="part2" style="float: left">
+            <img src="diamond.png" style="width: 3%"/>
+        <div id="hrm" style="font-family: Playfair Display; font-size: 30;color: #0D1252;font-weight: bold;">
+            Human Resource Management<br><br>
+            </div>
+            <div class="body3">
+            <div class="text4">
+            HR functions such as recruitment, payroll, taxes, 
+            employee evaluations and employee experience management can be challenging along with maze of statutory and regulatory requirements
+            </div>
+            <div class="text5">
+            We take over every step of your employment 
+            life cycle and the management of your HR activities. 
+            </div>
+            <div class="text6">
+            When employees know what it takes to perform, develop, grow, and succeed, they trust that their company is a meritocracy. We are committed to measuring everything—talent management, development programs, engagement, rewards, and reputation; to create a purpose-driven, performance-oriented, and principles-led HR organization for our clients.
+            </div>
+            </div>
+            <div class="img3">
+            <img src="img3.png"/>
+            </div>
+            <button class="btn2" type="button" onclick="location.href='hiring.html"><span><a href="hiring.html">Become a Client</a></span></button>
+            </div>
+             
+            <div id="part3" style="float: left">
+            <img src="diamond.png" style="width: 3%"/>
+        <div id="epo" style="font-family: Playfair Display; font-size: 30;color: #0D1252;font-weight: bold;">
+            Professional Employee Organization<br><br>
+            </div>
+            <div class="body4">
+            
+            </div>
+            <div class="img4">
+            <img src="img4.png"/>
+            </div>
+                <div class="text7">
+                India offers a significant pool of technical and management 
+resources. However navigating the landscape of statutory, 
+regulatory, taxes and employee management can be daunting 
+task for international companies.
+                </div>
+                <div class="text8">
+                Think of Professional Employer Organization (PEO) as a Shared Service - on behalf of your organization, we will create a virtual team for your organization in India. We handle all aspects of setup including employee recruitment and employment, while you select your team and manage their deliverables.
+                </div>
+                <div class="text9">
+                PEO  model is helpful for organizations that are skeptical of setting an offshore entity, but are in need to on-board technical resources in a hurry. Clients make final decision of their team selection, decide on their compensations and retain complete control of their operating environment safeguarding their intellectual property. It is your workforce without the headaches of an organization and with full transparency to costs of running this virtual team.
+                </div>
+                 <div class="img5">
+            <img src="img5.png"/>
+            </div>
+            <button class="btn3" type="button" onclick="location.href='hiring.html"><span><a href="hiring.html">Become a Client</a></span></button>
+                 <div style="height=100px;position: absolute;top: 1000px">
+               <br><br>
+            </div>
+            </div>
+           
+        </div>
+        
+        </div>
+        
+        <script>
+            function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+} 
+function my_closeemp1() {
+    if(document.getElementById("dropdown1").style.display == "block"){
+         document.getElementById("dropdown1").style.display = "none";
+    }
+    else
+    {
+       document.getElementById("dropdown1").style.display = "block" ;
+    }
+    
+}
+function my_closeemp2() {
+    if(document.getElementById("dropdown2").style.display == "block"){
+         document.getElementById("dropdown2").style.display = "none";
+    }
+    else
+    {
+       document.getElementById("dropdown2").style.display = "block" ;
+    }
+    
+}
+function my_open() {
+            if (document.getElementById("mySidebar").style.display == "block") {
+                document.getElementById("mySidebar").style.display = "none";
+            } else {
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("nav").style.height = "auto";
+            }
+        }
+
+        </script>
+    </body>
+</html>

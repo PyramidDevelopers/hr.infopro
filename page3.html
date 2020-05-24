@@ -1,0 +1,256 @@
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="index.css" />
+    <title>
+        InfoPro HR
+    </title>
+    <style>
+        body{
+         font-size: 18px;   
+       }
+       .p3s1{
+        background-color: rgba(12, 20, 117, 1);
+        padding: 5%;
+        color: white;
+        font-family: "Poppins";
+        position: relative;
+       }
+       .p3s11{
+        text-align: center;
+       }
+       h1,h2{
+        font-family: "Playfair Display";
+        font-weight: bolder;
+       }
+       .p3s11>div{
+           display: inline-block;
+           padding: 3%;
+       }
+       .p3s12{
+           display: none;
+       }
+       .p3s121{
+        width: 40%;
+        align-items: center;
+        display: flex;
+       }
+       .p3s121>img{
+           max-width:100% ;
+       }
+       .p3s122{
+           text-align: right;
+           width: 60%;
+       }
+       .bluep{
+        color:rgb(97, 180, 250);
+       }
+       .orange{
+           height: 2em;
+       }
+       .p3s13{
+           display: none;
+       }
+       .p3s14{
+           display: none;
+       }
+       .p3s141{
+           width: 50%;
+          text-align: left;
+       }
+       .p3s142>li{
+           float: left;
+       }
+       .p3s142{
+           position: relative;
+            width: 50%;
+            list-style: disc;
+            text-align: left;
+            padding: 18px 5%;
+            background-color: rgba(12, 20, 117, 1);
+            background: transparent;
+            z-index: 3;
+       }
+       .bgrect{
+        position: absolute;
+    right: -17%;
+    max-height: 100%;
+    top: 10%;
+    /* display: none; */
+    z-index: -1;
+    overflow: auto;
+    width: 112%;
+       }
+       .p3s15{
+           display: none;
+           flex-wrap: wrap;
+       }
+       .p3s151{
+            width: 32%;
+            margin: auto;
+            padding: 1%;
+       }
+       .p3s151>img{
+           max-width: 100%;
+       }
+       .p3s2{
+           color:  rgba(12, 20, 117, 1);
+           text-align: center;
+           padding: 5%;
+       }
+       .p3s22{
+           
+       }
+    </style>
+</head>
+<!DOCTYPE html>
+
+<body>
+
+
+   <nav class="navbar" id="nav">
+
+        <ul>
+
+           <a href="home.html"> <li class="logo"><img src="InfoProLogo.png" style="width: 200px;padding:10px 10px 10px 10px;"></li></a>
+            <div class="big" style="padding-top:10px">
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="page3.html">About Us</a></li>
+                <li><a href="hiring.html">Job Seekers</a></li>
+                        <li> <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Employers</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="whatwedo.html#staffing">Staffing Solutions</a>
+            <a href="whatwedo.html#hrm">Human Resource Management</a>
+            <a href="whatwedo.html#epo">Professional Employee Organization</a>
+          </div>
+        </div> 
+        </li>
+                <div id="dropdown1" style="display:none">
+                         <a onclick="my_close()" href="whatwedo.html#staffing" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
+                         
+                          <a onclick="my_close()" href="whatwedo.html#hrm" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
+                           <a onclick="my_close()" href="whatwedo.html#epo" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Professional Employee Organization</a>
+                    </div>
+                <li><a class="active" href="home.html">Home</a></li>
+            </div>
+            <div class="small">
+                <li> <button class="side" onclick="my_open()" style=" color:white;padding: 16px 28px 16px 15px; width: 50%;background-color: rgb(12, 20, 117);">☰</button></li>
+                
+                <div class="w3-dropdown w3-bar " style="display:none; background-color:rgb(12, 20, 117)" id="mySidebar">
+
+                    <a onclick="my_close()" href="home.html" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Home</a>
+                    <a onclick="my_closeemp2()" class="w3-bar-item w3-button" id="l2" style="width: 100% ;color: white;font-family: Poppins; ">Employers</a>
+                    <div id="dropdown2" style="display:none">
+                         <a onclick="my_close()" href="whatwedo.html#staffing" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
+                         
+                          <a onclick="my_close()" href="whatwedo.html#hrm" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
+                           <a onclick="my_close()" href="whatwedo.html#epo" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Professional Employee Organization</a>
+                    </div>
+                    
+                    <a onclick="my_close()" href="hiring.html" class="w3-bar-item w3-button" id="l3" style="width: 100% ;color: white;font-family: Poppins">Job Seekers</a>
+                    <a onclick="my_close()" href="page3.html" class="w3-bar-item w3-button" id="l4" style="width: 100% ;color: white;font-family: Poppins">About Us</a>
+                    <a onclick="my_close()" href="contactus.html" class="w3-bar-item w3-button" id="l5" style="width: 100% ;color: white;font-family: Poppins">Contact us</a>
+                </div>
+            </div>
+        </ul>
+    </nav>
+
+    <div class="main">
+    
+        <div style="width: auto">
+
+            <img id="home" src="PageWiseAssets\Page1\Landing.png" style="width: 100%;height: auto">
+        </div>
+        
+        <div class="p3s1">
+            <div class="p3s11">
+                <h1>How Can We Help You</h1>
+                <div>Finding highly skilled employees is a global challenge and time consuming process. Finding a new job for a candidate can be a frustrating experience as well. Find out how we can help you with fulfilling your hiring needs and job search.</div>
+            </div>
+            <div class="p3s12">
+                <div class="p3s121">
+                    <img src="PageWiseAssets/Page3/Group%20323.png" />
+                </div>
+                <div class="p3s122">
+                    <img src="PageWiseAssets/Page3/Orange1.png" class="orange"/>
+                    <h2>How We Work</h2>
+                    <p>We provide a platform with a range of solutions - Full-time and Temporary staffing, Human Resource Management and Professional Employer Organization.</p>
+                    <p class="bluep">Today, finding the right people has become a Global Challenge. With our innovative strategies on recruitment, we are committed to customizing our search to clients specific needs in identifying the right people within the projected time.</p>
+                    <p>Our platform leverages technology in many of our processes, that help our clients derive efficiency in areas of Human resource developmental needs and reduce costs through the recruitment life cycle.</p>
+                </div>
+            </div>
+            <div class="p3s13">
+                <img src="PageWiseAssets/Page3/Orange1.png" class="orange"/>
+                <h2>Why Choose Us</h2>
+            </div>
+            <div class="p3s14">
+                <div class="p3s141">
+                    <p class="bluep">We take pride in what we do. Our professionalism & commitment towards each of our clients has made us the most Trusted and Leading HR consultants in the industry.</p>
+                    <p class="bluep">We constantly strive towards the desired goal by going the extra mile to provide value added services to our clients.</p>
+                </div>
+                <ul class="p3s142">                                                      
+                    <li>Passionate about our work</li>
+                    <li>Do not outsource our services </li>
+                    <li>Flexible and transparent in our approach</li>
+                    <li>Adaptable to customize our work according to clients' need</li>
+                    <li>Quality driven and result oriented organization.</li>
+                    <!-- <img src="PageWiseAssets/Page3/Group%20325.png" class="bgrect"/> -->
+
+                </ul>
+            </div>
+
+            <div class="p3s15">
+                
+                <div class="p3s151">
+                    <img src="PageWiseAssets/Page3/Group%20327.png" />
+                </div>
+                <div class="p3s151">
+                    <img src="PageWiseAssets/Page3/Group%20328.png" />
+                </div>
+                <div class="p3s151">
+                    <img src="PageWiseAssets/Page3/Group%20329.png" />
+                </div>
+                <div class="p3s151">
+                    <img src="PageWiseAssets/Page3/Group%20331.png" />
+                </div>
+                <div class="p3s151">
+                    <img src="PageWiseAssets/Page3/Group%20332.png" />
+                </div>
+                <div class="p3s151">
+                    <img src="PageWiseAssets/Page3/Group%20334.png" />
+                </div>
+            </div>
+
+
+            <button id="readbtn" class="btn2" type="button" onclick="readless()"><span>Read More</span></button>
+        </div>
+
+        <div class="p3s2">
+            <div class="p3s21">
+                <h1>About Us</h1>
+                <p> InfoPro Solutions started its operation at Bangalore, India in 1997 by developing software products 
+                    for global pharmaceutical companies.  Soon, it grew to a few hundred employees. With about two 
+                    decades of experience & expertise in people management and operations management, InfoPro 
+                    ventured into Human Resource Management Services with staffing, Professional Employer 
+                    Organization (PEO) services.
+                    </p>
+                    <p class="bluep">We believe the growth of any organization needs to be in the hands of a Quality Service Provider, 
+                        and we being your business partner, your success is in trustable hands today and every day.
+                        </p>
+                <h2>Our History</h2>
+                <p>We have more than two decades of experience in people management and operations management. Our team has knowledge and expertise in setting up the operations, legal compliances, payroll and management.</p>
+            </div>
+            <div class="p3s22">
+                <img src="PageWiseAssets/Page3/Group%20339.png" ?>
+            </div>
+            <div></div>
+        </div>        
+
+    <script id="applicationScript" type="text/javascript" src="index.js"></script>
+</body></html>
