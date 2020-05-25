@@ -15,6 +15,69 @@
  
  overflow: hidden;
 }
+            .main{
+                display: block;
+            }
+            .phone{
+                display: none;
+            }
+.flip-card {
+  background-color: transparent;
+  width: 20%;
+    float: left;
+    margin-left: 10%;
+    margin-top: 5%;
+  height: auto;
+  
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+            .flip-card-back {
+  position: absolute;
+  width: 100%;
+  
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color:	rgb(21, 38, 104);
+  color: white;
+  transform: rotateY(180deg);
+    font-family: Poppins;
+    font-size: 15px;
+    padding:10%;
+    height: 56%;
+}           
 .small{
                     display: none;
                 }
@@ -287,7 +350,60 @@
                 top: 1000px;
                 text-align: center;
             }
-            
+        .btnm {
+           
+            display: block;
+            margin: 30px auto;
+            padding: 0;
+            font-size: 16;
+            overflow: hidden;
+
+            border-width: 0;
+            outline: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, .6);
+
+            background-color: rgb(35, 49, 135);
+            color: #ecf0f1;
+
+            transition: background-color .3s;
+        }
+
+        .btnm:hover,
+        .btnm:focus {
+            background-color: rgb(29, 40, 112);
+        }
+
+        .btnm>* {
+            position: relative;
+        }
+
+        .btnm span {
+            display: block;
+            padding: 12px 24px;
+        }
+
+        .btnm:before {
+            content: "";
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            display: block;
+            width: 0;
+            padding-top: 0;
+
+            border-radius: 100%;
+
+            background-color: rgba(236, 240, 241, .3);
+
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
         .btn {
             position: absolute;
             top:1050px;
@@ -577,247 +693,19 @@
             transition: width .2s ease-out, padding-top .2s ease-out;
         }
             @media screen and (max-width: 900px){
+                .phone{
+                display: block;
+            }
+                .main{
+                display: none;
+            }
                 .big{
     display: none;
 }
                 .small{
                     display: block;
                 }
-                #landingtext{
-                    position: absolute;
-                    top: 150px;
-                    width: 80%;
-                    left: 11%;
-                }
-               #p2 {
-                background-color: #0D1252;               
-                font-size: 1.7vw; 
-                font-family: Poppins;
-                color: white; 
-                overflow: auto;
-                padding-bottom: 50px;
-            }
-            .heading{
-            text-align: center;
-            padding-top: 50px;
-            font-size: 15;
-            }
-            .tiles{
-                width: 70%;
-                margin-left: 15%;
-            }
-            .tiles img{
-                width: 70%;
-                margin-left: 15%;
-                margin-top: 5%;
                 
-            }
-            #p3{
-                width: 70%;
-                margin-left: 15%;
-            }
-            .heading2{
-                font-family: Playfair Display;
-                font-size: 30;
-                color:  #0D1252;
-                font-weight: bolder;
-                text-align: center;
-                margin-top: 30px;
-                margin-bottom: 50px;
-            }
-            #body1{
-                font-family: Poppins;
-                font-size: 15;
-                width: 100%;
-                color: #0D1252;
-                font-weight: bold;
-                float: left;
-            }
-            #list{
-                color:#63B4FA;
-            }
-                #list2{
-                    float: left;
-                }
-            .text1{
-                font-family: Poppins;
-                font-size: 15;
-                color: #0D1252;
-                float:right;
-                width: 80%;
-                position: absolute;
-                left: 15%;
-                top: 800px;
-            }
-            .text2{
-                font-family: Poppins;
-                font-size: 15;
-                color: #0D1252;
-                float:right;
-                width: 80%;
-                position: absolute;
-                left: 20%;
-                top: 900px;
-            }
-            .text3{
-                font-family: Poppins;
-                font-size: 15;
-                color: #0D1252;
-                float:right;
-                width: 80%;
-                position: absolute;
-                left: 15%;
-                top: 1000px;
-            }
-            .circles{
-                display: none;
-            }
-            .img2{
-                position: absolute;
-                left: 10%;
-                top: 1150px;
-                width: 90%;
-            }
-                .btn {
-            position: absolute;
-            top:1450px;
-            left: 20%;
-            width: 60%;
-                }
-            #part1{
-                position: relative;
-                top:1%;
-                left:0%;
-            }
-            .img1{
-                width: 100% ;
-                position: relative;
-                left: 10%; 
-                top: 50px;
-                float: right;
-            }
-            .last1{
-                font-family: Playfair Display;
-                font-size: 25;
-                font-weight: bold;
-                font-style: italic; 
-                color: #63B4FA;
-                position: absolute;
-                left: 0%;
-                top: 1600px;
-                text-align: center;
-            }
-             #part2{
-                width: 100%;
-               position: relative;
-                top: 1100px;
-                left:0px;
-            }
-            .text4{
-                font-family: Poppins;
-                font-size: 15;
-                color: #0D1252;
-                
-                width: 100%;
-                position: absolute;
-                left: 0px;
-                top: 130px;
-            }
-            .text5{
-                font-family: Poppins;
-                font-size: 15;
-                color:#63B4FA;
-                
-                width: 100%;
-                position: absolute;
-                left: 0%;
-                top: 270px;
-            }
-            .text6{
-                font-family: Poppins;
-                font-size: 15;
-                color: #0D1252;
-                
-                width: 100%;
-                position: absolute;
-                left: 0%;
-                top: 330px;
-            }
-            .img3{
-                position: absolute;
-                left: 15%;
-                top: 550px;
-                width: 70%;
-            }
-            .img3 img{
-                width: 90%;
-            }
-              .btn2 {
-            position: absolute;
-            top:770px;
-            left: 23%;
-                }
-               #part3{
-                 width: 100%;
-               position: relative;
-                top: 1900px;
-                left:0px;
-            }
-             .img4{
-                position: absolute;
-                left: 15%;
-                top: 150px;
-                
-                width: 70%;
-            }
-            .img4 img{
-                width: 90%;
-            }
-             .img5{
-                position: absolute;
-                left: 20%;
-                top: 1050px;
-                width: 70%;
-            }
-            .img5 img{
-                width: 90%;
-            }
-                .text7{
-                font-family: Poppins;
-                font-size: 15;
-                color: #0D1252;
-                
-                width: 100%;
-                position: absolute;
-                left:0px;
-                top: 400px;
-            }
-            .text8{
-                font-family: Poppins;
-                font-size: 15;
-                color:#63B4FA;
-                float:right;
-                width: 100%;
-                position: absolute;
-                left:0px;
-                top: 550px;
-            }
-            .text9{
-                font-family: Poppins;
-                font-size: 15;
-                color: #0D1252;
-                float:right;
-                width: 100%;
-                position: absolute;
-               
-                top: 750px;
-            }
-            .btn3 {
-            position: absolute;
-            top:1250px;
-            left: 25%;
-                }
-            }
         </style>
     </head>
     <body>
@@ -872,16 +760,55 @@
     <div class="main">
         <br><br>
         <img src="Landing2.png" style="width: 100%;height:100vh;position: relative;top: 0;left: 0;"/>
-        <!-- <img id="landingtext" src="landingtxt.png" />
+         <img id="landingtext" src="landingtxt.png" />
         <div id="p2" style="height:720px">
             <div class="heading">
             Our expert recruiters specialize in the following verticals
             </div>
-            <div class="tiles"  >
-            <img src="tech.png"/>
-            <img src="exe.png"/>
-            <img src="supp.png"/>
-            </div> -->
+           
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+       <img src="tech.png"  >
+    </div>
+    <div class="flip-card-back">
+      TECHNOLOGY
+
+Business of every size and domain depend on IT skills right from hiring software engineers to project managers to Architects. 
+Is your company looking to hire technology professionals? The demand for IT skills continues to grow on different scale and size which increases the challenges to find, recruit and retain. Use our innovative services to find the right skill within the expected time.
+
+    </div>
+  </div>
+</div>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+       <img src="exe.png"/>
+    </div>
+    <div class="flip-card-back">
+      EXECUTIVE SEARCH
+
+We offer Executive Search service by investigating potential Executive Level employee. We research executives working for similar kind of business and approach them for client’s need. We act as an intermediary between client & candidate and enquire about candidates’ interests, expectations before taking it forward with the client.
+
+Our Innovative approach enable us to work with a speed and deep understanding of your Executive needs
+
+    </div>
+  </div>
+</div>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+         <img src="supp.png"/>
+    </div>
+    <div class="flip-card-back">
+      SUPPORT FUNCTIONS
+
+The success of an organization stands on the efficiency of the Support Functions. The support team that needs to ensure the entire employees, customers and suppliers are kept in good faith, maintains satisfaction at all levels. It involves teams like Operations, HR, Administration, Marketing, IT, Finance etc..
+We provide support team resources at all levels.
+
+    </div>
+  </div>        
+            </div> 
         </div>
         <div id="p3">
         <div class="heading2">
@@ -970,7 +897,7 @@
             <div id="part3" style="float: left">
             <img src="diamond.png" style="width: 3%"/>
         <div id="epo" style="font-family: Playfair Display; font-size: 30;color: #0D1252;font-weight: bold;">
-            Professional Employee Organization<br><br>
+            Professional Employer Organization<br><br>
             </div>
             <div class="body4">
             
@@ -1002,6 +929,138 @@ task for international companies.
         </div>
         
         </div>
+       <div class="phone">
+        <img style="width: 100%" src="Landing2ph.png"/>
+        <div style="background:#0D1252; overflow: auto">
+            <div style="color: white;padding: 5%;text-align:center">
+            Our expert recruiters specialize in the following verticals
+            </div>
+           
+
+       <img src="tech.png" style="padding: 10%" >
+
+
+       <img src="exe.png" style="padding: 10%">
+   
+
+         <img src="supp.png" style="padding: 10%">
+   
+           </div>
+           <div>
+           <div style="font-family: Playfair Display;
+                       font-size: 25px;
+                       font-weight: bolder;
+                       text-align: center;
+                       padding-top: 5%;
+                        ">
+               What We Do</div>
+               <div style="padding: 10%">
+                <img src="diamond.png" style="width: 5%"/>
+        <div id="staffing" style="font-family: Playfair Display; font-size: 25px;color: #0D1252;font-weight: bold;">
+            Staffing Solutions<br><br>
+            </div>
+                An effective recruitment selection process clearly identifies your company's needs and to match the job requirement with the right set of candidates for:<br><br><br>
+                <div id="list" >
+                  <div id="list1" style="float: left">
+                 <li  style="float: left">Educational qualification</li><br> 
+                        <li  style="float: left">Technical Abilities</li> <br>
+                        <li  style="float: left">Prior related experience</li><br>
+                </div>
+                <div id="list2" style="float: left">
+                <li  style="float: left">Credibility and Integrity</li><br>
+                   <li  style="float: left">Communication skills</li><br>
+                   <li  style="float: left">Professionalism</li><br>
+                </div>
+                    </div>       
+                <br>
+                    
+                <div id="extra" style="float: left">
+                <br>
+                The focus of the selection process is not just about finding someone to do the job, but about finding the person who is the best possible fit for the open position.
+                </div> 
+                   </div>
+               <div style="padding: 10%">
+               <img src="circles.png" style="width: 50%;
+                                             margin-left: 25%" />
+            
+                <div >
+            The demand for technical and professional 
+            employees continues to grow, we fulfil the 
+            need within a short time.<br><br>
+                </div>
+                <div >
+            If your resource need is for a week, month 
+            or years, we are committed to meet your 
+            demand of temporary staffing for that duration.<br><br>
+            </div>
+            <div >
+            Not sure of the effectiveness of remote workforce? 
+            Don’t worry. Try our PEO model as an intermediary step. 
+            After you are satisfied with the quality, you hire them on 
+            your rolls.
+            </div>
+             <img  src="img2.png" style="width: 80%;margin: 10%" />
+           
+            <div style="font-family: Playfair Display;
+                        color:#63B4FA;font-style: italic;
+                        font-size: 20px;font-weight: bold" >
+            Let us screen and eliminate the wrong candidates to select the right one for you!
+            </div>
+                   <button class="btnm" type="button" onclick="location.href='hiring.html"><span><a href="hiring.html">Become a Client</a></span></button>
+            </div>
+            <div id="new" style="padding: 10%">
+                <img src="diamond.png" style="width: 5%"/>
+        <div id="hrm" style="font-family: Playfair Display; font-size: 25px;color: #0D1252;font-weight: bold;">
+            Human Resource Management<br><br>
+            </div>
+            <div >
+            <div >
+            HR functions such as recruitment, payroll, taxes, 
+            employee evaluations and employee experience management can be challenging along with maze of statutory and regulatory requirements
+            </div>
+            <div >
+            We take over every step of your employment 
+            life cycle and the management of your HR activities. 
+            </div>
+            <div >
+            When employees know what it takes to perform, develop, grow, and succeed, they trust that their company is a meritocracy. We are committed to measuring everything—talent management, development programs, engagement, rewards, and reputation; to create a purpose-driven, performance-oriented, and principles-led HR organization for our clients.
+            </div>
+            </div>
+            <div >
+            <img src="img3.png"/>
+            </div>
+                <button class="btnm" type="button" onclick="location.href='hiring.html"><span><a href="hiring.html">Become a Client</a></span></button>
+               </div>   
+               <div id="new2" style="padding: 10%">
+               <img src="diamond.png" style="width: 5%"/>
+        <div id="epo" style="font-family: Playfair Display; font-size: 25px;color: #0D1252;font-weight: bold;">
+            Professional Employer Organization<br><br>
+            </div>
+            <div class="body4">
+            
+            </div>
+            <div style="padding: 10%" >
+            <img src="img4.png"/>
+            </div>
+                <div >
+                India offers a significant pool of technical and management 
+resources. However navigating the landscape of statutory, 
+regulatory, taxes and employee management can be daunting 
+task for international companies.
+                </div>
+                <div >
+                Think of Professional Employer Organization (PEO) as a Shared Service - on behalf of your organization, we will create a virtual team for your organization in India. We handle all aspects of setup including employee recruitment and employment, while you select your team and manage their deliverables.
+                </div>
+                <div >
+                PEO  model is helpful for organizations that are skeptical of setting an offshore entity, but are in need to on-board technical resources in a hurry. Clients make final decision of their team selection, decide on their compensations and retain complete control of their operating environment safeguarding their intellectual property. It is your workforce without the headaches of an organization and with full transparency to costs of running this virtual team.
+                </div>
+                 <div style="padding: 10%">
+            <img src="img5.png"/>
+            </div>
+                   <button class="btnm" type="button" onclick="location.href='hiring.html"><span><a href="hiring.html">Become a Client</a></span></button>
+               </div>
+           </div>
+           </div>
         
         <script>
             function myFunction() {
@@ -1043,36 +1102,7 @@ function my_open() {
 
         </script>
         
-        <div class="blue" style="background-color:rgb(12, 20, 117) ; height: auto;clear:both; ">
-            <div class="data" style="overflow: auto;top:5vh; margin-top: 10vh;">
-                <div class="footer1" id="f11" >
-                    <div style="text-align: center; color: rgba(99, 180, 250, 1) ;">CONTACT</div> hr@infoprosol.com
-                </div>
-                <div class="footer1"  id="f12" >
-                    <div style="text-align: center; color: rgba(99, 180, 250, 1) ;">ADDRESS</div> InfoPro Solutions Pvt Ltd.<br>#9, Krishna Kasthuri<br> 2nd Floor, Ashwathnagar<br> Sanjaynagar Main Road,<br> Bangalore-560094
-                </div>
-            </div>
-            <div class="blue" style="overflow: auto;float: left;width: 20%;height: auto;background-color:rgb(12, 20, 117)">
-                <img src="PageWiseAssets/Page8/Footer/design.png" style="max-height: 100%;max-width: 100%; " />
-            </div>
+       
 
-            <div class="blue" style="overflow: auto; float: left;width: 60%; height:auto;background-color:rgb(12, 20, 117)">
-                <div style="color: white; text-align: center">
-                    <br>
-                    <br>
-                    Follow Us On
-                </div>
-                <div class="footer2" id="f21" ><a href="#">
-                        <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon%20awesome-facebook.png" width="30px" height="30px"></a></div>
-                <div class="footer2"  id="f22" > <a href="#">
-                        <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon%20awesome-linkedin-in.png" width="30px" height="30px">
-
-                    </a></div>
-            </div>
-
-            <div class="blue" style="overflow: auto; float: right;width: 20%;background-color:rgb(12, 20, 117)">
-                <img src="PageWiseAssets/Page8/Footer/design.png" style="max-height: 100%;max-width: 100%;" />
-            </div>
-        </div>
     </body>
 </html>
