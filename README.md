@@ -1,16 +1,19 @@
 ## Things left to do
 
-* Navbar +  Footer on 
-  * remove home
-  * Making employers not bold
-  * Home
-  * Job Seekers
-  * About us
-  * Contact us
-  * OPos.html
-  * Alignment of footer in mobile view
-* Responsive Design for OPPos.html
-* Fixing landing page in contact us
-* Restyling Job Seeker Tips - Done, link to be fixed in index.js
-* Fixing images in all the pages
-* Cleanup the Repo
+* Navbar +  Footer on  #DONE 
+  * Making employers not bold 
+  * Home #Done
+  * Job Seekers #Done
+  * About us #Done
+  * Contact us #Done
+  * OPos.html - Logo not showing
+  * Alignment of footer in mobile view #Done
+* Responsive Design for OPPos.html #Done
+* Fixing landing page in contact us #Done
+* Take off the text in landing page of employers
+* onclick of employers, it should go to page2
+* No overlap in text
+* Scrolling to be fixed
+* Restyling Job Seeker Tips #Done
+* Fixing images in all the pages #Done
+* Cleanup the Repo #Done
