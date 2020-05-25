@@ -271,7 +271,7 @@ fetch(URL)
                         }
 
                         var i = localStorage.getItem("i value");
-                        document.getElementById("JobTitleA").innerHTML = fullData[localStorage.getItem("i value")][1].toString();
+                        //document.getElementById("JobTitleA").innerHTML = fullData[localStorage.getItem("i value")][1].toString();
                         document.getElementById("myForm").style.display = "block";
 
 
@@ -414,7 +414,8 @@ function loadOPosPage() {
                     count += 1;
                 }
                 var i = localStorage.getItem("i value");
-                document.getElementById("JobTitleA").innerHTML = fullData[localStorage.getItem("i value")][1].toString();
+
+                window.frames["userHtmlFrame"].document.getElementById("ctrlq-text-0").value = fullData[localStorage.getItem("i value")][1].toString();
                 document.getElementById("myForm").style.display = "block";
 
 

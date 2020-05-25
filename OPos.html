@@ -82,7 +82,6 @@
                 margin-top: -2%;
             }
         }
-
     </style>
 </head>
 <!DOCTYPE html>
@@ -104,7 +103,7 @@
                 <li><a href="hiring.html">Job Seekers</a></li>
                 <li>
                     <div class="dropdown">
-                          <a href="whatwedo.html"><button style="padding-top: 0px" onclick="myFunction()" class="dropbtn">Employers</button></a>
+                        <a href="whatwedo.html"><button style="padding-top: 0px" onclick="myFunction()" class="dropbtn">Employers</button></a>
                         <div id="myDropdown" class="dropdown-content">
                             <a href="whatwedo.html#staffing">Staffing Solutions</a>
                             <a href="whatwedo.html#hrm">Human Resource Management</a>
@@ -215,32 +214,93 @@
             </div>
         </div>
     </div>
-
     <div class="form-popup" id="myForm">
-        <form action="/action_page.php" class="form-container">
-            <h1 id="JobTitleA"></h1>
 
-            <label for="name"><b>First Name</b></label>
-            <input type="text" name="FName" required>
+        <style>
+            .forms-studio {
+                position: relative;
+                padding-bottom: 56.25%;
+                overflow: hidden;
+                width: 100%;
+                height: 600px;
+            }
 
-            <label for="name"><b>Last Name</b></label>
-            <input type="text" name="LName" required>
-
-            <label for="email"><b>Email ID Name</b></label>
-            <input type="text" name="Email" required>
-
-            <label for="pno"><b>Phone No</b></label>
-            <input type="text" name="PhNo" required>
-
-            <label for="psw"><b>Upload Resume</b></label>
-            <button type="button" value="Choose  File" name="Resume"> Choose File </button> <br> <br>
-
-            <button type="submit" class="btn">Apply</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-        </form>
+            .forms-studio iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 0;
+            }
+        </style>
+        <div class='forms-studio'><iframe src='https://script.google.com/macros/s/AKfycbwDdI-6PecC5gc3R8jcQRfAPGqGU-vDfl0PWp2O857FvyduWx0/exec'></iframe></div>
     </div>
-
     <script id="applicationScript" type="text/javascript" src="index.js"></script>
-</body>
 
-</html>
+
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.24.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        //Bucket Configurations
+        var bucketName = 'resumes-infoprohr';
+        var bucketRegion = 'ap-south-1';
+        var IdentityPoolId = "ap-south-1:001290aa-c4c1-4ae1-b0b4-4277bc41619f";
+
+        AWS.config.region = 'ap-south-1'; // Region
+        AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+            IdentityPoolId: 'ap-south-1:001290aa-c4c1-4ae1-b0b4-4277bc41619f',
+        });
+
+        var s3 = new AWS.S3({
+            apiVersion: '2006-03-01',
+            params: {
+                Bucket: bucketName
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        function s3upload() {
+            var Fname = document.getElementById('Fname').value.toString();
+            var Lname = document.getElementById('Lname').value.toString();
+            var Email = document.getElementById('EmailID').value.toString();
+            var Phone = document.getElementById('Phone').value.toString();
+            var Job = document.getElementById('JobTitleA').innerHTML.toString();
+            var files = document.getElementById('fileUpload').files;
+            if (Fname != "" && Lname != "") {
+                if (Email != "" && Phone != "") {
+                    if (files.length != 0) {
+                        if (files[0].type == "application/pdf") {
+                            var file = files[0];
+                            var fileName = file.name + ":" +
+                                Fname + Lname + "-Resume.pdf";
+                            var filePath = Job + '/' + fileName;
+                            var fileUrl = 'https://resumes-infoprohr.s3.' + bucketRegion + '.amazonaws.com/' + filePath;
+                            s3.upload({
+                                Key: filePath,
+                                Body: file,
+                                ACL: 'public-read'
+                            }, function(err, data) {
+                                console.log(fileUrl);
+                                if (err) {
+                                    reject('error');
+                                }
+
+                                alert('Successfully Saved Resume! We will get in touch with you shortly');
+                                //TODO: Need to make the link along with the rest of the details, send by mail.
+                            });
+                        } else {
+                            alert("Oly PDF resumes are allowed to be uploaded");
+                        }
+                    } else {
+                        alert("Please upload your Resume");
+                    }
+                } else {
+                    alert("Enter your email ID and Phone Number");
+                }
+            } else {
+                alert("Please enter your name");
+            }
+        };
+    </script>
+</body></html>
