@@ -2,6 +2,7 @@
 <head>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet'>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -119,8 +120,9 @@
 
         <ul>
 
-           <a href="home.html"> <li class="logo"><img src="InfoProLogo.png" style="width: 200px;padding:10px 10px 10px 10px;"></li></a>
+           
             <div class="big" style="padding-top:10px">
+                <a href="index.html"> <li class="logo"><img src="InfoProLogo.png" style="width: 200px;padding:10px 10px 10px 10px;"></li></a>
                 <li><a href="contactus.html">Contact Us</a></li>
                 <li><a href="page3.html">About Us</a></li>
                 <li><a href="hiring.html">Job Seekers</a></li>
@@ -131,30 +133,45 @@
             <a href="whatwedo.html#hrm">Human Resource Management</a>
             <a href="whatwedo.html#epo">Professional Employer Organization</a>
           </div>
-        </div> 
+        </div>
         </li>
                 <div id="dropdown1" style="display:none">
                          <a onclick="my_close()" href="whatwedo.html#staffing" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
-                         
+
                           <a onclick="my_close()" href="whatwedo.html#hrm" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
                            <a onclick="my_close()" href="whatwedo.html#epo" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Professional Employer Organization</a>
                     </div>
                 <li><a class="active" href="index.html">Home</a></li>
             </div>
             <div class="small">
-                <li> <button class="side" onclick="my_open()" style=" color:white;padding: 16px 28px 16px 15px; width: 50%;background-color: rgb(12, 20, 117);">☰</button></li>
-                
+                <div style="width: 100%">
+                 <div style="width: 40%;float: left"><a href="index.html"> <img src="InfoProLogo.png" style="width: 100%;"></a></div>
+                <button onclick="my_open()" 
+                    style="
+                    background-color:rgb(12, 20, 117) ;
+                      border: none;
+                      color: white;
+                      padding:15px 15px;
+                      font-size: 16px;
+                           float: right;
+                           width: 20%;
+                           border-radius: 2px;
+                           
+                      cursor: pointer;"><i class="fa fa-bars"></i></button> </div>
+               
+                   
+
                 <div class="w3-dropdown w3-bar " style="display:none; background-color:rgb(12, 20, 117)" id="mySidebar">
 
                     <a onclick="my_close()" href="index.html" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Home</a>
                     <a onclick="my_closeemp2()" class="w3-bar-item w3-button" id="l2" style="width: 100% ;color: white;font-family: Poppins; ">Employers</a>
                     <div id="dropdown2" style="display:none">
                          <a onclick="my_close()" href="whatwedo.html#staffing" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
-                         
+
                           <a onclick="my_close()" href="whatwedo.html#hrm" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
                            <a onclick="my_close()" href="whatwedo.html#epo" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Professional Employer Organization</a>
                     </div>
-                    
+
                     <a onclick="my_close()" href="hiring.html" class="w3-bar-item w3-button" id="l3" style="width: 100% ;color: white;font-family: Poppins">Job Seekers</a>
                     <a onclick="my_close()" href="page3.html" class="w3-bar-item w3-button" id="l4" style="width: 100% ;color: white;font-family: Poppins">About Us</a>
                     <a onclick="my_close()" href="contactus.html" class="w3-bar-item w3-button" id="l5" style="width: 100% ;color: white;font-family: Poppins">Contact us</a>
