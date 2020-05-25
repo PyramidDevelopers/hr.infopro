@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
@@ -11,6 +12,77 @@
     <title>
         InfoPro HR
     </title>
+
+    <script>
+    function submitToAPI(e) {
+           e.preventDefault();
+          var URL = "https://avf0c7ist5.execute-api.ap-south-1.amazonaws.com/production/contactformsubmit";
+          console.log('inside function');
+
+
+           var name = document.getElementById("positionHiringFor").value;
+           var company = document.getElementById("skill").value;
+           var country = document.getElementById("positionType").value;
+           // var formChoice = document.getElementById("form-input").value;
+           var formChoice = "Staffing";
+           var phone = document.getElementById("prospectiveClientname").value;
+           var email = document.getElementById("emailId").value;
+           var message = document.getElementById("message").value;
+           
+           if (name=="" || phone=="" || email=="" || company=="")
+            {
+                alert("Please Fill All Required Field");
+                return false;
+            }
+            
+            // nameRE = /^[A-Z]{1}[a-z]{2,20}[ ]{1}[A-Z]{1}[a-z]{2,20}/;
+            // if(!nameRE.test(name)) {
+            //  alert("Name entered, is not valid");
+            //      return false;
+            // }
+            
+            // phoneRE = /^([0|\+[0-9]{1,5})?([7-9][0-9]{9})$/;
+            // if(!phoneRE.test(phone)) {
+            //      alert("Phone number entered, is not valid");
+            //      return false;
+      //           }
+            
+            // emailRE = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            // if(!emailRE.test(email)) {
+            //  alert("Email Address entered, is not valid");
+            //      return false;
+            // }
+
+           var data = {
+              name : name,
+              company: company,
+              email : email,
+              phone : phone,
+              formChoice: formChoice,
+              country: country,
+              message : message
+            };
+
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("POST", URL);
+            xmlhttp.setRequestHeader("Content-Type", "application/json", "Access-Control-Allow-Origin", "*");
+            xmlhttp.send(JSON.stringify(data));
+        //  xmlhttp.onreadystatechange = function() {
+        //  if (xmlhttp.readyState === 4) {
+        //      var response = JSON.parse(xmlhttp.responseText);
+        //      if (xmlhttp.status === 200 ) {
+        //          console.log('successful');
+        //          document.getElementById("contact-form").innerHTML = "<h1>Thank you for your message/feedback<br>our team will get back to you soon!</h1>";
+        //      } else {
+        //          console.log('failed');
+        //      }
+        //  }
+        // }
+        
+        document.getElementById('contact-form').reset();
+          
+        } 
+    </script>
 </head>
 <!DOCTYPE html>
 
@@ -108,7 +180,7 @@
 
                                 <div class="textbox">
                                     <label class="textName" for="positionType"> Email ID</label>
-                                    <input type="text" class="textinput" name="positionType">
+                                    <input type="text" class="textinput" id = "emailId" name="positionType">
                                 </div>
                                 <div class="textbox">
                                     <label class="textName" for="prospectiveClientName" name = "prospectiveClientName">  Phone no.</label>
@@ -155,7 +227,7 @@
 
                                 <div class="textbox">
                                     <label class="textName" for="Comments">Message</label>
-                                    <input type="text" class="textinput" id="positionType" name="comments">
+                                    <input type="text" class="textinput" id="message" name="comments">
                                 </div>
                                 
                             </div>
