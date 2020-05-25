@@ -132,17 +132,18 @@ fetch(URL)
         var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1').length;
 
         var j = 0;
-        while (fullData.length < dataFromSheet.length / numOfColumns) {
-            var subData = [];
-            var i = numOfColumns;
-            while (i--) {
-                subData.push(dataFromSheet[j].content['$t']);
-                j++
-            }
-            fullData.push(subData);
-        }
+			var count = 1;
+			while(fullData.length < dataFromSheet.length/numOfColumns){
+				var subData = [];
+				var i = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == count.toString()).length;
+				while(i--){
+					subData.push(dataFromSheet[j].content['$t']);
+					j++
+				}
+				fullData.push(subData);
+				count += 1;
+			}
 
-        console.log(fullData);
         var Jload = document.getElementById('JSTloading');
 
         for (var i = 1; i < fullData.length; i++) {
@@ -188,16 +189,18 @@ fetch(URL)
 
         var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1').length;
 
-        var j = 0;
-        while (fullData.length < dataFromSheet.length / numOfColumns) {
-            var subData = [];
-            var i = numOfColumns;
-            while (i--) {
-                subData.push(dataFromSheet[j].content['$t']);
-                j++
-            }
-            fullData.push(subData);
-        }
+       var j = 0;
+			var count = 1;
+			while(fullData.length < dataFromSheet.length/numOfColumns){
+				var subData = [];
+				var i = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == count.toString()).length;
+				while(i--){
+					subData.push(dataFromSheet[j].content['$t']);
+					j++
+				}
+				fullData.push(subData);
+				count += 1;
+			}
         var OPload = document.getElementById('OpenPosloading');
         for (var i = 1; i < fullData.length; i++) {
             var divNew = document.createElement('div');
@@ -255,15 +258,17 @@ fetch(URL)
                         var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1').length;
 
                         var j = 0;
-                        while (fullData.length < dataFromSheet.length / numOfColumns) {
-                            var subData = [];
-                            var i = numOfColumns;
-                            while (i--) {
-                                subData.push(dataFromSheet[j].content['$t']);
-                                j++
-                            }
-                            fullData.push(subData);
-                        }
+			var count = 1;
+			while(fullData.length < dataFromSheet.length/numOfColumns){
+				var subData = [];
+				var i = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == count.toString()).length;
+				while(i--){
+					subData.push(dataFromSheet[j].content['$t']);
+					j++
+				}
+				fullData.push(subData);
+				count += 1;
+			}
 
                         var i = localStorage.getItem("i value");
                         document.getElementById("JobTitleA").innerHTML = fullData[localStorage.getItem("i value")][1].toString();
@@ -313,15 +318,17 @@ function loadOPosPage(){
     var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1').length;
 
     var j = 0;
-    while (fullData.length < dataFromSheet.length / numOfColumns) {
-        var subData = [];
-        var i = numOfColumns;
-        while (i--) {
-            subData.push(dataFromSheet[j].content['$t']);
-            j++
-        }
-        fullData.push(subData);
-    }
+			var count = 1;
+			while(fullData.length < dataFromSheet.length/numOfColumns){
+				var subData = [];
+				var i = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == count.toString()).length;
+				while(i--){
+					subData.push(dataFromSheet[j].content['$t']);
+					j++
+				}
+				fullData.push(subData);
+				count += 1;
+			}
 
       var i = localStorage.getItem("i value");
     //   document.getElementsByClassName("I")[0].innerHTML=i;
