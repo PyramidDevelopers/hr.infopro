@@ -23,8 +23,8 @@
            var name = document.getElementById("positionHiringFor").value;
            var company = document.getElementById("skill").value;
            var country = document.getElementById("positionType").value;
-           // var formChoice = document.getElementById("form-input").value;
-           var formChoice = "Staffing";
+           var formChoice = document.getElementById("FormChoice").value.toString();
+           // var formChoice = "Staffing";
            var phone = document.getElementById("prospectiveClientname").value;
            var email = document.getElementById("emailId").value;
            var message = document.getElementById("message").value;
@@ -156,7 +156,7 @@
         <div id="pg8">
             
             <div id="Contact">
-                <form action = "mailingScript.php" method = "post" >
+                <form action = "" method = "post" id="contact-form" >
                     <div style="font-family: Playfair Display black roman ; font-size: 2.5em ; font-weight: bolder; color:rgba(242, 242, 242, 1);text-align: center;padding-top:1.5em">Contact Us</div>
 
 
@@ -199,20 +199,20 @@
                             <div class="RBtn" class="texbox">
                                 <label class="RadioButtons" id="StaffingSolutions">
                                     Staffing Solutions
-                                    <input type="radio" name="FormChoice" value="StaffingSolutions">
+                                    <input type="radio" name="FormChoice" id="FormChoice" value="Staffing Solutions">
                                     <span class="Radio"></span>
 
                                 </label>
                             </div>
                             <div class="RBtn">
                                 <label class="RadioButtons" id="HRM">HRM
-                                    <input type="radio" name="FormChoice" value="HRM">
+                                    <input type="radio" name="FormChoice" id="FormChoice" value="HRM">
                                     <span class="Radio"></span>
                                 </label>
                             </div>
                             <div class="RBtn">
                                 <label class="RadioButtons">PEO
-                                    <input type="radio" name="FormChoice" value="PEO">
+                                    <input type="radio" name="FormChoice" id="FormChoice" value="PEO">
 
                                     <span class="Radio"></span>
                                 </label>
@@ -232,7 +232,7 @@
                                 
                             </div>
                             <div class="SubmitBtn">
-                                <input type = "submit" name = "submit" class="submit" value="SUBMIT    > "> 
+                                <button type = "submit" onClick="submitToAPI(event)" name = "submit" class="submit" value="SUBMIT    > ">SUBMIT    > </button>
                                     <!--Submit <i class="fa fa-angle-right"></i></button>-->
     
                             </div><br/>
