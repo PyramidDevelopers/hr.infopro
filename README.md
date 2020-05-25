@@ -1,7 +1,7 @@
 ## Things left to do
 
 * <del>Navbar +  Footer </del>
-  * Making employers not bold 
+  * <del>Making employers not bold </del>
   * <del>Home </del>
   * <del>Job Seekers </del>
   * <del>About us </del>
