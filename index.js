@@ -117,7 +117,7 @@ function changeSize() {
 }
 var JST = document.getElementById('interview');
 var dataFromSheet;
-var URL = 'https://spreadsheets.google.com/feeds/cells/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/od6/public/basic?alt=json';
+var URL = 'https://spreadsheets.google.com/feeds/cells/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/osl6nlo/public/basic?alt=json';
 fetch(URL)
     .then(function (response) {
         return response.json();
