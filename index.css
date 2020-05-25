@@ -940,6 +940,12 @@ display: block;
             transform: translate(-50%, 50%);
             border: 3px solid #f1f1f1;
             z-index: 9;
+            height: 70vh;
+            overflow: auto;
+            font-size: 15px;
+        }
+        .JobTitleA{
+            font-size: 2em;
         }
         
         /* Add styles to the form container */
