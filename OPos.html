@@ -16,30 +16,31 @@
             display: inline-block;
             color: rgba(12, 20, 117, 1);
             padding: 5%;
-            font-size: 1.3em;
+            font-size: 1em;
         }
         .jobleft>h1{
             color: rgba(12, 20, 117, 1);
             font-weight: bolder;
-            font-size: -webkit-xxx-large;
+            font-size: 2em;
             margin-bottom: 5%;
         }
         .opHeading{
             color: rgb(99, 180, 250);
             font-weight: bolder;
+            font-size: 1.5em;
         }
         .orange{
            height: 2em;
            margin: 1vh;
        }
         .jobright{
-            font-size: 1.3em;
+            font-size: 1em;
             width: 40%;
             display: inline-block;
             position: fixed;
             padding: 5%;
             color: rgb(99, 180, 250);
-            bottom: 0;
+            top: 20%;
         }
         .dblue{
             color: rgba(12, 20, 117, 1);
@@ -52,6 +53,22 @@
             text-align: center;
             color: white;
             background-color: rgba(12, 20, 117, 1);;
+        }
+        @media only screen and (max-width: 900px){
+            .jobleft{
+                width: 100%;
+            }
+            .jobright{
+                width: 100%;
+                position: static;
+            }
+            .orange{
+                margin-top: 7%;
+            }
+            .jobleft>h1{
+                margin-bottom:0% ;
+                margin-top: -2%;
+            }
         }
     </style>
 </head>
@@ -128,17 +145,17 @@
             <br>
             <div class="opapply"></div>
        </div>
-       <div class="blue" style="background-color:rgb(12, 20, 117) ; height: auto;clear:both; position: sticky;  ">
+       <div class="blue" style="background-color:rgb(12, 20, 117) ; height: auto;clear:both;position: sticky; ">
         <div class="data" style="overflow: auto;top:5vh; margin-top: 10vh;">
-            <div class="ph" style="color: white;font-family: Poppins;font-size: 1.2em;float:left; margin-left: 30%; text-align: center;">
+            <div class="footer1" id="f11" >
                 <div style="text-align: center; color: rgba(99, 180, 250, 1) ;">CONTACT</div> hr@infoprosol.com
             </div>
-            <div class="add" style="color: white;font-family: Poppins;font-size: 1.2em ;float:right;margin-right: 30%;text-align:center;">
-               <div style="text-align: center; color: rgba(99, 180, 250, 1) ;">ADDRESS</div> InfoPro Solutions Pvt Ltd.<br>#9, Krishna Kasthuri<br> 2nd Floor, Ashwathnagar<br> Sanjaynagar Main Road,<br> Bangalore-560094
+            <div class="footer1"  id="f12" >
+                <div style="text-align: center; color: rgba(99, 180, 250, 1) ;">ADDRESS</div> InfoPro Solutions Pvt Ltd.<br>#9, Krishna Kasthuri<br> 2nd Floor, Ashwathnagar<br> Sanjaynagar Main Road,<br> Bangalore-560094
             </div>
         </div>
         <div class="blue" style="overflow: auto;float: left;width: 20%;height: auto;background-color:rgb(12, 20, 117)">
-            <img src="PageWiseAssets/Page8/Footer/design.png" style="max-height: 100%;max-width: 100%; "/>
+            <img src="PageWiseAssets/Page8/Footer/design.png" style="max-height: 100%;max-width: 100%; " />
         </div>
 
         <div class="blue" style="overflow: auto; float: left;width: 60%; height:auto;background-color:rgb(12, 20, 117)">
@@ -147,10 +164,10 @@
                 <br>
                 Follow Us On
             </div>
-            <div style="float: left;margin-left: 45%; padding:0.2em;"><a href="#">
-                    <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon-awesome-facebook.png" width="30px" height="30px"></a></div>
-            <div style="float: right;margin-right: 45%;padding:0.2em;"> <a href="#">
-                    <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon-awesome-linkedin-in.png" width="30px" height="30px">
+            <div class="footer2" id="f21" ><a href="#">
+                    <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon%20awesome-facebook.png" width="30px" height="30px"></a></div>
+            <div class="footer2"  id="f22" > <a href="#">
+                    <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon%20awesome-linkedin-in.png" width="30px" height="30px">
 
                 </a></div>
         </div>

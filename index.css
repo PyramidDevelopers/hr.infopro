@@ -170,7 +170,7 @@ display: block;
   
           .main {
               margin-top: 30px;
-              height: 1500px;
+              /* height: 1500px; */
               /* Used in this example to enable scrolling */
           }
   
@@ -989,6 +989,7 @@ display: block;
           #Contact {
               background-color:rgb(12, 20, 117) ;
               justify-content: center;
+              font-size: 15px;
           }
           /* #Contact > div {
             display:inline-block;
@@ -1018,7 +1019,7 @@ display: block;
   
           .ContactForm {
               /* position: relative; */
-              padding-top: 12vh;
+              /* padding-top: 12vh; */
               width:85%;
               margin: auto;
           }
@@ -1118,7 +1119,7 @@ display: block;
               position: relative;
               padding-left: 1vw;
               /* margin-right: 5vw; */
-              height: 4em;
+              height: 3em;
               /* margin-left: 1vw; */
               width: 100%;
               font-size: 1em;
@@ -1138,7 +1139,7 @@ display: block;
           .textbox {
   
               display: grid;
-              margin-top: 3vh;
+              margin-top: -0.5vh;
               margin-right: 3vw; 
           }
   
@@ -1152,12 +1153,12 @@ display: block;
               font-family: Poppins;
               font-style: normal;
               font-weight: normal;
-              font-size: 1.5rem;
+              font-size: 1.1em;
               color: rgba(242, 242, 242, 1);
           }
   
           .Details {
-              padding:2rem;
+              padding:1.5em;
           }
           #Details1,
           #Details2,
@@ -1641,6 +1642,11 @@ display: block;
               color: rgba(242, 242, 242, 1);
           }
   
+          .Submitbtn{
+              float: unset;
+              margin-top: 3vw;
+              text-align: center;
+          }
           .Rbtn {
               top: 1vh;
               padding-top: 0.5em;

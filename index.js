@@ -51,7 +51,7 @@ function readless() {
         document.getElementsByClassName("p3s13")[0].style.display = "none";
         document.getElementsByClassName("p3s14")[0].style.display = "none";
         document.getElementsByClassName("p3s15")[0].style.display = "none";
-        document.getElementsByClassName("bgrect")[0].style.display = "none";
+        // document.getElementsByClassName("bgrect")[0].style.display = "none";
 
 
     } else {
@@ -69,7 +69,7 @@ function readless() {
         document.getElementsByClassName("p3s13")[0].style.display = "flex";
         document.getElementsByClassName("p3s14")[0].style.display = "flex";
         document.getElementsByClassName("p3s15")[0].style.display = "flex";
-        document.getElementsByClassName("bgrect")[0].style.display = "block";
+        // document.getElementsByClassName("bgrect")[0].style.display = "block";
 
         document.getElementById("readbtn").textContent = "Read Less";
 
