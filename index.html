@@ -15,6 +15,13 @@
 
  overflow: hidden;
 }
+            .main{
+                    display: block;
+                    
+                }
+                .phone{
+                    display: none;
+                }
 .small{
                     display: none;
                 }
@@ -196,18 +203,27 @@
        }
        .p3s3{
            float: left;
-           width: 50%;
-
+           width: 30%;
+           margin-left: 50px;
        }
        .p3s4{
-           float: right;
-           width: 50%;
+           float: left;
+           width: 30%;
+       }
+            .p3s5{
+           float:left;
+           width: 30%;
+                 margin-right: 50px;
        }
        .ncc{
            padding: 50px 50px 50px 100px;
        }
        .inno{
            padding: 50px 50px 50px 100px;
+       }
+            .nive{
+               padding: 50px 50px 50px 100px;
+               
        }
 
 
@@ -302,6 +318,17 @@
         }
 
             @media screen and (max-width: 900px){
+                .logo{
+                    width: 40%;
+                }
+                .main{
+                    display: none;
+                    
+                }
+               
+                .phone{
+                    display: block;
+                }
                 .big{
                 display: none;
 }
@@ -367,21 +394,30 @@
                      width: 6%;
            margin-left:48%;
                 }
-                 .p3s3{
-           float: left;
+                 
+       .p3s3{
+                    
+          
            width: 100%;
 
        }
        .p3s4{
-           float: right;
+          
            width: 100%;
        }
+                .p3s5{
+                    width: 100%; 
+                }
        .ncc{
-           padding: 50px 80px 100px 100px;
+           padding: 0px 100px 100px 100px;
        }
        .inno{
            padding: 0px 100px 100px 100px;
+           
        }
+                .nive{
+                     padding: 0px 100px 100px 100px;
+                }
 
 
             }
@@ -429,7 +465,8 @@
                 <li><a class="active" href="home.html">Home</a></li>
             </div>
             <div class="small">
-                <li> <button class="side" onclick="my_open()" style=" color:white;padding: 16px 28px 16px 15px; width: 50%;background-color: rgb(12, 20, 117);">☰</button></li>
+               
+                <li> <button class="side" onclick="my_open()" style=" color:white;background-color: rgb(12, 20, 117);width: 10%;height: 100%; position: absolute;top: 0px;left: 75%">☰</button></li>
 
                 <div class="w3-dropdown w3-bar " style="display:none; background-color:rgb(12, 20, 117)" id="mySidebar">
 
@@ -522,7 +559,11 @@
             </div>
             <div class="p3s4">
                 <img class="inno" src="inno.png"/>
+            
             </div>
+            <div class="p3s5">
+                <img class="nive" src="client3.png"/>
+                </div>
         </div>
         <div class="blue" style="background-color:rgb(12, 20, 117) ; height: auto;clear:both; ">
             <div class="data" style="overflow: auto;top:5vh; margin-top: 10vh;">
@@ -556,7 +597,85 @@
             </div>
         </div>
         </div>
+        <div class="phone">
+            <img  style="" src="Page2/Orange2.svg"/>
+            <div style="font-family: Playfair Display;color:#0D1252;margin-top: 10%;margin-left: 2%; font-size: 20px;font-weight: bold"> 
+            Leading HR Professionals In India<br>
+                for Engineers and Executives
+            </div>
+            <div style="font-family: Poppins;font-size: 12px;position: absolute;margin-left: 2%;"> 
+            Serving clients from across the world.<br>
+               If you have the need for talented resources,<br>
+                we are here to make it happen
+            </div>
+            
+            <img id="home" src="landingbg.png" style="width: 100%;height: auto">
+     
+
+        <div id="p2" style="width: 100%">
+            <div id="p2s1">
+                <div id="p2s11">
+                    
+                    <div id="p2s112" style="width: 100%">
+                        <img src="Page2/RectBoxes2.png"/>
+                        <div  style="width: 5%;left: 10%">
+                        <img src="Page2/Orange2.svg"/>
+                    </div>
+                        <div style="margin-top: 7%;width: 80%;position: absolute;left: 10%">Whether you need to find top talent, your next great opportunity or a HR solution for managing your business and resourcing challenges, we can help.</div>
+                    </div>
+                </div>
+                <div id="p2s12">
+                    <img src="Page2/p2Illustration.svg" />
+                </div>
+            </div>
+            <div id="p2s2">
+                <div class="p2s21">
+                    <div class="p2s211">
+                        <img src="Page2/Staffing%20Illustration%20woT.svg"/>
+                        <div class="p2s212">STAFFING<br><br></div>
+                    </div>
+
+                    <div class="p2s213">We are a fast growing IT staffing company. We  bridge the gap between talent demand and supply using expert search techniques, innovative processes and many years of experience.</div>
+                </div>
+                <div class="p2s21">
+                    <div class="p2s211">
+                        <img src="Page2/HRM%20Illustration%20woT.svg"/>
+                        <div class="p2s212">HUMAN RESOURCE MANAGEMENT</div>
+                    </div>
+                    <div class="p2s213">When you outsource your HR, we manage every step of employment life cycle of your workforce operation. We service from start-ups to large organizations.</div>
+                </div>
+                <div class="p2s21">
+                    <div class="p2s211">
+                        <img src="Page2/PEO%20Illustration%20woT.svg"/>
+                        <div class="p2s212"> PROFESSIONAL EMPLOYEE ORGANIZATION</div>
+                    </div>
+                    <div class="p2s213">We can be an employer for your outsourcing entity. We perform all essential operational activities needed to manage your  entity in India while your employees stay focused on project deliverables.</div>
+                </div>
+            </div>
         </div>
+            <div>
+            <div class="p3s1">
+                <br><br>
+                Our Top Clients
+
+            </div>
+            <div style="width: 5%;margin-left: 47.5%">
+                <br>
+                <img src="Page2/Orange2.svg"/>
+            </div>
+            <div style="width: 100%;margin-top: 5%">
+                <img class="ncc" src="ncc.png"/>
+            </div>
+            <div class="p3s4">
+                <img class="inno" src="inno.png"/>
+            
+            </div>
+            <div class="p3s5">
+                <img class="nive" src="client3.png"/>
+                </div>
+            </div>
+        </div>
+        
         <script>
             function myFunction() {
   var x = document.getElementById("myTopnav");
