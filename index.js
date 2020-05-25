@@ -132,17 +132,17 @@ fetch(URL)
         var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1').length;
 
         var j = 0;
-			var count = 1;
-			while(fullData.length < dataFromSheet.length/numOfColumns){
-				var subData = [];
-				var i = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == count.toString()).length;
-				while(i--){
-					subData.push(dataFromSheet[j].content['$t']);
-					j++
-				}
-				fullData.push(subData);
-				count += 1;
-			}
+        var count = 1;
+        while (fullData.length < dataFromSheet.length / numOfColumns) {
+            var subData = [];
+            var i = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == count.toString()).length;
+            while (i--) {
+                subData.push(dataFromSheet[j].content['$t']);
+                j++
+            }
+            fullData.push(subData);
+            count += 1;
+        }
 
         var Jload = document.getElementById('JSTloading');
 
@@ -151,7 +151,7 @@ fetch(URL)
             var aNew = document.createElement('a');
             var JSTName = document.createElement('div');
             var JSTDesc = document.createElement('div');
-            aNew.setAttribute("style","text-decoration:none;");
+            aNew.setAttribute("style", "text-decoration:none;");
             aNew.href = fullData[i][2]
             divNew.innerHTML = "";
             JSTName.className = "interview-1";
@@ -162,7 +162,7 @@ fetch(URL)
             aNew.appendChild(JSTDesc);
             divNew.appendChild(aNew);
             JST.appendChild(divNew);
-            Jload.setAttribute("style","display:none");
+            Jload.setAttribute("style", "display:none");
 
         }
 
@@ -189,18 +189,18 @@ fetch(URL)
 
         var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1').length;
 
-       var j = 0;
-			var count = 1;
-			while(fullData.length < dataFromSheet.length/numOfColumns){
-				var subData = [];
-				var i = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == count.toString()).length;
-				while(i--){
-					subData.push(dataFromSheet[j].content['$t']);
-					j++
-				}
-				fullData.push(subData);
-				count += 1;
-			}
+        var j = 0;
+        var count = 1;
+        while (fullData.length < dataFromSheet.length / numOfColumns) {
+            var subData = [];
+            var i = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == count.toString()).length;
+            while (i--) {
+                subData.push(dataFromSheet[j].content['$t']);
+                j++
+            }
+            fullData.push(subData);
+            count += 1;
+        }
         var OPload = document.getElementById('OpenPosloading');
         for (var i = 1; i < fullData.length; i++) {
             var divNew = document.createElement('div');
@@ -228,7 +228,7 @@ fetch(URL)
             OSection.appendChild(OName);
             OSection.appendChild(OClickA);
             Opp.appendChild(OSection);
-            OPload.setAttribute("style","display:none");
+            OPload.setAttribute("style", "display:none");
             divNew.innerHTML = "";
             OPName.className = "OPName";
             OPDesc.className = "OPDesc";
@@ -258,17 +258,17 @@ fetch(URL)
                         var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1').length;
 
                         var j = 0;
-			var count = 1;
-			while(fullData.length < dataFromSheet.length/numOfColumns){
-				var subData = [];
-				var i = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == count.toString()).length;
-				while(i--){
-					subData.push(dataFromSheet[j].content['$t']);
-					j++
-				}
-				fullData.push(subData);
-				count += 1;
-			}
+                        var count = 1;
+                        while (fullData.length < dataFromSheet.length / numOfColumns) {
+                            var subData = [];
+                            var i = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == count.toString()).length;
+                            while (i--) {
+                                subData.push(dataFromSheet[j].content['$t']);
+                                j++
+                            }
+                            fullData.push(subData);
+                            count += 1;
+                        }
 
                         var i = localStorage.getItem("i value");
                         document.getElementById("JobTitleA").innerHTML = fullData[localStorage.getItem("i value")][1].toString();
@@ -302,101 +302,136 @@ fetch(URL)
     .catch(error => console.log(error))
 console.log(dataFromSheet);
 
-function loadOPosPage(){
+function loadOPosPage() {
     var dataFromSheet;
     var URL = 'https://spreadsheets.google.com/feeds/cells/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/od6/public/basic?alt=json';
     fetch(URL)
-        .then(function(response) {
+        .then(function (response) {
             return response.json();
         })
-        .then(function(data) {
-    dataFromSheet = data.feed.entry;
-    var fullData = [];
+        .then(function (data) {
+            dataFromSheet = data.feed.entry;
+            var fullData = [];
 
-    // console.log(dataFromSheet.filter((item) => item.title['$t'][1] == '1').length);
+            // console.log(dataFromSheet.filter((item) => item.title['$t'][1] == '1').length);
 
-    var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1').length;
+            var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1').length;
 
-    var j = 0;
-			var count = 1;
-			while(fullData.length < dataFromSheet.length/numOfColumns){
-				var subData = [];
-				var i = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == count.toString()).length;
-				while(i--){
-					subData.push(dataFromSheet[j].content['$t']);
-					j++
-				}
-				fullData.push(subData);
-				count += 1;
-			}
+            var j = 0;
+            var count = 1;
+            while (fullData.length < dataFromSheet.length / numOfColumns) {
+                var subData = [];
+                var i = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == count.toString()).length;
+                while (i--) {
+                    subData.push(dataFromSheet[j].content['$t']);
+                    j++
+                }
+                fullData.push(subData);
+                count += 1;
+            }
 
-      var i = localStorage.getItem("i value");
-    //   document.getElementsByClassName("I")[0].innerHTML=i;
-      document.getElementsByClassName("opname")[0].innerHTML+=fullData[i][1].toString();
-      document.getElementsByClassName("opdesc")[0].innerHTML+=fullData[i][7].toString();
-      document.getElementsByClassName("opqual")[0].innerHTML+=fullData[i][6].toString();
-      document.getElementsByClassName("oproles")[0].innerHTML+=fullData[i][8].toString();
-      document.getElementsByClassName("opskills")[0].innerHTML+=fullData[i][9].toString();
-      document.getElementsByClassName("opdate")[0].innerHTML+=fullData[i][0].toString();
-      document.getElementsByClassName("optype")[0].innerHTML+=fullData[i][2].toString();
-      document.getElementsByClassName("opexp")[0].innerHTML+=fullData[i][3].toString();
-      document.getElementsByClassName("oppackage")[0].innerHTML+=fullData[i][4].toString();
-      document.getElementsByClassName("oploc")[0].innerHTML+=fullData[i][5].toString();
+            var i = localStorage.getItem("i value");
+            //   document.getElementsByClassName("I")[0].innerHTML=i;
 
-    })
-      var OPApply = document.createElement('button');
-      OPApply.className = "OPApply";
-      var i = localStorage.getItem("i value");
-      OPApply.setAttribute("value", i);
-      OPApply.setAttribute("type","button");
-      OPApply.addEventListener('click', function(){
+
+            var oprolesA = fullData[i][8].toString().split("•");
+            var opskillsA = fullData[i][9].toString().split("•");
+            var ulroles = document.createElement('ul');
+
+            ulroles.setAttribute("style", "list-style-type: disc;list-style-position: inside;");
+            var ulskills = document.createElement('ul');
+
+            ulskills.setAttribute("style", "list-style-type: disc;list-style-position: inside;");
+
+            for (var a = 0; a < oprolesA.length; a++) {
+
+
+                if (oprolesA[a].toString() != "") {
+                    var li = document.createElement('li');
+                    li.setAttribute("style", "float:left;")
+                    li.innerHTML = oprolesA[a].toString();
+                    ulroles.appendChild(li);
+                }
+
+            }
+            for (var a = 0; a < opskillsA.length; a++) {
+
+                if (opskillsA[a].toString() != "") {
+                    var li = document.createElement('li');
+                    li.setAttribute("style", "float:left;")
+                    li.innerHTML = opskillsA[a].toString();
+                    ulskills.appendChild(li);
+                }
+
+            }
+
+            document.getElementsByClassName("opdesc")[0].innerHTML += fullData[i][7].toString();
+            document.getElementsByClassName("oproles")[0].appendChild(ulroles);
+            document.getElementsByClassName("opskills")[0].appendChild(ulskills);
+
+
+            document.getElementsByClassName("opname")[0].innerHTML += fullData[i][1].toString();
+            document.getElementsByClassName("opqual")[0].innerHTML += fullData[i][6].toString();
+            document.getElementsByClassName("opdate")[0].innerHTML += fullData[i][0].toString();
+            document.getElementsByClassName("optype")[0].innerHTML += fullData[i][2].toString();
+            document.getElementsByClassName("opexp")[0].innerHTML += fullData[i][3].toString();
+            document.getElementsByClassName("oppackage")[0].innerHTML += fullData[i][4].toString();
+            document.getElementsByClassName("oploc")[0].innerHTML += fullData[i][5].toString();
+
+        })
+    var OPApply = document.createElement('button');
+    OPApply.className = "OPApply";
+    var i = localStorage.getItem("i value");
+    OPApply.setAttribute("value", i);
+    OPApply.setAttribute("type", "button");
+    OPApply.addEventListener('click', function () {
         event.preventDefault();
-          //   window.location.href='Apply.html';
-          var dataFromSheet;
-         var URL = 'https://spreadsheets.google.com/feeds/cells/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/od6/public/basic?alt=json';
-         fetch(URL)
-               .then(function(response) {
-                   return response.json();
-               })
-               .then(function(data) {
-           dataFromSheet = data.feed.entry;
-           var fullData = [];
+        //   window.location.href='Apply.html';
+        var dataFromSheet;
+        var URL = 'https://spreadsheets.google.com/feeds/cells/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/od6/public/basic?alt=json';
+        fetch(URL)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                dataFromSheet = data.feed.entry;
+                var fullData = [];
 
-           // console.log(dataFromSheet.filter((item) => item.title['$t'][1] == '1').length);
+                // console.log(dataFromSheet.filter((item) => item.title['$t'][1] == '1').length);
 
-           var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1').length;
+                var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1').length;
 
-           var j = 0;
-           while (fullData.length < dataFromSheet.length / numOfColumns) {
-               var subData = [];
-               var i = numOfColumns;
-               while (i--) {
-                   subData.push(dataFromSheet[j].content['$t']);
-                   j++
-               }
-               fullData.push(subData);
-           }
+                var j = 0;
+                while (fullData.length < dataFromSheet.length / numOfColumns) {
+                    var subData = [];
+                    var i = numOfColumns;
+                    while (i--) {
+                        subData.push(dataFromSheet[j].content['$t']);
+                        j++
+                    }
+                    fullData.push(subData);
+                }
 
-          var i = localStorage.getItem("i value");
-          document.getElementById("JobTitleA").innerHTML = fullData[localStorage.getItem("i value")][1].toString();
-          document.getElementById("myForm").style.display = "block";
-
-
-});
-      });
-OPApply.innerHTML = "APPLY NOW";
-document.getElementsByClassName("opapply")[0].appendChild(OPApply);
+                var i = localStorage.getItem("i value");
+                document.getElementById("JobTitleA").innerHTML = fullData[localStorage.getItem("i value")][1].toString();
+                document.getElementById("myForm").style.display = "block";
 
 
+            });
+    });
+    OPApply.innerHTML = "APPLY NOW";
+    document.getElementsByClassName("opapply")[0].appendChild(OPApply);
 
 
-  
+
+
+
 }
 
 function openForm() {
-document.getElementById("myForm").style.display = "block";
+    document.getElementById("myForm").style.display = "block";
 }
 
 function closeForm() {
-document.getElementById("myForm").style.display = "none";
+    document.getElementById("myForm").style.display = "none";
 }
