@@ -402,16 +402,17 @@ function loadOPosPage() {
                 var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1').length;
 
                 var j = 0;
+                var count = 1;
                 while (fullData.length < dataFromSheet.length / numOfColumns) {
                     var subData = [];
-                    var i = numOfColumns;
+                    var i = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == count.toString()).length;
                     while (i--) {
                         subData.push(dataFromSheet[j].content['$t']);
                         j++
                     }
                     fullData.push(subData);
+                    count += 1;
                 }
-
                 var i = localStorage.getItem("i value");
                 document.getElementById("JobTitleA").innerHTML = fullData[localStorage.getItem("i value")][1].toString();
                 document.getElementById("myForm").style.display = "block";
