@@ -348,7 +348,7 @@ function loadOPosPage() {
 
                 if (oprolesA[a].toString() != "") {
                     var li = document.createElement('li');
-                    li.setAttribute("style", "float:left;")
+                    li.setAttribute("style", "width:100%")
                     li.innerHTML = oprolesA[a].toString();
                     ulroles.appendChild(li);
                 }
@@ -358,7 +358,7 @@ function loadOPosPage() {
 
                 if (opskillsA[a].toString() != "") {
                     var li = document.createElement('li');
-                    li.setAttribute("style", "float:left;")
+                    li.setAttribute("style", "width:100%;")
                     li.innerHTML = opskillsA[a].toString();
                     ulskills.appendChild(li);
                 }
