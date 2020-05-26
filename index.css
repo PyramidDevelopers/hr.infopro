@@ -68,7 +68,7 @@
 
 /* Add a dark background on topnav links and the dropdown button on hover */
 .topnav a:hover,
-.dropdown:hover .dropbtn {
+.dropdown:hover {
     background-color: rgb(12, 20, 117);
     color: white;
 }
