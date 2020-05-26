@@ -845,7 +845,7 @@ img {
 }
 
 .tab-switch:checked + .tab-label {
-    height: 33vh;
+    height: 16rem;
     border-top: 0.5rem solid #fff;
     transition: all 0.35s;
     z-index: 1;
