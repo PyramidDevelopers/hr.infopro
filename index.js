@@ -415,7 +415,7 @@ function loadOPosPage() {
                 }
                 var i = localStorage.getItem("i value");
 
-                window.frames["userHtmlFrame"].document.getElementById("ctrlq-text-0").value = fullData[localStorage.getItem("i value")][1].toString();
+                //window.frames["userHtmlFrame"].document.getElementById("ctrlq-text-0").value = fullData[localStorage.getItem("i value")][1].toString();
                 document.getElementById("myForm").style.display = "block";
 
 
