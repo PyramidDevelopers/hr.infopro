@@ -225,7 +225,7 @@ fetch(URL)
                 localStorage.setItem("i value", this.id);
             });
             OClickA.appendChild(OClick);
-            OSection.appendChild(OName);
+            OClickA.appendChild(OName);
             OSection.appendChild(OClickA);
             Opp.appendChild(OSection);
             OPload.setAttribute("style", "display:none");
