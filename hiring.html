@@ -3,7 +3,7 @@
 <head>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet'>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -18,38 +18,40 @@
 <body onload="changeSize()">
 
 
- <nav class="navbar" id="nav">
+    <nav class="navbar" id="nav">
 
         <ul>
 
-           
+
             <div class="big" style="padding-top:10px">
-                <a href="index.html"> <li class="logo"><img src="PageWiseAssets/InfoProLogo.png" style="width: 200px;padding:10px 10px 10px 10px;"></li></a>
+                <a href="index.html">
+                    <li class="logo"><img src="PageWiseAssets/InfoProLogo.png" style="width: 200px;padding:10px 10px 10px 10px;"></li>
+                </a>
                 <li><a href="contactus.html">Contact Us</a></li>
                 <li><a href="page3.html">About Us</a></li>
                 <li><a href="hiring.html">Job Seekers</a></li>
-                        <li> <div class="dropdown">
-          <button onclick="myFunction()" class="dropbtn">Employers</button>
-          <div id="myDropdown" class="dropdown-content">
-            <a href="whatwedo.html#staffing">Staffing Solutions</a>
-            <a href="whatwedo.html#hrm">Human Resource Management</a>
-            <a href="whatwedo.html#epo">Professional Employer Organization</a>
-          </div>
-        </div>
-        </li>
-                <div id="dropdown1" style="display:none">
-                         <a onclick="my_close()" href="whatwedo.html#staffing" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
-
-                          <a onclick="my_close()" href="whatwedo.html#hrm" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
-                           <a onclick="my_close()" href="whatwedo.html#epo" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Professional Employer Organization</a>
+                <li>
+                    <div class="dropdown">
+                        <a href="whatwedo.html"><button style="padding-top: 0px" onclick="myFunction()" class="dropbtn">Employers</button></a>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="whatwedo.html#staffing">Staffing Solutions</a>
+                            <a href="whatwedo.html#hrm">Human Resource Management</a>
+                            <a href="whatwedo.html#epo">Professional Employer Organization</a>
+                        </div>
                     </div>
+                </li>
+                <div id="dropdown1" style="display:none">
+                    <a onclick="my_close()" href="whatwedo.html#staffing" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
+
+                    <a onclick="my_close()" href="whatwedo.html#hrm" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
+                    <a onclick="my_close()" href="whatwedo.html#epo" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Professional Employer Organization</a>
+                </div>
                 <li><a class="active" href="index.html">Home</a></li>
             </div>
             <div class="small">
                 <div style="width: 100%">
-                 <div style="width: 40%;float: left"><a href="index.html"> <img src="PageWiseAssets/InfoProLogo.png" style="width: 100%;"></a></div>
-                <button onclick="my_open()" 
-                    style="
+                    <div style="width: 40%;float: left"><a href="index.html"> <img src="PageWiseAssets/InfoProLogo.png" style="width: 100%;"></a></div>
+                    <button onclick="my_open()" style="
                     background-color:rgb(12, 20, 117) ;
                       border: none;
                       color: white;
@@ -59,19 +61,20 @@
                            width: 20%;
                            border-radius: 2px;
                            
-                      cursor: pointer;"><i class="fa fa-bars"></i></button> </div>
-               
-                   
+                      cursor: pointer;"><i class="fa fa-bars"></i></button>
+                </div>
+
+
 
                 <div class="w3-dropdown w3-bar " style="display:none; background-color:rgb(12, 20, 117)" id="mySidebar">
 
                     <a onclick="my_close()" href="index.html" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Home</a>
                     <a onclick="my_closeemp2()" class="w3-bar-item w3-button" id="l2" style="width: 100% ;color: white;font-family: Poppins; ">Employers</a>
                     <div id="dropdown2" style="display:none">
-                         <a onclick="my_close()" href="whatwedo.html#staffing" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
+                        <a onclick="my_close()" href="whatwedo.html#staffing" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
 
-                          <a onclick="my_close()" href="whatwedo.html#hrm" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
-                           <a onclick="my_close()" href="whatwedo.html#epo" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Professional Employer Organization</a>
+                        <a onclick="my_close()" href="whatwedo.html#hrm" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
+                        <a onclick="my_close()" href="whatwedo.html#epo" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Professional Employer Organization</a>
                     </div>
 
                     <a onclick="my_close()" href="hiring.html" class="w3-bar-item w3-button" id="l3" style="width: 100% ;color: white;font-family: Poppins">Job Seekers</a>
@@ -107,8 +110,8 @@
                         </div>
 
                     </div>
-                    
-                    <div class="tab" >
+
+                    <div class="tab">
                         <input type="radio" name="css-tabs" id="tab-3" class="tab-switch" value=2 onclick=changeSize()>
                         <label for="tab-3" class="tab-label"> <img src="PageWiseAssets/Page8/JobSeeker/openpositions.svg" class="hiring-images" />
                             <br /> <b>Open Positions</b></label>
@@ -140,10 +143,10 @@
             </div>
             <div class="blue" style="background-color:rgb(12, 20, 117) ; height: auto;clear:both; ">
                 <div class="data" style="overflow: auto;top:5vh; margin-top: 10vh;">
-                    <div class="footer1" id="f11" >
+                    <div class="footer1" id="f11">
                         <div style="text-align: center; color: rgba(99, 180, 250, 1) ;">CONTACT</div> hr@infoprosol.com
                     </div>
-                    <div class="footer1"  id="f12" >
+                    <div class="footer1" id="f12">
                         <div style="text-align: center; color: rgba(99, 180, 250, 1) ;">ADDRESS</div> InfoPro Solutions Pvt Ltd.<br>#9, Krishna Kasthuri<br> 2nd Floor, Ashwathnagar<br> Sanjaynagar Main Road,<br> Bangalore-560094
                     </div>
                 </div>
@@ -157,9 +160,9 @@
                         <br>
                         Follow Us On
                     </div>
-                    <div class="footer2" id="f21" ><a href="#">
+                    <div class="footer2" id="f21"><a href="#">
                             <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon%20awesome-facebook.png" width="30px" height="30px"></a></div>
-                    <div class="footer2"  id="f22" > <a href="#">
+                    <div class="footer2" id="f22"> <a href="#">
                             <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon%20awesome-linkedin-in.png" width="30px" height="30px">
 
                         </a></div>
@@ -173,31 +176,32 @@
 
 
         <div class="form-popup" id="myForm">
-            <form action="/action_page.php" class="form-container">
-                <h1 id="JobTitleA"></h1>
+            <style>
+                .forms-studio {
+                    position: relative;
+                    padding-bottom: 56.25%;
+                    overflow: hidden;
+                    width: 100%;
+                    height: 600px;
+                }
 
-                <label for="name"><b>First Name</b></label>
-                <input type="text" name="FName" required>
+                .forms-studio iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                }
 
-                <label for="name"><b>Last Name</b></label>
-                <input type="text" name="LName" required>
+            </style>
+            <div class='forms-studio'><iframe src='https://script.google.com/macros/s/AKfycbwDdI-6PecC5gc3R8jcQRfAPGqGU-vDfl0PWp2O857FvyduWx0/exec'></iframe></div>
 
-                <label for="email"><b>Email ID Name</b></label>
-                <input type="text" name="Email" required>
-
-                <label for="pno"><b>Phone No</b></label>
-                <input type="text" name="PhNo" required>
-
-                <label for="psw"><b>Upload Resume</b></label>
-                <button type="button" value="Choose  File" name="Resume"> Choose File </button> <br> <br>
-
-                <button type="submit" class="btn">Apply</button>
-                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-            </form>
         </div>
     </div>
 
     <script id="applicationScript" type="text/javascript" src="index.js"></script>
+
 </body>
 
 </html>
