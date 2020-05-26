@@ -85,7 +85,9 @@
     color: white;
     display: block;
 }
-
+.dropbtn:hover{
+    color: white;
+}
 #f11 {
     color: white;
     font-family: Poppins;
