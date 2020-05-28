@@ -937,7 +937,14 @@ img {
     z-index: 2;
     border-color: black;
     border-width: thick;
+    box-shadow: 0 4px black;
+}
+.OPApply:hover {background-color: rgb(99, 180, 250)}
 
+.OPApply:active {
+        background-color:  rgb(99, 180, 250);
+        box-shadow: 0 5px black;
+        transform: translateY(4px);
 }
 
 #opportunities {
