@@ -216,6 +216,7 @@ fetch(URL)
             fullData.push(subData);
             count += 1;
         }
+        var OPload = document.getElementById('OpenPosloading');
         for (var i = 1; i < fullData.length; i++) {
             var divNew = document.createElement('div');
             var OPAnchor = document.createElement('a');
