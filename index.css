@@ -746,6 +746,7 @@ img {
     width: 50%;
     float: left;
     padding-top: 2vh;
+    padding-left: 2vh;
 }
 
 .tab-content-image {
@@ -963,6 +964,7 @@ img {
     text-align: center;
     border-radius: 1rem;
     width: 45%;
+    position: relative;
 
 }
 
@@ -980,6 +982,11 @@ img {
     float: right;
     font-size: smaller;
     color: rgb(99, 180, 250);
+}
+.opps-2>button{
+    position: absolute;
+    right: 2%;
+    top: 10%;
 }
 
 /* APPLY FORM */
