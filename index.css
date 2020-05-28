@@ -730,7 +730,7 @@ img {
 /*    Hiring Normal*/
 .hiring {
     font-family: "Poppins";
-    background-color:rgba(242, 242, 242, 1);
+    background-color:#fff;
     /* max-width: 75%; */
     width: 100vw;
     /* margin: 0 auto; */
@@ -872,7 +872,7 @@ img {
 
 .interview-1 {
     margin: auto;
-    padding: 1vh;
+    padding: 0.3vh;
     color: rgb(97, 180, 250);
     font-weight: bolder;
     font-size: larger;
@@ -880,7 +880,7 @@ img {
 
 .interview-2 {
     margin: auto;
-    padding: 1vh;
+    padding: 0.3vh;
 }
 
 #openpos {
@@ -1102,6 +1102,7 @@ form {
 
 .RBtn {
     margin: 2vw;
+    margin-bottom: 1.5em;
 }
 
 .RadioButtons {
@@ -1265,6 +1266,16 @@ form {
     float: right;
 
 
+}
+
+.footerlinks>div{
+    padding: 2%;
+}
+.footerlinks>div>a{
+    text-decoration: none;
+}
+.footerlinks>div>a:visited{
+    color: rgba(99, 180, 250, 1);
 }
 
 @media only screen and (max-width: 900px) {
@@ -1656,7 +1667,7 @@ form {
     }
 
     #interview > div {
-        margin: 3vh 1vh;
+        margin: 1vh 1vh;
     }
 
     .opportunities-1 {
@@ -1740,5 +1751,8 @@ form {
         margin: auto;
         padding: 1em;
         text-align: center;
+    }
+    .footerlinks>div{
+        font-size: 0.8em;
     }
 }

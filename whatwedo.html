@@ -177,6 +177,9 @@
             color: white;
             display: block;
         }
+        .footer{
+                bottom:-4200px;
+            }
         
         /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
         @media screen and (max-width: 600px) {
@@ -189,6 +192,9 @@
             .topnav a.icon {
                 float: right;
                 display: block;
+            }
+            .footer{
+                bottom: -5600px;
             }
         }
 
@@ -783,6 +789,8 @@
             .small {
                 display: block;
             }
+            
+
     </style>
 </head>
 
@@ -1019,14 +1027,52 @@
                     <img src="PageWiseAssets/img5.png" />
                 </div>
                 <button class="btn3" type="button" onclick="location.href='contactus.html'"><span><a href="contactus.html">Become a Client</a></span></button>
-                <div style="height=100px;position: absolute;top: 1000px">
+                <div style="height:100px;position: absolute;top: 1000px">
                     <br><br>
                 </div>
             </div>
 
         </div>
+        
 
     </div>
+    <div class="blue footer" style="background-color:rgb(12, 20, 117) ; height: auto;clear:both;position: absolute; ">
+            <div class="data footerlinks" style="overflow: auto;top:5vh; margin-top: 5vh;display: flex;justify-content:center;text-align: center; color: rgba(99, 180, 250, 1) ;">
+                <div >
+                    <a href="contactus.html">CONTACT US</a>
+                </div>
+                <div >
+                    <a  href="hiring.html">JOB SEEKERS</a>
+                </div>
+                <div>
+                   <a href="page3.html"> ABOUT US</a>
+                </div>
+                <div>
+                    <a href="#">PRIVACY POLICY</a>
+                </div>
+            </div>
+            <div class="blue" style="overflow: auto;float: left;width: 20%;height: auto;background-color:rgb(12, 20, 117)">
+                <img src="PageWiseAssets/Page8/Footer/design.png" style="max-height: 100%;max-width: 100%; " />
+            </div>
+
+            <div class="blue" style="overflow: auto; float: left;width: 60%; height:auto;background-color:rgb(12, 20, 117)">
+                <div style="color: white; text-align: center">
+                    <br>
+                    <br>
+                    Follow Us On
+                </div>
+                <div class="footer2" id="f21"><a href="#">
+                        <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon%20awesome-facebook.png" width="30px" height="30px"></a></div>
+                <div class="footer2" id="f22"> <a href="#">
+                        <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon%20awesome-linkedin-in.png" width="30px" height="30px">
+
+                    </a></div>
+            </div>
+
+            <div class="blue" style="overflow: auto; float: right;width: 20%;background-color:rgb(12, 20, 117)">
+                <img src="PageWiseAssets/Page8/Footer/design.png" style="max-height: 100%;max-width: 100%;" />
+            </div>
+        </div>
     <div class="phone">
         <img style="width: 100%" src="PageWiseAssets/Landing2ph.png" />
         <div id="landingtext" style="text-align: center;color:white ;font-family: Playfair Display;font-size: 20;font-weight: bolder;top:150px">
@@ -1156,10 +1202,11 @@
                 <div style="padding: 10%">
                     <img src="PageWiseAssets/img5.png" />
                 </div>
-                <button class="btnm" type="button" onclick="location.href='contactus.html"><span><a href="contactus.html">Become a Client</a></span></button>
+                <button class="btnm" type="button" onclick="location.href='contactus.html'"><span><a href="contactus.html">Become a Client</a></span></button>
             </div>
         </div>
     </div>
+    
 
     <script>
     function change(){
