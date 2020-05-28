@@ -730,7 +730,7 @@ img {
 /*    Hiring Normal*/
 .hiring {
     font-family: "Poppins";
-    background-color: rgba(12, 20, 117, 1);
+    background-color:rgba(242, 242, 242, 1);
     /* max-width: 75%; */
     width: 100vw;
     /* margin: 0 auto; */
@@ -759,14 +759,14 @@ img {
 }
 
 .hiring-images {
-    margin: 2rem 0;
+    margin: 1rem 0;
     height: 30%;
     width: 30%;
 }
 
 .tabs {
     position: relative;
-    margin: 3rem 0 3rem 0;
+    margin: 1rem 0 3rem 0;
     height: auto;
 
 }
@@ -794,14 +794,14 @@ img {
     position: relative;
     display: block;
     line-height: 1.5rem;
-    height: 14rem;
+    height: 8rem;
     /* padding: 0 1.618em; */
     background: rgb(35, 49, 135);
     color: #fff;
     cursor: pointer;
     top: 0;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1em;
     /* left:1rem;
               right:1rem; */
     transition: all 0.25s;
@@ -811,17 +811,18 @@ img {
 .tab-label:hover {
     top: -0.5vh;
     transition: all 0.25s;
-    border-top: 0.5rem solid #fff;
+    border-top: 0.5rem solid rgba(99, 180, 250, 1);
+    ;
 }
 
 .tab-content {
     height: auto;
     position: absolute;
     z-index: 1;
-    top: 15rem;
+    top: 9rem;
     left: 0;
     right: 0;
-    padding: 1.618rem;
+    padding: 0.5rem;
     background: rgb(35, 49, 135);
     color: #fff;
     opacity: 0;
@@ -845,8 +846,9 @@ img {
 }
 
 .tab-switch:checked + .tab-label {
-    height: 16rem;
-    border-top: 0.5rem solid #fff;
+    height: 9rem;
+    border-top: 0.5rem solid rgba(99, 180, 250, 1);
+    ;
     transition: all 0.35s;
     z-index: 1;
     /* top: -0.0625rem; */
@@ -890,7 +892,7 @@ img {
     background-color: rgb(12, 20, 117);
     padding: 1%;
     /* height: 18vh; */
-    font-size: 1vw;
+    font-size: 13px;
     margin: 1%;
     text-align: left;
     border-radius: 1rem;
@@ -905,29 +907,29 @@ img {
 .OPName {
     /* font-size: 1.2em; */
     font-weight: bold;
-    padding: 1vh;
+    padding: 0.4vh;
     color: rgb(99, 180, 250);
     width: 65%;
 
 }
 
 .OPSpec {
-    padding: 1vh;
+    padding: 0.4vh;
 }
 
 .OPDesc {
-    padding: 1vh;
+    padding: 0.4vh;
 }
 
 .OpDate {
-    padding: 1vh;
+    padding: 0.4vh;
 }
 
 .OPApply {
     position: absolute;
     right: 5%;
     top: 7%;
-    height: 3.5em;
+    height: 3em;
     width: 12em;
     border-radius: 1em;
     background-color: rgb(99, 180, 250);
@@ -1622,7 +1624,7 @@ form {
         margin: 1vw;
         top: 17.5vh;
         height: auto;
-        font-size: 15px;
+        font-size: 0.7em;
         padding: 3vw;
     }
 
@@ -1666,7 +1668,7 @@ form {
     }
 
     #openpos > div {
-        font-size: 0.6em;
+        font-size: 0.7em;
         margin: 2%;
         width: 90%;
         /* height: 21vh; */
@@ -1674,8 +1676,8 @@ form {
 
     .OPApply {
         right: 2%;
-        top: 2%;
-        height: 2.5em;
+        top: 1%;
+        height: 2em;
         width: 7em;
         width: 35%;
     }
@@ -1685,7 +1687,7 @@ form {
     }
 
     .opps-1 {
-        padding: 2%;
+        padding: 4%;
     }
 
     .opps-2 {
