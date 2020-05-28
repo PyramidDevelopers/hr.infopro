@@ -6,7 +6,24 @@ function myFunction() {
         x.className = "topnav";
     }
 }
+ function change(){
+        var x = document.getElementById("clrbtn"); 
+        var y = document.getElementById("drp");
+        x.style.color="white";
+       
+    }
+    function change3(){
+        var x = document.getElementById("clrbtn"); 
+        
+        x.style.color="white";
+       
+    }
+    function changeback(){
+        var x = document.getElementById("clrbtn"); 
 
+        x.style.color="#0D1252";
+       
+    }
 function my_closeemp1() {
     if (document.getElementById("dropdown1").style.display == "block") {
         document.getElementById("dropdown1").style.display = "none";
