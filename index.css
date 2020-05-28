@@ -164,6 +164,7 @@
         width: 100%;
         text-align: left;
     }
+    
 }
 
 .navbar {
@@ -724,7 +725,12 @@ img {
 }
 
 #pg8 {
-    background-color: rgba(12, 20, 117, 1);
+    /* background-image: url('PageWiseAssets\contactUs.jpg'); */
+    /* background-image: image('PageWiseAssets\contactUs.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%; */
+    position: relative;
 }
 
 /*    Hiring Normal*/
@@ -1059,7 +1065,7 @@ img {
 
 /*    COntat Us*/
 #Contact {
-    background-color: rgb(12, 20, 117);
+    
     justify-content: center;
     font-size: 15px;
 }
@@ -1071,7 +1077,6 @@ form {
     top: 1vh;
     /* position: relative; */
     margin: 0;
-    background-color: rgba(12, 20, 117, 1);
     font-family: Poppins;
     font-size: 1em;
 }
@@ -1087,14 +1092,17 @@ form {
     font-style: normal;
     font-weight: bold;
     font-size: 3em;
-    color: rgba(242, 242, 242, 1);
+    color:rgb(12, 20, 117);
 }
 
 .ContactForm {
     /* position: relative; */
     /* padding-top: 12vh; */
-    width: 85%;
+    width: 70%;
     margin: auto;
+}
+.contact-heading{
+    font-family: Playfair Display black roman ; font-size: 3em ; font-weight: bolder;color:rgb(12, 20, 117);text-align: center;padding-top:1.5em; width:60%; margin:auto;
 }
 
 #Requirement_type {
@@ -1112,6 +1120,7 @@ form {
 .RbtnAll {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .RBtn {
@@ -1133,7 +1142,7 @@ form {
               font-style: normal;
               font-weight: normal; */
     font-size: 1.3em;
-    color: rgba(99, 180, 250, 1);
+    color:rgb(12, 20, 117);
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1155,7 +1164,7 @@ form {
     left: 0.1em;
     height: 2em;
     width: 2em;
-    background-color: #eee;
+    background-color: white;
     border-radius: 100%;
 }
 
@@ -1164,7 +1173,8 @@ form {
 }
 
 .RadioButtons input:checked ~ .Radio {
-    background-color: #2196F3;
+    background-color:rgb(12, 20, 117);
+    ;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -1193,15 +1203,15 @@ form {
     position: relative;
     padding-left: 1vw;
     /* margin-right: 5vw; */
-    height: 3em;
+    height: 4em;
     /* margin-left: 1vw; */
     width: 100%;
     font-size: 1em;
     font-weight: 600;
-    color: white;
+    color:rgb(12, 20, 117);
     border: 0px;
 
-    background-color: rgba(35, 49, 135, 1);
+    background-color: white;
     border-radius: 20px;
     display: inline-flex;
     flex-wrap: wrap;
@@ -1228,7 +1238,7 @@ form {
     font-style: normal;
     font-weight: normal;
     font-size: 1.1em;
-    color: rgba(242, 242, 242, 1);
+    color:  rgba(35, 49, 135, 1);
 }
 
 .Details {
@@ -1263,11 +1273,16 @@ form {
     padding: 0.1em;
     height: 2em;
     width: 9em;
-    background-color: white;
+    background-color:  rgb(99, 180, 250);;
     border-radius: 0.5em;
-    color: rgba(12, 20, 117, 1);
+    color: white;
     font-size: 1.5em;
+}
+.submit:hover {background-color: rgb(99, 180, 250)}
 
+.submit:active {
+        background-color:  rgb(99, 180, 250);
+        transform: translateY(4px);
 }
 
 .Submitbtn {
@@ -1748,7 +1763,19 @@ form {
         font-size: 2em;
         color: rgba(242, 242, 242, 1);
     }
-
+    .contact-heading{
+        width: 70%;
+        font-size: 2em;
+    }
+    .contact-bgimg{
+        height: 100%;
+    }
+    .textinput{
+        margin-bottom: 1em;
+    }
+    #Details3,#Details4{
+        margin-top: -1em;
+    }
     .Submitbtn {
         float: unset;
         margin-top: 3vw;

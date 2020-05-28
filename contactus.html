@@ -152,84 +152,79 @@
         </ul>
     </nav>
     <div class="main">
+        <div style="background-color: skyblue;position: absolute;top:0;left: 0; width: 100%;height: 200%;opacity: 0.2;z-index: -1;"></div>
 
 
         <div id="pg8">
+            <img class="contact-bgimg" src="PageWiseAssets\contactUs.jpg" style="position: absolute; z-index: -2;opacity: 0.4;">
 
             <div id="Contact">
                 <form action="" method="post" id="contact-form">
-                    <div style="font-family: Playfair Display black roman ; font-size: 2.5em ; font-weight: bolder; color:rgba(242, 242, 242, 1);text-align: center;padding-top:1.5em">Contact Us</div>
+                    <div class="contact-heading" >Schedule a call with our executives by filling the form below</div>
 
 
                     <div class=ContactForm>
 
 
                         <div class="Details">
-                            <div id="Details1">
+                            <div class="Details1">
+                            <div class="textbox">
+                                <!-- <div id="Requirement_type">Interested in</div> -->
+                                <div class="RbtnAll">
 
-                                <div class="textbox">
-                                    <label class="textName" for="positionHiringFor">Name</label>
-                                    <input type="text" class="textinput" id="positionHiringFor" name="positionHiringFor">
-                                </div>
-                                <div class="textbox">
-                                    <label class="textName" for="skill">Company</label>
-                                    <input type="text" class="textinput" id="skill" name="skill">
-                                </div>
-                            </div><br>
 
+                                    <div class="RBtn" class="texbox">
+                                        <label class="RadioButtons" id="StaffingSolutions">
+                                            Staffing Solutions
+                                            <input type="radio" name="FormChoice" id="FormChoice" value="Staffing Solutions">
+                                            <span class="Radio"></span>
+
+                                        </label>
+                                    </div>
+                                    <div class="RBtn">
+                                        <label class="RadioButtons" id="HRM">HRM
+                                            <input type="radio" name="FormChoice" id="FormChoice" value="HRM">
+                                            <span class="Radio"></span>
+                                        </label>
+                                    </div>
+                                    <div class="RBtn">
+                                        <label class="RadioButtons">PEO
+                                            <input type="radio" name="FormChoice" id="FormChoice" value="PEO">
+
+                                            <span class="Radio"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                             <div id="Details2">
 
                                 <div class="textbox">
-                                    <label class="textName" for="positionType"> Email ID</label>
-                                    <input type="text" class="textinput" id="emailId" name="positionType">
+                                    <input type="text" class="textinput" id="positionHiringFor" name="positionHiringFor" placeholder="NAME">
                                 </div>
                                 <div class="textbox">
-                                    <label class="textName" for="prospectiveClientName" name="prospectiveClientName"> Phone no.</label>
-                                    <input type="text" class="textinput" id="prospectiveClientname" name="prospectiveClientName">
+                                    <input type="text" class="textinput" id="skill" name="skill" placeholder="PHONE No.">
                                 </div>
+                                <div class="textbox">
+                                    <input type="text" class="textinput" id="skill" name="skill" placeholder="COMPANY">
+                                </div>
+                            </div><br>
 
-                            </div>
                             <div id="Details3">
+
                                 <div class="textbox">
-                                    <label class="textName" for="prospectiveClientName" name="prospectiveClientName"> Interested in </label><br>
-
-                                    <!-- <div id="Requirement_type">Interested in</div> -->
-                                    <div class="RbtnAll">
-
-
-                                        <div class="RBtn" class="texbox">
-                                            <label class="RadioButtons" id="StaffingSolutions">
-                                                Staffing Solutions
-                                                <input type="radio" name="FormChoice" id="FormChoice" value="Staffing Solutions">
-                                                <span class="Radio"></span>
-
-                                            </label>
-                                        </div>
-                                        <div class="RBtn">
-                                            <label class="RadioButtons" id="HRM">HRM
-                                                <input type="radio" name="FormChoice" id="FormChoice" value="HRM">
-                                                <span class="Radio"></span>
-                                            </label>
-                                        </div>
-                                        <div class="RBtn">
-                                            <label class="RadioButtons">PEO
-                                                <input type="radio" name="FormChoice" id="FormChoice" value="PEO">
-
-                                                <span class="Radio"></span>
-                                            </label>
-                                        </div>
-                                    </div>
+                                    <input type="text" class="textinput" id="emailId" name="positionType" placeholder="EMAIL ID">
                                 </div>
                                 <div class="textbox">
-                                    <label class="textName" for="Comments">Country</label>
-                                    <input type="text" class="textinput" id="positionType" name="comments">
+                                    <input type="text" class="textinput" id="prospectiveClientname" name="prospectiveClientName" placeholder="COUNTRY">
                                 </div>
+
                             </div>
+                            
                             <div id="Details4">
 
                                 <div class="textbox">
-                                    <label class="textName" for="Comments">Message</label>
-                                    <input type="text" class="textinput" id="message" name="comments">
+                                    <textarea type="text" class="textinput" id="message" name="comments" placeholder="MESSAGE" rows="5" style="height:auto;margin-top: 2em;padding-top: 1vh;"></textarea>
                                 </div>
 
                             </div>
@@ -243,41 +238,42 @@
 
                     </div>
                 </form>
-                <div class="blue" style="background-color:rgb(12, 20, 117) ; height: auto;clear:both; ">
-                    <div class="data" style="overflow: auto;top:5vh; margin-top: 10vh;">
-                        <div class="footer1" id="f11">
-                            <div style="text-align: center; color: rgba(99, 180, 250, 1) ;">CONTACT</div> hr@infoprosol.com
-                        </div>
-                        <div class="footer1" id="f12">
-                            <div style="text-align: center; color: rgba(99, 180, 250, 1) ;">ADDRESS</div> InfoPro Solutions Pvt Ltd.<br>#9, Krishna Kasthuri<br> 2nd Floor, Ashwathnagar<br> Sanjaynagar Main Road,<br> Bangalore-560094<br>Karnataka, India
-                        </div>
-                    </div>
-                    <div class="blue" style="overflow: auto;float: left;width: 20%;height: auto;background-color:rgb(12, 20, 117)">
-                        <img src="PageWiseAssets/Page8/Footer/design.png" style="max-height: 100%;max-width: 100%; " />
-                    </div>
-
-                    <div class="blue" style="overflow: auto; float: left;width: 60%; height:auto;background-color:rgb(12, 20, 117)">
-                        <div style="color: white; text-align: center">
-                            <br>
-                            <br>
-                            Follow Us On
-                        </div>
-                        <div class="footer2" id="f21"><a href="#">
-                                <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon%20awesome-facebook.png" width="30px" height="30px"></a></div>
-                        <div class="footer2" id="f22"> <a href="#">
-                                <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon%20awesome-linkedin-in.png" width="30px" height="30px">
-
-                            </a></div>
-                    </div>
-
-                    <div class="blue" style="overflow: auto; float: right;width: 20%;background-color:rgb(12, 20, 117)">
-                        <img src="PageWiseAssets/Page8/Footer/design.png" style="max-height: 100%;max-width: 100%;" />
-                    </div>
-                </div>
+                
 
             </div>
+            
         </div>
+        <div class="blue" style="background-color:rgb(12, 20, 117) ; height: auto;clear:both; ">
+            <div class="data" style="overflow: auto;top:5vh; margin-top: 10vh;">
+                <div class="footer1" id="f11">
+                    <div style="text-align: center; color: rgba(99, 180, 250, 1) ;">CONTACT</div> hr@infoprosol.com
+                </div>
+                <div class="footer1" id="f12">
+                    <div style="text-align: center; color: rgba(99, 180, 250, 1) ;">ADDRESS</div> InfoPro Solutions Pvt Ltd.<br>#9, Krishna Kasthuri<br> 2nd Floor, Ashwathnagar<br> Sanjaynagar Main Road,<br> Bangalore-560094<br>Karnataka, India
+                </div>
+            </div>
+            <div class="blue" style="overflow: auto;float: left;width: 20%;height: auto;background-color:rgb(12, 20, 117)">
+                <img src="PageWiseAssets/Page8/Footer/design.png" style="max-height: 100%;max-width: 100%; " />
+            </div>
 
+            <div class="blue" style="overflow: auto; float: left;width: 60%; height:auto;background-color:rgb(12, 20, 117)">
+                <div style="color: white; text-align: center">
+                    <br>
+                    <br>
+                    Follow Us On
+                </div>
+                <div class="footer2" id="f21"><a href="#">
+                        <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon%20awesome-facebook.png" width="30px" height="30px"></a></div>
+                <div class="footer2" id="f22"> <a href="#">
+                        <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon%20awesome-linkedin-in.png" width="30px" height="30px">
+
+                    </a></div>
+            </div>
+
+            <div class="blue" style="overflow: auto; float: right;width: 20%;background-color:rgb(12, 20, 117)">
+                <img src="PageWiseAssets/Page8/Footer/design.png" style="max-height: 100%;max-width: 100%;" />
+            </div>
+        </div>
 
 
     </div>
