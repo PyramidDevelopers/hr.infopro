@@ -1282,7 +1282,7 @@ form {
 
 }
 .footerlinks{
-    height:3em;top:5vh; margin-top: 0;display: flex;justify-content:center;text-align: center; color: rgba(99, 180, 250, 1) ;line-height: 0;
+    height:3em;top:5vh; margin-top: 0;display: flex;justify-content:center;text-align: center; color: rgba(99, 180, 250, 1) ;
 }
 .footerlinks>div{
     margin: 2%;
@@ -1719,12 +1719,16 @@ form {
 
     .opps-1 {
         padding: 4%;
+        width:70%
     }
 
     .opps-2 {
         padding: 5%;
+        width: 30%;
     }
-
+    .opps-2>button{
+        height: 4em;
+    }
     .RbtnAll {
         display: inline-block;
         flex-wrap: wrap;
