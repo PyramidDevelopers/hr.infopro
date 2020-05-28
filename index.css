@@ -1267,15 +1267,21 @@ form {
 
 
 }
-
+.footerlinks{
+    height:3em;top:5vh; margin-top: 0;display: flex;justify-content:center;text-align: center; color: rgba(99, 180, 250, 1) ;line-height: 0;
+}
 .footerlinks>div{
-    padding: 2%;
+    margin: 2%;
 }
 .footerlinks>div>a{
     text-decoration: none;
 }
 .footerlinks>div>a:visited{
     color: rgba(99, 180, 250, 1);
+}
+.footerlinks2>div{
+    line-height: 0.8em;
+    margin-bottom: 1em;
 }
 
 @media only screen and (max-width: 900px) {
