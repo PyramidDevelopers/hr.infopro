@@ -1104,7 +1104,7 @@ form {
 .ContactForm {
     /* position: relative; */
     /* padding-top: 12vh; */
-    width: 70%;
+    width: 61%;
     margin: auto;
 }
 
@@ -1217,7 +1217,7 @@ form {
     position: relative;
     padding-left: 1vw;
     /* margin-right: 5vw; */
-    height: 4em;
+    height: 3.5em;
     /* margin-left: 1vw; */
     width: 100%;
     font-size: 1em;
@@ -1226,7 +1226,7 @@ form {
     border: 0px;
 
     background-color: white;
-    border-radius: 20px;
+    border-radius: 10px;
     display: inline-flex;
     flex-wrap: wrap;
     font-family: Poppins;
@@ -1238,7 +1238,7 @@ form {
 
     display: grid;
     margin-top: -0.5vh;
-    margin-right: 3vw;
+    margin-right: 1vw;
 }
 
 
@@ -1794,7 +1794,9 @@ form {
         font-size: 2em;
         color: rgba(242, 242, 242, 1);
     }
-
+    .ContactForm{
+        width: 90%;
+    }
     .contact-heading {
         width: 70%;
         font-size: 2em;
