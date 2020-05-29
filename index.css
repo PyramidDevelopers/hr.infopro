@@ -1273,15 +1273,17 @@ form {
     padding: 0.1em;
     height: 2em;
     width: 9em;
-    background-color:  rgb(99, 180, 250);;
+    background-color: rgba(35, 49, 135, 1);
     border-radius: 0.5em;
     color: white;
     font-size: 1.5em;
 }
-.submit:hover {background-color: rgb(99, 180, 250)}
+.submit:hover {background-color: ba(35, 49, 135, 1);
+}
 
 .submit:active {
-        background-color:  rgb(99, 180, 250);
+        background-color:    rgba(35, 49, 135, 1);
+
         transform: translateY(4px);
 }
 
@@ -1293,8 +1295,10 @@ form {
               justify-content: flex-end; */
     padding: 3vw;
     float: right;
-
-
+}
+::placeholder{
+    color:     rgba(35, 49, 135, 1);
+    opacity: 1;
 }
 .footerlinks{
     height:3em;top:5vh; margin-top: 0;display: flex;justify-content:center;text-align: center; color: white ;
@@ -1796,12 +1800,11 @@ form {
         font-size: 1em;
     }
 
-    #f21,
+    #f21{
+        margin-left: 30%;
+    }
     #f22 {
-        float: unset;
-        margin: auto;
-        padding: 1em;
-        text-align: center;
+        margin-right: 30%;
     }
     .footerlinks>div{
         font-size: 0.8em;
