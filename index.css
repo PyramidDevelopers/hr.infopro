@@ -1104,7 +1104,7 @@ form {
 .ContactForm {
     /* position: relative; */
     /* padding-top: 12vh; */
-    width: 70%;
+    width: 61%;
     margin: auto;
 }
 
@@ -1217,7 +1217,7 @@ form {
     position: relative;
     padding-left: 1vw;
     /* margin-right: 5vw; */
-    height: 4em;
+    height: 3.5em;
     /* margin-left: 1vw; */
     width: 100%;
     font-size: 1em;
@@ -1226,7 +1226,7 @@ form {
     border: 0px;
 
     background-color: white;
-    border-radius: 20px;
+    border-radius: 10px;
     display: inline-flex;
     flex-wrap: wrap;
     font-family: Poppins;
@@ -1238,7 +1238,7 @@ form {
 
     display: grid;
     margin-top: -0.5vh;
-    margin-right: 3vw;
+    margin-right: 1vw;
 }
 
 
@@ -1287,20 +1287,18 @@ form {
     padding: 0.1em;
     height: 2em;
     width: 9em;
-    background-color: rgb(99, 180, 250);
-    ;
+    background-color: rgba(35, 49, 135, 1);
     border-radius: 0.5em;
     color: white;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
-
-.submit:hover {
-    background-color: rgb(99, 180, 250)
+.submit:hover {background-color: rgba(35, 49, 135, 1);
 }
 
 .submit:active {
-    background-color: rgb(99, 180, 250);
-    transform: translateY(4px);
+        background-color:    rgba(35, 49, 135, 1);
+
+        transform: translateY(4px);
 }
 
 .Submitbtn {
@@ -1309,10 +1307,13 @@ form {
               display: flex;
               right: 0;
               justify-content: flex-end; */
-    padding: 3vw;
+    padding: 1vw;
+    padding-top: 1.5vw;
     float: right;
-
-
+}
+::placeholder{
+    color:     rgba(35, 49, 135, 1);
+    opacity: 1;
 }
 
 .footerlinks {
@@ -1794,7 +1795,9 @@ form {
         font-size: 2em;
         color: rgba(242, 242, 242, 1);
     }
-
+    .ContactForm{
+        width: 90%;
+    }
     .contact-heading {
         width: 70%;
         font-size: 2em;
@@ -1833,12 +1836,11 @@ form {
         font-size: 1em;
     }
 
-    #f21,
+    #f21{
+        margin-left: 30%;
+    }
     #f22 {
-        float: unset;
-        margin: auto;
-        padding: 1em;
-        text-align: center;
+        margin-right: 30%;
     }
 
     .footerlinks > div {
