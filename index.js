@@ -173,7 +173,8 @@ fetch(URL)
             var JSTName = document.createElement('div');
             var JSTDesc = document.createElement('div');
             aNew.setAttribute("style", "text-decoration:none;");
-            aNew.href = fullData[i][2]
+            aNew.href = fullData[i][2];
+            aNew.target = "blank";
             divNew.innerHTML = "";
             JSTName.className = "interview-1";
             JSTDesc.className = "interview-2";

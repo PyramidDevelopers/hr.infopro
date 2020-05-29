@@ -85,9 +85,11 @@
     color: white;
     display: block;
 }
-.dropbtn:hover{
+
+.dropbtn:hover {
     color: white;
 }
+
 #f11 {
     color: white;
     font-family: Poppins;
@@ -164,7 +166,7 @@
         width: 100%;
         text-align: left;
     }
-    
+
 }
 
 .navbar {
@@ -736,7 +738,7 @@ img {
 /*    Hiring Normal*/
 .hiring {
     font-family: "Poppins";
-    background-color:#fff;
+    background-color: #fff;
     /* max-width: 75%; */
     width: 100vw;
     /* margin: 0 auto; */
@@ -946,12 +948,15 @@ img {
     border-width: thick;
     box-shadow: 0 4px black;
 }
-.OPApply:hover {background-color: rgb(99, 180, 250)}
+
+.OPApply:hover {
+    background-color: rgb(99, 180, 250)
+}
 
 .OPApply:active {
-        background-color:  rgb(99, 180, 250);
-        box-shadow: 0 5px black;
-        transform: translateY(4px);
+    background-color: rgb(99, 180, 250);
+    box-shadow: 0 5px black;
+    transform: translateY(4px);
 }
 
 #opportunities {
@@ -989,7 +994,8 @@ img {
     font-size: smaller;
     color: rgb(99, 180, 250);
 }
-.opps-2>button{
+
+.opps-2 > button {
     position: absolute;
     right: 2%;
     top: 10%;
@@ -1007,7 +1013,7 @@ img {
     border: 3px solid #f1f1f1;
     z-index: 15;
     height: 80vh;
-    width: 80%;
+    width: 40%;
     /* overflow: auto; */
     font-size: 15px;
 }
@@ -1065,7 +1071,7 @@ img {
 
 /*    COntat Us*/
 #Contact {
-    
+
     justify-content: center;
     font-size: 15px;
 }
@@ -1092,7 +1098,7 @@ form {
     font-style: normal;
     font-weight: bold;
     font-size: 3em;
-    color:rgb(12, 20, 117);
+    color: rgb(12, 20, 117);
 }
 
 .ContactForm {
@@ -1101,8 +1107,16 @@ form {
     width: 70%;
     margin: auto;
 }
-.contact-heading{
-    font-family: Playfair Display black roman ; font-size: 3em ; font-weight: bolder;color:rgb(12, 20, 117);text-align: center;padding-top:1.5em; width:60%; margin:auto;
+
+.contact-heading {
+    font-family: Playfair Display black roman;
+    font-size: 3em;
+    font-weight: bolder;
+    color: rgb(12, 20, 117);
+    text-align: center;
+    padding-top: 1.5em;
+    width: 60%;
+    margin: auto;
 }
 
 #Requirement_type {
@@ -1142,7 +1156,7 @@ form {
               font-style: normal;
               font-weight: normal; */
     font-size: 1.3em;
-    color:rgb(12, 20, 117);
+    color: rgb(12, 20, 117);
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -1173,7 +1187,7 @@ form {
 }
 
 .RadioButtons input:checked ~ .Radio {
-    background-color:rgb(12, 20, 117);
+    background-color: rgb(12, 20, 117);
     ;
 }
 
@@ -1208,7 +1222,7 @@ form {
     width: 100%;
     font-size: 1em;
     font-weight: 600;
-    color:rgb(12, 20, 117);
+    color: rgb(12, 20, 117);
     border: 0px;
 
     background-color: white;
@@ -1238,7 +1252,7 @@ form {
     font-style: normal;
     font-weight: normal;
     font-size: 1.1em;
-    color:  rgba(35, 49, 135, 1);
+    color: rgba(35, 49, 135, 1);
 }
 
 .Details {
@@ -1273,16 +1287,20 @@ form {
     padding: 0.1em;
     height: 2em;
     width: 9em;
-    background-color:  rgb(99, 180, 250);;
+    background-color: rgb(99, 180, 250);
+    ;
     border-radius: 0.5em;
     color: white;
     font-size: 1.5em;
 }
-.submit:hover {background-color: rgb(99, 180, 250)}
+
+.submit:hover {
+    background-color: rgb(99, 180, 250)
+}
 
 .submit:active {
-        background-color:  rgb(99, 180, 250);
-        transform: translateY(4px);
+    background-color: rgb(99, 180, 250);
+    transform: translateY(4px);
 }
 
 .Submitbtn {
@@ -1296,19 +1314,30 @@ form {
 
 
 }
-.footerlinks{
-    height:3em;top:5vh; margin-top: 0;display: flex;justify-content:center;text-align: center; color: white ;
-}
-.footerlinks>div{
-    margin: 2%;
-}
-.footerlinks>div>a{
-    text-decoration: none;
-}
-.footerlinks>div>a:visited{
+
+.footerlinks {
+    height: 3em;
+    top: 5vh;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
     color: white;
 }
-.footerlinks2>div{
+
+.footerlinks > div {
+    margin: 2%;
+}
+
+.footerlinks > div > a {
+    text-decoration: none;
+}
+
+.footerlinks > div > a:visited {
+    color: white;
+}
+
+.footerlinks2 > div {
     line-height: 0.8em;
     margin-bottom: 1em;
 }
@@ -1734,16 +1763,18 @@ form {
 
     .opps-1 {
         padding: 4%;
-        width:70%
+        width: 70%
     }
 
     .opps-2 {
         padding: 5%;
         width: 30%;
     }
-    .opps-2>button{
+
+    .opps-2 > button {
         height: 4em;
     }
+
     .RbtnAll {
         display: inline-block;
         flex-wrap: wrap;
@@ -1763,19 +1794,25 @@ form {
         font-size: 2em;
         color: rgba(242, 242, 242, 1);
     }
-    .contact-heading{
+
+    .contact-heading {
         width: 70%;
         font-size: 2em;
     }
-    .contact-bgimg{
+
+    .contact-bgimg {
         height: 100%;
     }
-    .textinput{
+
+    .textinput {
         margin-bottom: 1em;
     }
-    #Details3,#Details4{
+
+    #Details3,
+    #Details4 {
         margin-top: -1em;
     }
+
     .Submitbtn {
         float: unset;
         margin-top: 3vw;
@@ -1803,7 +1840,8 @@ form {
         padding: 1em;
         text-align: center;
     }
-    .footerlinks>div{
+
+    .footerlinks > div {
         font-size: 0.8em;
     }
 }
