@@ -1297,7 +1297,7 @@ form {
 
 }
 .footerlinks{
-    height:3em;top:5vh; margin-top: 0;display: flex;justify-content:center;text-align: center; color: rgba(99, 180, 250, 1) ;
+    height:3em;top:5vh; margin-top: 0;display: flex;justify-content:center;text-align: center; color: white ;
 }
 .footerlinks>div{
     margin: 2%;
@@ -1306,7 +1306,7 @@ form {
     text-decoration: none;
 }
 .footerlinks>div>a:visited{
-    color: rgba(99, 180, 250, 1);
+    color: white;
 }
 .footerlinks2>div{
     line-height: 0.8em;
