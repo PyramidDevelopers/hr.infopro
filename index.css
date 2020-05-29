@@ -89,35 +89,35 @@
 .dropbtn:hover {
     color: white;
 }
-
+.data{
+    display: flex;
+    justify-content: center;
+}
 #f11 {
     color: white;
     font-family: Poppins;
-    font-size: 1.2em;
-    float: left;
-    margin-left: 30%;
     text-align: center;
+    display: inline-block;
+    width: 25%;
 }
 
 #f12 {
     color: white;
     font-family: Poppins;
-    font-size: 1.2em;
-    float: right;
-    margin-right: 30%;
     text-align: center;
+    display: inline-block;
+    width: 25%;
 }
-
+.f2{
+    display: flex;
+    justify-content: center;
+}
 #f21 {
-    float: left;
-    margin-left: 45%;
-    padding: 0.2em;
+    padding: 0.5em;
 }
 
 #f22 {
-    float: right;
-    margin-right: 45%;
-    padding: 0.2em;
+    padding: 0.5em;
 }
 
 
@@ -1837,15 +1837,9 @@ form {
     #f12 {
         float: unset;
         margin: auto;
-        padding: 1em;
-        font-size: 1em;
-    }
-
-    #f21{
-        margin-left: 30%;
-    }
-    #f22 {
-        margin-right: 30%;
+        padding-bottom: 1em;
+        font-size: 0.8em;
+        width: 50%;
     }
 
     .footerlinks > div {
