@@ -193,8 +193,6 @@ console.log(dataFromSheet);
 
 var divExist = document.getElementById('openpos');
 
-var Opp = document.getElementById('opportunities');
-// var numOfColumns = 3;
 var dataFromSheet;
 var URL = 'https://spreadsheets.google.com/feeds/cells/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/od6/public/basic?alt=json';
 fetch(URL)
@@ -231,24 +229,6 @@ fetch(URL)
             var OPSpec = document.createElement('div');
             var OPDate = document.createElement('div');
             var OPApply = document.createElement('button');
-            var OSection = document.createElement('div');
-            var OName = document.createElement('div');
-            var OClick = document.createElement('div');
-            var OClickA = document.createElement('a');
-            OName.className = "opps-1";
-            OName.innerHTML = fullData[i][1].toString();
-            OClick.className = "opps-2";
-            OClick.innerHTML = "We are hiring >"
-            OSection.className = "opportunities-1";
-            OClickA.setAttribute("id", i);
-            OClickA.setAttribute('href', "OPos.html")
-            OClickA.addEventListener('click', function (event) {
-                localStorage.setItem("i value", this.id);
-            });
-            OClickA.appendChild(OClick);
-            OClickA.appendChild(OName);
-            OSection.appendChild(OClickA);
-            Opp.appendChild(OSection);
             OPload.setAttribute("style", "display:none");
             divNew.innerHTML = "";
             OPName.className = "OPName";
@@ -322,6 +302,110 @@ fetch(URL)
     })
     .catch(error => console.log(error))
 console.log(dataFromSheet);
+
+//input values in opportunities
+
+var Opp = document.getElementById('opportunities');
+// var numOfColumns = 3;
+var dataFromSheet;
+var URL = 'https://spreadsheets.google.com/feeds/cells/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/ohut5b9/public/basic?alt=json';
+fetch(URL)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        // console.log(data);
+        dataFromSheet = data.feed.entry;
+        var fullData = [];
+
+        // console.log(dataFromSheet.filter((item) => item.title['$t'][1] == '1').length);
+
+        var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1').length;
+
+        var j = 0;
+        var count = 1;
+        while (fullData.length < dataFromSheet.length / numOfColumns) {
+            var subData = [];
+            var i = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == count.toString()).length;
+            while (i--) {
+                subData.push(dataFromSheet[j].content['$t']);
+                j++
+            }
+            fullData.push(subData);
+            count += 1;
+        }
+        var Oload = document.getElementById('Opportunitiesloading');
+        for (var i = 1; i < fullData.length; i++) {
+            var divNew = document.createElement('div');
+            var OSection = document.createElement('div');
+            var OName = document.createElement('div');
+            var OClick = document.createElement('div');
+            var OApply = document.createElement('button');
+            OName.className = "opps-1";
+            OName.innerHTML = fullData[i][0].toString();
+            OClick.className = "opps-2";
+            OApply.innerHTML = "Submit Resume";
+            OSection.className = "opportunities-1";
+            OApply.className = "OPApply";
+            OApply.setAttribute("id", i);
+            OApply.setAttribute("type", "button");
+            OApply.addEventListener('click', function (event) {
+                localStorage.setItem("i value", this.id);
+            });
+            OSection.appendChild(OName);
+            OClick.appendChild(OApply);
+            OSection.appendChild(OClick);
+            Opp.appendChild(OSection);
+            Oload.setAttribute("style", "display:none");
+            divNew.innerHTML = "";
+            OApply.addEventListener('click', function () {
+                event.preventDefault();
+                //   window.location.href='Apply.html';
+                var dataFromSheet;
+                var URL = 'https://spreadsheets.google.com/feeds/cells/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/ohut5b9/public/basic?alt=json';
+                fetch(URL)
+                    .then(function (response) {
+                        return response.json();
+                    })
+                    .then(function (data) {
+                        dataFromSheet = data.feed.entry;
+                        var fullData = [];
+
+                        // console.log(dataFromSheet.filter((item) => item.title['$t'][1] == '1').length);
+
+                        var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1').length;
+
+                        var j = 0;
+                        var count = 1;
+                        while (fullData.length < dataFromSheet.length / numOfColumns) {
+                            var subData = [];
+                            var i = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == count.toString()).length;
+                            while (i--) {
+                                subData.push(dataFromSheet[j].content['$t']);
+                                j++
+                            }
+                            fullData.push(subData);
+                            count += 1;
+                        }
+
+                        var i = localStorage.getItem("i value");
+                        //document.getElementById("JobTitleA").innerHTML = fullData[localStorage.getItem("i value")][1].toString();
+                        document.getElementById("myForm").style.display = "block";
+
+
+                    })
+
+
+            });
+
+
+        }
+
+    })
+    .catch(error => console.log(error))
+console.log(dataFromSheet);
+
+
 
 function loadOPosPage() {
     var dataFromSheet;
