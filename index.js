@@ -6,24 +6,28 @@ function myFunction() {
         x.className = "topnav";
     }
 }
- function change(){
-        var x = document.getElementById("clrbtn"); 
-        var y = document.getElementById("drp");
-        x.style.color="white";
-       
-    }
-    function change3(){
-        var x = document.getElementById("clrbtn"); 
-        
-        x.style.color="white";
-       
-    }
-    function changeback(){
-        var x = document.getElementById("clrbtn"); 
 
-        x.style.color="#0D1252";
-       
-    }
+function change() {
+    var x = document.getElementById("clrbtn");
+    var y = document.getElementById("drp");
+    x.style.color = "white";
+
+}
+
+function change3() {
+    var x = document.getElementById("clrbtn");
+
+    x.style.color = "white";
+
+}
+
+function changeback() {
+    var x = document.getElementById("clrbtn");
+
+    x.style.color = "#0D1252";
+
+}
+
 function my_closeemp1() {
     if (document.getElementById("dropdown1").style.display == "block") {
         document.getElementById("dropdown1").style.display = "none";
@@ -169,7 +173,8 @@ fetch(URL)
             var JSTName = document.createElement('div');
             var JSTDesc = document.createElement('div');
             aNew.setAttribute("style", "text-decoration:none;");
-            aNew.href = fullData[i][2]
+            aNew.href = fullData[i][2];
+            aNew.target = "blank";
             divNew.innerHTML = "";
             JSTName.className = "interview-1";
             JSTDesc.className = "interview-2";
@@ -537,4 +542,5 @@ function openForm() {
 
 function closeForm() {
     document.getElementById("myForm").style.display = "none";
+    document.getElementById('applyForm').src = document.getElementById('applyForm').src
 }
