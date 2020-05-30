@@ -89,10 +89,12 @@
 .dropbtn:hover {
     color: white;
 }
-.data{
+
+.data {
     display: flex;
     justify-content: center;
 }
+
 #f11 {
     color: white;
     font-family: Poppins;
@@ -108,10 +110,12 @@
     display: inline-block;
     width: 25%;
 }
-.f2{
+
+.f2 {
     display: flex;
     justify-content: center;
 }
+
 #f21 {
     padding: 0.5em;
 }
@@ -1011,15 +1015,22 @@ img {
     left: 50%;
     transform: translate(-50%, 50%);
     border: 3px solid #f1f1f1;
-    z-index: 15;
-    height: 80vh;
-    width: 40%;
-    /* overflow: auto; */
+    z-index: 9;
+    height: 85vh;
+    overflow: auto;
     font-size: 15px;
 }
 
 .JobTitleA {
     font-size: 2em;
+}
+
+.closeForm {
+    z-index: 1;
+    width: 1.5em;
+    border-radius: 2em;
+    float: right;
+
 }
 
 /* Add styles to the form container */
@@ -1291,13 +1302,15 @@ form {
     color: white;
     font-size: 1.2em;
 }
-.submit:hover {background-color: rgba(35, 49, 135, 1);
+
+.submit:hover {
+    background-color: rgba(35, 49, 135, 1);
 }
 
 .submit:active {
-        background-color:    rgba(35, 49, 135, 1);
+    background-color: rgba(35, 49, 135, 1);
 
-        transform: translateY(4px);
+    transform: translateY(4px);
 }
 
 .Submitbtn {
@@ -1310,8 +1323,9 @@ form {
     padding-top: 1.5vw;
     float: right;
 }
-::placeholder{
-    color:     rgba(35, 49, 135, 1);
+
+::placeholder {
+    color: rgba(35, 49, 135, 1);
     opacity: 1;
 }
 
@@ -1794,9 +1808,11 @@ form {
         font-size: 2em;
         color: rgba(242, 242, 242, 1);
     }
-    .ContactForm{
+
+    .ContactForm {
         width: 90%;
     }
+
     .contact-heading {
         width: 70%;
         font-size: 2em;
@@ -1814,12 +1830,13 @@ form {
     #Details4 {
         margin-top: -1em;
     }
+
     #Details1,
-#Details2,
-#Details3,
-#Details4{
-    flex-wrap: wrap;
-}
+    #Details2,
+    #Details3,
+    #Details4 {
+        flex-wrap: wrap;
+    }
 
     .Submitbtn {
         float: unset;
