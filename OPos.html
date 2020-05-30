@@ -12,6 +12,21 @@
     <title>
         InfoPro HR
     </title>
+    <script>
+        function addData(input) {
+            var file = input.files[0];
+            var fr = new FileReader();
+            fr.fileName = file.name
+            fr.onload = function(e) {
+                html = '<input type="hidden" name="data" value="' + e.target.result.replace(/^.*,/, '') + '" >';
+                html += '<input type="hidden" name="mimetype" value="' + e.target.result.match(/^.*(?=;)/)[0] + '" >';
+                html += '<input type="hidden" name="filename" value="' + e.target.fileName + '" >';
+                html += '<input type="hidden" name="URL" value="' + document.URL + '">';
+                document.getElementById("data").innerHTML = html;
+            }
+            fr.readAsDataURL(file);
+        };
+    </script>
     <style>
         .jobleft {
             width: 80%;
@@ -254,16 +269,16 @@
             <button type="button" class="closeForm" onclick="closeForm()">X</button>
 
             <label for="Name"><b>Name</b></label>
-            <input type="text" name="Name" id="Name" required>
+            <input type="text" name="Name" id="Name" required autocomplete="name">
 
             <label for="Email"><b>Email ID</b></label>
-            <input type="text" name="Email" id="Email" required>
+            <input type="text" name="Email" id="Email" required autocomplete="email">
 
             <label for="Phone"><b>Phone No</b></label>
-            <input type="text" name="Phone" id="Phone" required>
+            <input type="text" name="Phone" id="Phone" required autocomplete="tel">
 
             <label for="Location"><b>Location</b></label>
-            <input type="text" name="Location" id="Location" required>
+            <input type="text" name="Location" id="Location" required autocomplete="address">
 
             <label for="TE"><b>Total Experience</b></label>
             <input type="text" name="TE" id="TE" required>

@@ -508,7 +508,7 @@ function loadOPosPage() {
                 }
                 var i = localStorage.getItem("i value");
                 document.getElementById("JobTitleA").innerHTML = fullData[localStorage.getItem("i value")][1].toString();
-                document.getElementById("JobPos").value = fullData[localStorage.getItem("i value")].toString();
+                document.getElementById("JobPos").value = fullData[localStorage.getItem("i value")][1].toString();
 
                 document.getElementById("myForm").style.display = "block";
 
@@ -552,5 +552,6 @@ function Apply() {
         return false;
     } else {
         //TODO : Send mails with the data @Sachith . If possible, also figure out how to redirect the site properly on data submission. And clearing the form as well and stuff like that
+        //There are ways to run the script within the redirect of AppScript, can try figuring out something there too
     }
 }
