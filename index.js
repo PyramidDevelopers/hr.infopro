@@ -150,13 +150,13 @@ fetch(URL)
 
         // console.log(dataFromSheet.filter((item) => item.title['$t'][1] == '1').length);
 
-        var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1').length;
+        var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1' && item.title['$t'][item.title['$t'].length - 2].match(/[a-z]/i)).length;
 
         var j = 0;
         var count = 1;
         while (fullData.length < dataFromSheet.length / numOfColumns) {
             var subData = [];
-            var i = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == count.toString()).length;
+            var i = dataFromSheet.filter((item) => item.title['$t'].match(/\d+/)[0] == count.toString()).length;
             while (i--) {
                 subData.push(dataFromSheet[j].content['$t']);
                 j++
@@ -207,13 +207,13 @@ fetch(URL)
 
         // console.log(dataFromSheet.filter((item) => item.title['$t'][1] == '1').length);
 
-        var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1').length;
+        var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1' && item.title['$t'][item.title['$t'].length - 2].match(/[a-z]/i)).length;
 
         var j = 0;
         var count = 1;
         while (fullData.length < dataFromSheet.length / numOfColumns) {
             var subData = [];
-            var i = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == count.toString()).length;
+            var i = dataFromSheet.filter((item) => item.title['$t'].match(/\d+/)[0] == count.toString()).length;
             while (i--) {
                 subData.push(dataFromSheet[j].content['$t']);
                 j++
@@ -257,13 +257,13 @@ fetch(URL)
 
                         // console.log(dataFromSheet.filter((item) => item.title['$t'][1] == '1').length);
 
-                        var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1').length;
+                        var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1' && item.title['$t'][item.title['$t'].length - 2].match(/[a-z]/i)).length;
 
                         var j = 0;
                         var count = 1;
                         while (fullData.length < dataFromSheet.length / numOfColumns) {
                             var subData = [];
-                            var i = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == count.toString()).length;
+                            var i = dataFromSheet.filter((item) => item.title['$t'].match(/\d+/)[0] == count.toString()).length;
                             while (i--) {
                                 subData.push(dataFromSheet[j].content['$t']);
                                 j++
@@ -408,13 +408,13 @@ function loadOPosPage() {
 
             // console.log(dataFromSheet.filter((item) => item.title['$t'][1] == '1').length);
 
-            var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1').length;
+            var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1' && item.title['$t'][item.title['$t'].length - 2].match(/[a-z]/i)).length;
 
             var j = 0;
             var count = 1;
             while (fullData.length < dataFromSheet.length / numOfColumns) {
                 var subData = [];
-                var i = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == count.toString()).length;
+                var i = dataFromSheet.filter((item) => item.title['$t'].match(/\d+/)[0] == count.toString()).length;
                 while (i--) {
                     subData.push(dataFromSheet[j].content['$t']);
                     j++
@@ -492,13 +492,13 @@ function loadOPosPage() {
 
                 // console.log(dataFromSheet.filter((item) => item.title['$t'][1] == '1').length);
 
-                var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1').length;
+                var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1' && item.title['$t'][item.title['$t'].length - 2].match(/[a-z]/i)).length;
 
                 var j = 0;
                 var count = 1;
                 while (fullData.length < dataFromSheet.length / numOfColumns) {
                     var subData = [];
-                    var i = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == count.toString()).length;
+                    var i = dataFromSheet.filter((item) => item.title['$t'].match(/\d+/)[0] == count.toString()).length;
                     while (i--) {
                         subData.push(dataFromSheet[j].content['$t']);
                         j++
@@ -506,6 +506,7 @@ function loadOPosPage() {
                     fullData.push(subData);
                     count += 1;
                 }
+
                 var i = localStorage.getItem("i value");
                 document.getElementById("JobTitleA").innerHTML = fullData[localStorage.getItem("i value")][1].toString();
                 document.getElementById("JobPos").value = fullData[localStorage.getItem("i value")][1].toString();
@@ -551,6 +552,26 @@ function Apply() {
         alert("Please Fill All Required Field");
         return false;
     } else {
+        var URL = "https://8iwwlfrj1b.execute-api.ap-south-1.amazonaws.com/prod2/applynow";
+        var data = {
+            JobPosition: JobPos,
+            Name: name,
+            EmailID: email,
+            PhoneNumber: phone,
+            ResumeFolder: "https://drive.google.com/drive/folders/1_ijpQm-13pYeWE1Zixv30DTWfgvV3Nqf?usp=sharing",
+            Location: location,
+            TotalExperience: TE,
+            RelevantExperience: RE,
+            CurrentCTC: CCTC,
+            ExpectedCTC: ECTC,
+            NoticePeriod: NP
+        }
+
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("POST", URL);
+        xmlhttp.setRequestHeader("Content-Type", "application/json", "Access-Control-Allow-Origin", "*");
+        xmlhttp.send(JSON.stringify(data));
+        console.log("Mails Sent");
         //TODO : Send mails with the data @Sachith . If possible, also figure out how to redirect the site properly on data submission. And clearing the form as well and stuff like that
         //There are ways to run the script within the redirect of AppScript, can try figuring out something there too
     }
