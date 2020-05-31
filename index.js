@@ -273,7 +273,9 @@ fetch(URL)
                         }
 
                         var i = localStorage.getItem("i value");
-                        //document.getElementById("JobTitleA").innerHTML = fullData[localStorage.getItem("i value")][1].toString();
+                        document.getElementById("JobTitleA").innerHTML = fullData[localStorage.getItem("i value")][1].toString();
+
+                        document.getElementById("JobPos").value = fullData[localStorage.getItem("i value")].toString();
                         document.getElementById("myForm").style.display = "block";
 
 
@@ -321,21 +323,14 @@ fetch(URL)
 
         // console.log(dataFromSheet.filter((item) => item.title['$t'][1] == '1').length);
 
-        var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1').length;
-
+        var numOfColumns = 1;
         var j = 0;
-        var count = 1;
         while (fullData.length < dataFromSheet.length / numOfColumns) {
-            var subData = [];
-            var i = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == count.toString()).length;
-            while (i--) {
-                subData.push(dataFromSheet[j].content['$t']);
-                j++
-            }
-            fullData.push(subData);
-            count += 1;
+            fullData.push(dataFromSheet[j].content['$t']);
+            j++;
         }
         var Oload = document.getElementById('Opportunitiesloading');
+        console.log(fullData);
         for (var i = 1; i < fullData.length; i++) {
             var divNew = document.createElement('div');
             var OSection = document.createElement('div');
@@ -343,7 +338,7 @@ fetch(URL)
             var OClick = document.createElement('div');
             var OApply = document.createElement('button');
             OName.className = "opps-1";
-            OName.innerHTML = fullData[i][0].toString();
+            OName.innerHTML = fullData[i].toString();
             OClick.className = "opps-2";
             OApply.innerHTML = "Submit Resume";
             OSection.className = "opportunities-1";
@@ -374,23 +369,15 @@ fetch(URL)
 
                         // console.log(dataFromSheet.filter((item) => item.title['$t'][1] == '1').length);
 
-                        var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1').length;
-
+                        var numOfColumns = 1;
                         var j = 0;
-                        var count = 1;
                         while (fullData.length < dataFromSheet.length / numOfColumns) {
-                            var subData = [];
-                            var i = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == count.toString()).length;
-                            while (i--) {
-                                subData.push(dataFromSheet[j].content['$t']);
-                                j++
-                            }
-                            fullData.push(subData);
-                            count += 1;
+                            fullData.push(dataFromSheet[j].content['$t']);
+                            j++;
                         }
-
                         var i = localStorage.getItem("i value");
-                        //document.getElementById("JobTitleA").innerHTML = fullData[localStorage.getItem("i value")][1].toString();
+                        document.getElementById("JobTitleA").innerHTML = fullData[localStorage.getItem("i value")].toString();
+                        document.getElementById("JobPos").value = fullData[localStorage.getItem("i value")].toString();
                         document.getElementById("myForm").style.display = "block";
 
 
@@ -520,8 +507,9 @@ function loadOPosPage() {
                     count += 1;
                 }
                 var i = localStorage.getItem("i value");
+                document.getElementById("JobTitleA").innerHTML = fullData[localStorage.getItem("i value")][1].toString();
+                document.getElementById("JobPos").value = fullData[localStorage.getItem("i value")][1].toString();
 
-                //window.frames["userHtmlFrame"].document.getElementById("ctrlq-text-0").value = fullData[localStorage.getItem("i value")][1].toString();
                 document.getElementById("myForm").style.display = "block";
 
 
@@ -542,5 +530,28 @@ function openForm() {
 
 function closeForm() {
     document.getElementById("myForm").style.display = "none";
-    document.getElementById('applyForm').src = document.getElementById('applyForm').src
+}
+
+function Apply() {
+
+    var JobPos = document.getElementById("JobPos").value;
+    var name = document.getElementById("Name").value;
+    var email = document.getElementById("Email").value;
+    var phone = document.getElementById("Phone").value;
+
+    var location = document.getElementById("Location").value;
+    var TE = document.getElementById("TE").value;
+    var RE = document.getElementById("RE").value;
+    var CCTC = document.getElementById("CCTC").value;
+    var ECTC = document.getElementById("ECTC").value;
+    var NP = document.getElementById("NP").value;
+
+
+    if (name == "" || phone == "" || email == "" || location == "" || TE == "" || RE == "" || CCTC == "" || NP == "") {
+        alert("Please Fill All Required Field");
+        return false;
+    } else {
+        //TODO : Send mails with the data @Sachith . If possible, also figure out how to redirect the site properly on data submission. And clearing the form as well and stuff like that
+        //There are ways to run the script within the redirect of AppScript, can try figuring out something there too
+    }
 }
