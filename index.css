@@ -964,9 +964,13 @@ img {
 }
 
 #opportunities {
+
+    overflow: auto;
     display: flex;
     flex-wrap: wrap;
-    overflow: auto;
+}
+#opportunities-container{
+    
 }
 
 .opportunities-1 {
