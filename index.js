@@ -57,15 +57,8 @@ function my_open() {
 
 function readless() {
     if (document.getElementById("readbtn").textContent == "Read Less") {
-        {
-            //   if (window.matchMedia("(max-width: 900px)").matches) {
-
-            //       document.getElementById("readm").style.display = "none";
-            //   } else {
-            //       document.getElementById("read3").style.display = "none";
-            //       document.getElementById("readm").style.display = "none";
-            //   }
-        }
+    
+        
         document.getElementById("readbtn").textContent = "Read More";
         document.getElementById("readbtn").style.padding = "10px 10px 10px 10px"
         document.getElementsByClassName("p3s12")[0].style.display = "none";
@@ -76,19 +69,17 @@ function readless() {
 
 
     } else {
-        {
-            //   if (window.matchMedia("(max-width: 900px)").matches) {
-            //       document.getElementById("read3").style.display = "none";
-            //       document.getElementById("readm").style.display = "block";
-            //   } else {
-            //       document.getElementById("read3").style.display = "block";
-            //       document.getElementById("readm").style.display = "none";
-            //   }
-        }
+        
+               if (window.matchMedia("(max-width: 900px)").matches) {
+                document.getElementsByClassName("p3s12")[0].style.display = "block";
+                document.getElementsByClassName("p3s14")[0].style.display = "block";
+               } else {
+                document.getElementsByClassName("p3s12")[0].style.display = "flex";
+                document.getElementsByClassName("p3s14")[0].style.display = "flex";
+            }
+        
         document.getElementById("readbtn").style.padding = "10px 10px 10px 10px"
-        document.getElementsByClassName("p3s12")[0].style.display = "flex";
-        document.getElementsByClassName("p3s13")[0].style.display = "flex";
-        document.getElementsByClassName("p3s14")[0].style.display = "flex";
+        document.getElementsByClassName("p3s13")[0].style.display = "block";
         document.getElementsByClassName("p3s15")[0].style.display = "flex";
         // document.getElementsByClassName("bgrect")[0].style.display = "block";
 
