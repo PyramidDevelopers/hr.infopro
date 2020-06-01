@@ -134,7 +134,6 @@ function changeSize() {
     console.log(tabSelected);
     var tabSize = document.getElementsByClassName("tab-label")[tabSelected].offsetHeight
     document.getElementById("tab").style.height = document.getElementsByClassName('tab-content')[tabSelected].offsetHeight + tabSize;
-
 }
 var JST = document.getElementById('interview');
 var dataFromSheet;
