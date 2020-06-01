@@ -26,133 +26,8 @@
         .phone {
             display: none;
         }
-       .css-typing p {
-  border-right: .15em solid orange;
-  font-family: Poppins;
-  font-size: 26px;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.css-typing p:nth-child(1) {
-  width: 18em;
-  -webkit-animation: type 2s steps(40, end);
-  animation: type 2s steps(40, end);
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
+        
 
-.css-typing p:nth-child(2) {
-  width: 30em;
-  opacity: 0;
-  -webkit-animation: type2 2s steps(40, end);
-  animation: type2 2s steps(40, end);
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.css-typing p:nth-child(3) {
-  width: 7.3em;
-  opacity: 0;
-  -webkit-animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
-  animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
-  -webkit-animation-delay: 4s;
-  animation-delay: 4s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-@keyframes type {
-  0% {
-    width: 0;
-  }
-  99.9% {
-    border-right: .15em solid orange;
-  }
-  100% {
-    border: none;
-  }
-}
-
-@-webkit-keyframes type {
-  0% {
-    width: 0;
-  }
-  99.9% {
-    border-right: .15em solid orange;
-  }
-  100% {
-    border: none;
-  }
-}
-
-@keyframes type2 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  99.9% {
-    border-right: .15em solid orange;
-  }
-  100% {
-    opacity: 1;
-    border: none;
-  }
-}
-
-@-webkit-keyframes type2 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  99.9% {
-    border-right: .15em solid orange;
-  }
-  100% {
-    opacity: 1;
-    border: none;
-  }
-}
-
-@keyframes type3 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes type3 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-@-webkit-keyframes blink {
-  50% {
-    border-color: tranparent;
-  }
-}
         .flip-card {
             background-color: transparent;
             width: 15%;
@@ -210,7 +85,6 @@
             font-family: Poppins;
             font-size: 12px;
             padding: 5%;
-            
             height: 90%;
         }
 
@@ -953,16 +827,15 @@
     </nav>
     <div class="main">
         <br><br>
-        <img src="Landing2.jpg" style="width:60%;">
-              <div style="position: absolute;top: 30%;left: 6.5%;color: white;"class="css-typing">
-          <p>
-           Accelerating your hiring needs-
-          </p>
-          <p>
-           Our expert recruiters specialize in the following verticals
-          </p>
-                </div>   
-        <div class="flip-card" style="position: absolute;top: 10%;left: 50%;">
+        <img src="PageWiseAssets/landingpage2.png" style="width: 100%;height:50vh;position: relative;top: 0;left: 0;" />
+       <!-- <div id="landingtext" style="text-align: center;color: white;font-family: Playfair Display;font-size: 40;font-weight: bolder;">
+            Accelerate Your Hiring Needs - Our expert recruiters specialize <br>in the following verticals
+        </div> -->
+
+        <div id="p2" style="height:340px">
+
+
+            <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <img src="PageWiseAssets/tech.png">
@@ -973,9 +846,7 @@
                     </div>
                 </div>
             </div>
-
-          
-            <div class="flip-card" style="position: absolute;top: 10%;left:67%;">
+            <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <img src="PageWiseAssets/exe.png" />
@@ -986,7 +857,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flip-card" style="position: absolute;top: 55%;left: 60%;">
+            <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <img src="PageWiseAssets/supp.png" />
@@ -997,13 +868,6 @@
                     </div>
                 </div>
             </div>
-      
-       
-      
-        <div id="p2" style="height:340px">
-
-
-          
         </div>
         <div style="padding-left: 0%;padding-right: 0%;position: relative;top: 5vh;left: 0vh">
             <div id="staffing" style="font-family: Playfair Display;
