@@ -1336,7 +1336,7 @@ form {
 
 .footerlinks {
     height: 3em;
-    top: 5vh;
+    top: 2vh;
     margin-top: 0;
     display: flex;
     justify-content: center;
@@ -1345,7 +1345,7 @@ form {
 }
 
 .footerlinks > div {
-    margin: 2%;
+    margin: 1%;
 }
 
 .footerlinks > div > a {
