@@ -875,12 +875,12 @@ img {
 }
 
 #interview > div {
-    background-color: rgb(12, 20, 117);
+    background-color: white;
     padding: 1%;
     margin: 1%;
     text-align: left;
     border-radius: 1rem;
-
+    color: rgb(12, 20, 117);
 }
 
 .interview-1 {
@@ -902,7 +902,7 @@ img {
 }
 
 #openpos > div {
-    background-color: rgb(12, 20, 117);
+    background-color: white;
     padding: 1%;
     /* height: 18vh; */
     font-size: 13px;
@@ -910,6 +910,7 @@ img {
     text-align: left;
     border-radius: 1rem;
     position: relative;
+    color:rgb(12, 20, 117);
 }
 
 .OPAnchor {
@@ -976,7 +977,7 @@ img {
 
 .opportunities-1 {
 
-    background-color: rgb(12, 20, 117);
+    background-color: white;
     padding: 1%;
     height: 7vh;
     font-size: 1em;
@@ -985,7 +986,7 @@ img {
     border-radius: 1rem;
     width: 45%;
     position: relative;
-
+    color:rgb(12, 20, 117);
 }
 
 .opps-1 {
