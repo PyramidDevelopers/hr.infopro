@@ -951,6 +951,7 @@ img {
     border-color: black;
     border-width: thick;
     box-shadow: 0 4px black;
+    cursor: pointer;
 }
 
 .OPApply:hover {
@@ -1335,7 +1336,7 @@ form {
 
 .footerlinks {
     height: 3em;
-    top: 5vh;
+    top: 2vh;
     margin-top: 0;
     display: flex;
     justify-content: center;
@@ -1344,7 +1345,7 @@ form {
 }
 
 .footerlinks > div {
-    margin: 2%;
+    margin: 1%;
 }
 
 .footerlinks > div > a {
@@ -1356,8 +1357,8 @@ form {
 }
 
 .footerlinks2 > div {
-    line-height: 0.8em;
-    margin-bottom: 1em;
+    line-height: 1.3em;
+    /* margin-bottom: 1em; */
 }
 
 @media only screen and (max-width: 900px) {
