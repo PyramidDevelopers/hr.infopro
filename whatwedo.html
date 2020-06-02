@@ -807,7 +807,7 @@
 
 
 
-                <div class="w3-dropdown w3-bar " style="display:none; background-color:rgb(12, 20, 117)" id="mySidebar">
+                <div  class="w3-dropdown w3-bar "  style="display:none; background-color:rgb(12, 20, 117)" id="mySidebar">
 
                     <a onclick="my_close()" href="index.html" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Home</a>
                     <a onclick="my_closeemp2()" class="w3-bar-item w3-button" id="l2" style="width: 100% ;color: white;font-family: Poppins; ">Employers</a>
@@ -870,16 +870,7 @@
             </div>
         </div>
         <div style="padding-left: 0%;padding-right: 0%;position: relative;top: 5vh;left: 0vh">
-            <div id="staffing" style="font-family: Playfair Display;
-            font-size: 35;
-            color: #0D1252;
-            font-weight: bolder;
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: 50px;
-            ">
-                What We Do
-            </div>
+           
             <div style="overflow: auto">
                 <div style="float: left;width: 50%;padding-left: 10%">
                     <img src="PageWiseAssets/diamond.png" style="width: 5%" />
@@ -970,15 +961,15 @@
                     <img style="width: 80%" src="PageWiseAssets/img4.png" />
                 </div>
                 <div style="width: 40%;float: left;margin-left: 10%;">
-                <div class="text7" style="text-align: justify;text-justify:inter-character;margin-top: 10%">
+                <div class="text7" style="text-align: justify;text-justify:inter-character;margin-top: 10%;overflow: auto">
                     India offers a significant pool of technical and management resources. However navigating the landscape of statutory, regulatory, taxes, and employee management can be a daunting task for international companies.
                 </div>
-                <div class="text8" style="text-align: justify;text-justify:inter-character;margin-top: 10%">
+                <div class="text8" style="text-align: justify;text-justify:inter-character;margin-top: 10%;overflow: auto">
                     Think of Professional Employer Organization (PEO) as a Shared Service - on behalf of your organization, we will create a virtual team for your organization in India. We handle all aspects of setup including employee recruitment and employment, while you select your team and manage their deliverables. When you are ready to set up your entity, we will transfer the team to you.
                 </div>
                      </div>
                     </div>
-                <div class="text9" style="text-align: justify;text-justify:inter-character;width: 40%;float: left;margin-top: 8%">
+                <div class="text9" style="text-align: justify;text-justify:inter-character;width: 40%;float: left;margin-top: 8%;overflow: auto">
                     PEO model is helpful for organizations that are skeptical of setting an offshore entity but require on-board technical resources in a hurry. Clients make the final decision of their team selection, decide on their compensations, and retain complete control of their operating environment safeguarding their intellectual property. It is your workforce without the headaches of an organization and with full transparency to the costs of running this virtual team.
                 </div>
                    
@@ -1053,13 +1044,7 @@
 
         </div>
         <div>
-            <div id="staffing2" style="font-family: Playfair Display;
-                       font-size: 25px;
-                       font-weight: bolder;
-                       text-align: center;
-                       padding-top: 5%;
-                        ">
-                What We Do</div>
+           
             <div style="padding: 10%">
                 <img src="PageWiseAssets/diamond.png" style="width: 5%" />
                 <div style="font-family: Playfair Display; font-size: 25px;color: #0D1252;font-weight: bold;">
@@ -1244,7 +1229,15 @@
             }
 
         }
+        
+ function my_close() {
+            if (document.getElementById("mySidebar").style.display == "block") {
+                document.getElementById("mySidebar").style.display = "none";
+            } else {
+                document.getElementById("mySidebar").style.display = "block";
+            }
 
+        }
         function my_open() {
             if (document.getElementById("mySidebar").style.display == "block") {
                 document.getElementById("mySidebar").style.display = "none";
