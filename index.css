@@ -1356,8 +1356,8 @@ form {
 }
 
 .footerlinks2 > div {
-    line-height: 0.8em;
-    margin-bottom: 1em;
+    line-height: 1.3em;
+    /* margin-bottom: 1em; */
 }
 
 @media only screen and (max-width: 900px) {
