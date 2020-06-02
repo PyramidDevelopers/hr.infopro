@@ -57,8 +57,8 @@ function my_open() {
 
 function readless() {
     if (document.getElementById("readbtn").textContent == "Read Less") {
-    
-        
+
+
         document.getElementById("readbtn").textContent = "Read More";
         document.getElementById("readbtn").style.padding = "10px 10px 10px 10px"
         document.getElementsByClassName("p3s12")[0].style.display = "none";
@@ -69,15 +69,15 @@ function readless() {
 
 
     } else {
-        
-               if (window.matchMedia("(max-width: 900px)").matches) {
-                document.getElementsByClassName("p3s12")[0].style.display = "block";
-                document.getElementsByClassName("p3s14")[0].style.display = "block";
-               } else {
-                document.getElementsByClassName("p3s12")[0].style.display = "flex";
-                document.getElementsByClassName("p3s14")[0].style.display = "flex";
-            }
-        
+
+        if (window.matchMedia("(max-width: 900px)").matches) {
+            document.getElementsByClassName("p3s12")[0].style.display = "block";
+            document.getElementsByClassName("p3s14")[0].style.display = "block";
+        } else {
+            document.getElementsByClassName("p3s12")[0].style.display = "flex";
+            document.getElementsByClassName("p3s14")[0].style.display = "flex";
+        }
+
         document.getElementById("readbtn").style.padding = "10px 10px 10px 10px"
         document.getElementsByClassName("p3s13")[0].style.display = "block";
         document.getElementsByClassName("p3s15")[0].style.display = "flex";
@@ -265,11 +265,12 @@ fetch(URL)
                         var i = localStorage.getItem("i value");
                         document.getElementById("JobTitleA").innerHTML = fullData[localStorage.getItem("i value")][1].toString();
 
-                        document.getElementById("JobPos").value = fullData[localStorage.getItem("i value")].toString();
+                        document.getElementById("JobPos").value = fullData[localStorage.getItem("i value")][1].toString();
                         document.getElementById("myForm").style.display = "block";
 
 
                     })
+
 
 
             });
