@@ -979,7 +979,7 @@ img {
 
     background-color: white;
     padding: 1%;
-    height: 7vh;
+    min-height: 7vh;
     font-size: 1em;
     margin: 1%;
     text-align: center;
