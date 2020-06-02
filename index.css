@@ -951,6 +951,7 @@ img {
     border-color: black;
     border-width: thick;
     box-shadow: 0 4px black;
+    cursor: pointer;
 }
 
 .OPApply:hover {
