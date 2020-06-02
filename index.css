@@ -116,13 +116,12 @@
     justify-content: center;
 }
 
-#f21 {
-    padding: 0.5em;
+#f21,#f22 {
+    padding: 0.8em;
+    width: 6%;
 }
 
-#f22 {
-    padding: 0.5em;
-}
+
 
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
@@ -1343,6 +1342,7 @@ form {
     justify-content: center;
     text-align: center;
     color: white;
+    font-size: 12px;
 }
 
 .footerlinks > div {
@@ -1358,7 +1358,7 @@ form {
 }
 
 .footerlinks2 > div {
-    line-height: 1.3em;
+    line-height: 0.3em;
     /* margin-bottom: 1em; */
 }
 
@@ -1866,6 +1866,21 @@ form {
     }
 
     .footerlinks > div {
-        font-size: 0.8em;
+        /* font-size: 0.8em; */
     }
+    .footerlinks{
+        height:2em;
+    }
+#f21,#f22{
+    padding: 0;
+    width: 10%;
+    margin-top: 0.5em;
+}
+#f21{
+    margin-right: 2%;
+}
+#f22{
+    margin-left: 2%;
+}
+
 }
