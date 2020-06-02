@@ -1,479 +1,581 @@
 <html>
-    <head>
-        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-        <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet'>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-        <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="index.css" />
-        <style>
-            html{
-                scroll-behavior: smooth;
-                 
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="index.css" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+
+        }
+
+        .topnav {
+
+            overflow: hidden;
+        }
+
+        .main {
+            display: block;
+
+        }
+
+        .phone {
+            display: none;
+        }
+
+        .small {
+            display: none;
+        }
+
+        .big {
+            display: block;
+        }
+
+        /* Style the links inside the navigation bar */
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        #space {
+            height: 10vh;
+        }
+
+        /* Add an active class to highlight the current page */
+        .active {
+
+            color: rgb(12, 20, 117);
+        }
+
+        /* Hide the link that should open and close the topnav on small screens */
+        .topnav .icon {
+            display: none;
+        }
+
+        /* Dropdown container - needed to position the dropdown content */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .flip-card {
+            width: 15%;
+            float: left;
+            margin-left: 13.75%;
+            margin-top: 3%;
+            margin-bottom: 3%;
+        }
+
+        /* Style the dropdown button to fit inside the topnav */
+        .dropdown .dropbtn {
+            font-size: 15px;
+            border: none;
+            outline: none;
+            color: rgb(12, 20, 117);
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        /* Style the dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Style the links inside the dropdown */
+        .dropdown-content a {
+            float: none;
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        /* Add a dark background on topnav links and the dropdown button on hover */
+        .topnav a:hover,
+        .dropdown:hover {
+            background-color: rgb(12, 20, 117);
+            color: white;
+        }
+
+        .dropbtn:hover {
+            color: white;
+        }
+
+        /* Add a grey background to dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        /* Show the dropdown menu when the user moves the mouse over the dropdown button */
+        .dropdown:hover .dropdown-content {
+            background-color: rgb(12, 20, 117);
+            color: white;
+            display: block;
+        }
+
+        /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+        @media screen and (max-width: 600px) {
+
+            .topnav a:not(:first-child),
+            .dropdown .dropbtn {
+                display: none;
             }
-            .topnav {
 
- overflow: hidden;
-}
-            .main{
-                    display: block;
-                    
-                }
-                .phone{
-                    display: none;
-                }
-.small{
-                    display: none;
-                }
-.big{
-    display: block;
-}
-/* Style the links inside the navigation bar */
-.topnav a {
- float: left;
- display: block;
- color: #f2f2f2;
- text-align: center;
- padding: 14px 16px;
- text-decoration: none;
- font-size: 17px;
-}
-            #space{
-                height: 10vh;
+            .topnav a.icon {
+                float: right;
+                display: block;
             }
-/* Add an active class to highlight the current page */
-.active {
+        }
 
- color: rgb(12, 20, 117);
-}
+        #space {
+            height: 0vh;
+        }
 
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
- display: none;
-}
+        /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            width: 100%;
+            height: 50px;
+            background-color: #ffffff;
+        }
 
-/* Dropdown container - needed to position the dropdown content */
-.dropdown {
- float: left;
- overflow: hidden;
-}
-            .flip-card{
-                width: 15%;
-                float: left;
-                margin-left: 13.75%;
-                margin-top: 3%;
-                margin-bottom: 3%;
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(255, 255, 255);
+        }
+
+        li {
+            float: right;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: rgb(12, 20, 117);
+            font-family: 'Poppins';
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            color: rgb(11, 18, 88);
+        }
+
+        .li1 {
+            margin-left: 49%;
+            position: absolute;
+            top: 20%;
+            width: 2%;
+        }
+
+        .lt1 {
+            font-family: Playfair Display;
+            font-size: 50;
+            color: white;
+            font-weight: bolder;
+            margin-left: 25%;
+            margin-top: 5%;
+            position: absolute;
+            top: 15%;
+            text-align: center;
+        }
+
+        .lt2 {
+            font-family: Poppins;
+            font-size: 35;
+            color: white;
+            font-weight: 500;
+            margin-left: 30%;
+            position: absolute;
+            top: 55%;
+            text-align: center;
+        }
+
+        .p3s1 {
+            padding-top: 0px;
+            font-family: Playfair Display;
+            color: #37138B;
+            font-size: 32;
+            font-weight: bolder;
+            text-align: center;
+        }
+
+        .p3s2 {
+            width: 2%;
+            margin-left: 48%;
+
+        }
+
+        .p3s3 {
+            float: left;
+            width: 30%;
+            margin-left: 50px;
+        }
+
+        .p3s4 {
+            float: left;
+            width: 30%;
+        }
+
+        .p3s5 {
+            float: left;
+            width: 30%;
+            margin-right: 50px;
+        }
+
+        .ncc {
+            width: 60%;
+            margin-left: 20%;
+            margin-bottom: 10px;
+
+        }
+
+        .inno {
+            width: 65%;
+            margin-left: 17.5%;
+
+        }
+
+        .nive {
+            width: 70%;
+            margin-left: 15%;
+            margin-bottom: 10px;
+
+        }
+
+
+        #p2 {
+            background-color: #0D1252;
+            font-size: 1.7vw;
+            font-family: Poppins;
+            color: white;
+        }
+
+        #p2s1 {
+            display: flex;
+        }
+
+        #p2s11 {
+            padding-top: 3%;
+            width: 50.25%;
+            margin-left: 5.5%;
+            margin-right: 0;
+
+        }
+
+        #p2s12 {
+            width: 25.25%;
+            margin-top: 3%;
+            margin-left: 10%;
+        }
+
+        #p2s111 {
+            height: 8%;
+            margin-left: 16%;
+        }
+
+        #p2s111>img {
+            margin: auto;
+            /* position: relative; */
+            /* bottom: -5vh; */
+            max-height: 100%;
+        }
+
+        #p2s112 {
+            position: relative;
+            max-width: 95%;
+            padding-right: 20%;
+            font-size: 15px;
+        }
+
+        #p2s112>div {
+            position: absolute;
+            right: 18%;
+            top: 9%;
+            left: 17%;
+        }
+
+        #p2s112>img {
+            width: 100%;
+
+        }
+
+        #p2s12>img {
+            width: 100%;
+        }
+
+        #p2s2 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .p2s21 {
+            width: 25%;
+            margin-top: 3%;
+            margin-left: 3%;
+            margin-right: 3%;
+            margin-bottom: 3%;
+
+
+        }
+
+        .p2s211 {
+            text-align: center;
+            font-size: 15;
+            position: relative;
+        }
+
+        .p2s211>img {
+            width: 60%;
+
+        }
+
+        .p2s213 {
+            padding: 3%;
+            text-align: center;
+            font-size: 15;
+        }
+
+        .p2s212 {
+            position: absolute;
+            bottom: 15%;
+            font-size: 20;
+            top: 65%;
+            left: 0;
+            right: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        @media screen and (max-width: 900px) {
+
+            .logo {
+                width: 40%;
             }
-/* Style the dropdown button to fit inside the topnav */
-.dropdown .dropbtn {
- font-size: 15px;
- border: none;
- outline: none;
- color: rgb(12, 20, 117);
- padding: 14px 16px;
- background-color: inherit;
- font-family: inherit;
- margin: 0;
-}
 
-/* Style the dropdown content (hidden by default) */
-.dropdown-content {
- display: none;
- position: absolute;
+            .main {
+                display: none;
 
- min-width: 160px;
- box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
- z-index: 1;
-}
-
-/* Style the links inside the dropdown */
-.dropdown-content a {
- float: none;
- color: white;
- padding: 12px 16px;
- text-decoration: none;
- display: block;
- text-align: left;
-}
-
-/* Add a dark background on topnav links and the dropdown button on hover */
-.topnav a:hover, .dropdown:hover {
- background-color: rgb(12, 20, 117);
- color: white;
-}
- .dropbtn:hover{
-                color: white;
             }
-/* Add a grey background to dropdown links on hover */
-.dropdown-content a:hover {
- background-color:white;
- color: black;
-}
 
-/* Show the dropdown menu when the user moves the mouse over the dropdown button */
-.dropdown:hover .dropdown-content {
-    background-color: rgb(12, 20, 117);
-    color: white;
- display: block;
-}
-
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
- .topnav a:not(:first-child), .dropdown .dropbtn {
-   display: none;
- }
- .topnav a.icon {
-   float: right;
-   display: block;
- }
-}
-            #space{
-                height: 0vh;
+            .phone {
+                display: block;
+                overflow: auto;
             }
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-.navbar {
-           position: fixed;
-           top: 0;
-           left: 0;
-           z-index: 9999;
-           width: 100%;
-           height: 50px;
-           background-color: #ffffff;
-       }
 
-       ul {
-           list-style-type: none;
-           margin: 0;
-           padding: 0;
-           overflow: hidden;
-           background-color: rgb(255, 255, 255);
-       }
-
-       li {
-           float: right;
-       }
-
-       .logo {
-           float: left;
-       }
-
-       li a {
-           display: block;
-           color: rgb(12, 20, 117);
-           font-family: 'Poppins';
-           text-align: center;
-           padding: 14px 16px;
-           text-decoration: none;
-       }
-
-       li a:hover {
-           color: rgb(11, 18, 88);
-       }
-            .li1{
-                margin-left: 49%;position: absolute;top: 20%;width: 2%;
+            .big {
+                display: none;
             }
-            .lt1{
-                font-family: Playfair Display;font-size: 50;color:white;font-weight: bolder;
-                     margin-left: 25%;margin-top: 5%;position: absolute;top: 15%;text-align: center;
-            }
-            .lt2{
-                font-family: Poppins;font-size: 35;color:white;font-weight: 500;
-                     margin-left: 30%;position: absolute;top: 55%;text-align: center;
-            }
-       .p3s1{
-           padding-top: 0px;
-           font-family: Playfair Display;
-           color: #37138B;
-           font-size: 32;
-           font-weight: bolder;
-           text-align: center;
-       }
-       .p3s2{
-           width: 2%;
-           margin-left:48%;
 
-       }
-       .p3s3{
-           float: left;
-           width: 30%;
-           margin-left: 50px;
-       }
-       .p3s4{
-           float: left;
-           width: 30%;
-       }
-            .p3s5{
-           float:left;
-           width: 30%;
-                 margin-right: 50px;
-       }
-       .ncc{
-           width: 60%;
-           margin-left: 20%;
-           margin-bottom: 10px;
-           
-       }
-       .inno{
-          width: 65%;
-           margin-left: 17.5%;
-           
-       }
-            .nive{
-              width: 70%;
-              margin-left: 15%;  
-                margin-bottom: 10px;
-               
-       }
+            .small {
+                display: block;
 
+            }
+
+            #homeparent {
+                overflow: auto;
+
+
+            }
+
+            .li1 {
+                margin-left: 10%;
+                position: absolute;
+                top: 11%;
+                width: 3%;
+            }
+
+            .lt1 {
+                font-family: Playfair Display;
+                font-size: 20;
+                color: rgb(12, 20, 117);
+                font-weight: bolder;
+                margin-left: 10%;
+                margin-top: 7%;
+                position: absolute;
+                top: 8%
+            }
+
+            .lt2 {
+                font-family: Poppins;
+                font-size: 13;
+                color: rgb(99, 179, 248);
+                font-weight: 500;
+                margin-left: 10%;
+                position: absolute;
+                top: 23%
+            }
 
             #p2 {
-                background-color: #0D1252;
-                font-size: 1.7vw;
-                font-family: Poppins;
-                color: white;
+                font-size: 3.7vw;
             }
-            #p2s1{
-                display: flex;
+
+            #p2s1 {
+                display: block;
             }
-            #p2s11{
-                padding-top: 3%;
-                width: 50.25%;
-                margin-left: 5.5%;
-                margin-right: 0;
-                
-            }
-            #p2s12{
-                width: 25.25%;
-                margin-top: 3%;
+
+            #p2s11 {
+                width: 100%;
+                padding-top: 5%;
                 margin-left: 10%;
+                margin-bottom: 100px;
             }
-            #p2s111{
-                height: 8%;
-                margin-left:16%;
+
+            #p2s12 {
+                width: 90%;
+                padding: 5%;
+
+                margin-left: 10%;
+                margin-bottom: 10px;
             }
-            #p2s111 > img{
+
+            #p2s111 {
+                height: 1%;
+            }
+
+            #p2s2 {
+                display: block;
+            }
+
+            .p2s21 {
+                width: 80%;
+                padding: 5%;
                 margin: auto;
-                /* position: relative; */
-                /* bottom: -5vh; */
-                max-height: 100%;
             }
-            #p2s112{
-                position: relative;
-                max-width: 95%;
-                padding-right: 20%;
-                font-size: 15px;
+
+            .p3s1 {
+                padding-top: 0px;
+                font-size: 25;
             }
-            #p2s112 > div{
-                position: absolute;
-                right: 18%;
-                top: 9%;
-                left: 17%;
+
+            .p3s2 {
+
+                width: 6%;
+                margin-left: 48%;
             }
-            #p2s112 > img{
+
+            .p3s3 {
+
+
                 width: 100%;
 
+
             }
-            #p2s12 > img{
+
+            .p3s4 {
+
                 width: 100%;
             }
 
-            #p2s2{
-                display: flex;
-                justify-content: center;
+            .p3s5 {
+                width: 100%;
             }
-            .p2s21{
-                width: 25%;
-                margin-top: 3%;
-                margin-left: 3%;
-                margin-right: 3%;
-                margin-bottom: 3%;
-               
-                
+
+            .ncc {
+                padding: 0px 100px 100px 100px;
             }
-            .p2s211{
-                text-align: center;
-                font-size: 15;
-                position: relative;
-            }
-            .p2s211>img{
-                width: 60%;
+
+            .inno {
+                padding: 0px 100px 100px 100px;
 
             }
-            .p2s213{
-                padding: 3%;
-                text-align: center;
-                font-size: 15;
+
+            .nive {
+                padding: 0px 100px 100px 100px;
             }
-            .p2s212{
-                position: absolute;
-                bottom: 15%;
-                font-size: 20;
-                top:65%;
-                left: 0;
-                right: 0;
-            }
- * {
+
+
+        }
+
+        * {
             margin: 0;
             padding: 0;
         }
 
-            @media screen and (max-width: 900px){
-                
-                .logo{
-                    width: 40%;
-                }
-                .main{
-                    display: none;
-                    
-                }
-               
-                .phone{
-                    display: block;
-                    overflow: auto;
-                }
-                .big{
-                display: none;
-}
-                .small{
-                    display: block;
-
-                }
-                #homeparent{
-                    overflow:auto;
-
-
-                }
-                 .li1{
-                margin-left: 10%;position: absolute;top: 11%;width: 3%;
-            }
-                 .lt1{
-                font-family: Playfair Display;font-size: 20;color:rgb(12, 20, 117);font-weight: bolder;
-                     margin-left: 10%;margin-top: 7%;position: absolute;top: 8%
-            }
-            .lt2{
-                font-family: Poppins;font-size: 13;color:rgb(99, 179, 248);font-weight: 500;
-                     margin-left: 10%;position: absolute;top: 23%
-            }
-                #p2{
-                    font-size: 3.7vw;
-                }
-                #p2s1{
-                     display: block;
-                 }
-                #p2s11{
-                    width: 100%;
-                    padding-top: 5%;
-                    margin-left: 10%;
-                    margin-bottom: 100px;
-                }
-                #p2s12{
-                    width: 90%;
-                    padding: 5%;
-                   
-                    margin-left: 10%;
-                    margin-bottom: 10px;
-                }
-                #p2s111{
-                    height: 1%;
-                }
-               
-                #p2s2{
-                    display: block;
-                }
-                .p2s21{
-                    width: 80%;
-                    padding: 5%;
-                    margin:auto;
-                }
-                .p3s1{
-                    padding-top: 0px;
-                 font-size: 25;
-                }
-                .p3s2{
-
-                     width: 6%;
-           margin-left:48%;
-                }
-                 
-       .p3s3{
-                    
-          
-           width: 100%;
-           
-
-       }
-       .p3s4{
-          
-           width: 100%;
-       }
-                .p3s5{
-                    width: 100%; 
-                }
-       .ncc{
-           padding: 0px 100px 100px 100px;
-       }
-       .inno{
-           padding: 0px 100px 100px 100px;
-           
-       }
-                .nive{
-                     padding: 0px 100px 100px 100px;
-                }
-
-
-            }
-              * {
-            margin: 0;
-            padding: 0;
-        }
         .imgbox {
             display: grid;
             height: 100%;
         }
+
         .center-fit {
             max-width: 100%;
             max-height: 100vh;
             margin: auto;
         }
-        </style>
-    </head>
-    <body>
+
+    </style>
+</head>
+
+<body>
 
     <nav class="navbar" id="nav">
 
         <ul>
 
-           
+
             <div class="big" style="padding-top:10px">
-                <a href="index.html"> <li class="logo"><img src="PageWiseAssets/InfoProLogo.png" style="width: 200px;padding:10px 10px 10px 10px;"></li></a>
+                <a href="index.html">
+                    <li class="logo"><img src="PageWiseAssets/InfoProLogo.png" style="width: 200px;padding:10px 10px 10px 10px;"></li>
+                </a>
                 <li><a href="contactus.html">Contact Us</a></li>
                 <li><a href="page3.html">About Us</a></li>
-                
-                <li><a href="hiring.html">Job Seekers</a></li>
-                        <li> <div class="dropdown">
-              <a href="whatwedo.html"><button style="padding-top: 0px;" onmouseout="changeback()" onmouseover="change3()" onclick="myFunction()" id="clrbtn" class="dropbtn">Employers</button></a>
-                        <div id="myDropdown" id="drp" onmouseover="change()" onmouseout="changeback()" class="dropdown-content">
-            <a href="whatwedo.html#staffing">Staffing Solutions</a>
-            <a href="whatwedo.html#hrm">Human Resource Management</a>
-            <a href="whatwedo.html#epo">Professional Employer Organization</a>
-          </div>
-        </div>
-        </li>
-                <div id="dropdown1" style="display:none">
-                         <a onclick="my_close()" href="whatwedo.html#staffing" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
 
-                          <a onclick="my_close()" href="whatwedo.html#hrm" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
-                           <a onclick="my_close()" href="whatwedo.html#epo" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Professional Employer Organization</a>
+                <li><a href="hiring.html">Job Seekers</a></li>
+                <li>
+                    <div class="dropdown">
+                        <a href="whatwedo.html"><button style="padding-top: 0px;" onmouseout="changeback()" onmouseover="change3()" onclick="myFunction()" id="clrbtn" class="dropbtn">Employers</button></a>
+                        <div id="myDropdown" id="drp" onmouseover="change()" onmouseout="changeback()" class="dropdown-content">
+                            <a href="whatwedo.html#staffing">Staffing Solutions</a>
+                            <a href="whatwedo.html#hrm">Human Resource Management</a>
+                            <a href="whatwedo.html#epo">Professional Employer Organization</a>
+                        </div>
                     </div>
+                </li>
+                <div id="dropdown1" style="display:none">
+                    <a onclick="my_close()" href="whatwedo.html#staffing" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
+
+                    <a onclick="my_close()" href="whatwedo.html#hrm" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
+                    <a onclick="my_close()" href="whatwedo.html#epo" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Professional Employer Organization</a>
+                </div>
                 <li><a class="active" href="index.html">Home</a></li>
             </div>
             <div class="small">
                 <div style="width: 100%">
-                 <div style="width: 40%;float: left"><a href="index.html"> <img src="PageWiseAssets/InfoProLogo.png" style="width: 100%;"></a></div>
-                <button onclick="my_open()" 
-                    style="
+                    <div style="width: 40%;float: left"><a href="index.html"> <img src="PageWiseAssets/InfoProLogo.png" style="width: 100%;"></a></div>
+                    <button onclick="my_open()" style="
                     background-color:rgb(12, 20, 117) ;
                       border: none;
                       color: white;
@@ -483,19 +585,20 @@
                            width: 20%;
                            border-radius: 2px;
                            
-                      cursor: pointer;"><i class="fa fa-bars"></i></button> </div>
-               
-                   
+                      cursor: pointer;"><i class="fa fa-bars"></i></button>
+                </div>
+
+
 
                 <div class="w3-dropdown w3-bar " style="display:none; background-color:rgb(12, 20, 117)" id="mySidebar">
 
                     <a onclick="my_close()" href="index.html" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Home</a>
                     <a onclick="my_closeemp2()" class="w3-bar-item w3-button" id="l2" style="width: 100% ;color: white;font-family: Poppins; ">Employers</a>
                     <div id="dropdown2" style="display:none">
-                         <a onclick="my_close()" href="whatwedo.html#staffing" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
+                        <a onclick="my_close()" href="whatwedo.html#staffing" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
 
-                          <a onclick="my_close()" href="whatwedo.html#hrm" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
-                           <a onclick="my_close()" href="whatwedo.html#epo" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Professional Employer Organization</a>
+                        <a onclick="my_close()" href="whatwedo.html#hrm" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
+                        <a onclick="my_close()" href="whatwedo.html#epo" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Professional Employer Organization</a>
                     </div>
 
                     <a onclick="my_close()" href="hiring.html" class="w3-bar-item w3-button" id="l3" style="width: 100% ;color: white;font-family: Poppins">Job Seekers</a>
@@ -505,41 +608,41 @@
             </div>
         </ul>
     </nav>
-        
-  <div class="main">
-<div style="width: 100%;">
-       <img src="PageWiseAssets/landingpage1.png">
-      </div>
-      <div id="homeparent" style="width: auto;  overflow: hidden;">
-            <img class="li1" style="" src="PageWiseAssets/Page2/Orange2.svg"/>
-            <div class="lt1" style=""> 
-            Leading HR Professionals In India<br>
+
+    <div class="main">
+        <div style="width: 100%;">
+            <img src="PageWiseAssets/landingpage1.png">
+        </div>
+        <div id="homeparent" style="width: auto;  overflow: hidden;">
+            <img class="li1" style="" src="PageWiseAssets/Page2/Orange2.svg" />
+            <div class="lt1" style="">
+                Leading HR Professionals In India<br>
                 for Engineers and Executives
             </div>
-            <div class="lt2" style=""> 
-            
-               	If you require talented resources, <br>we are here to make it happen.<br>
+            <div class="lt2" style="">
+
+                If you require talented resources, <br>we are here to make it happen<br>
                 <div style="height: 10px"></div>
 
 
-Serving clients from across the world.
+                Serving clients from across the world
 
             </div>
             <div id="space"></div>
-            
+
         </div>
 
         <div id="p2">
             <div id="p2s1">
                 <div id="p2s11">
                     <div id="p2s111" style="width: 4%">
-                        <img style="" src="PageWiseAssets/Page2/Orange2.svg"/>
+                        <img style="" src="PageWiseAssets/Page2/Orange2.svg" />
                     </div>
                     <div id="p2s112" style=" text-align: justify;text-justify:inter-character">
-                        <img src="PageWiseAssets/Page2/RectBoxes2.png"/>
-                        <div > 	In a changing work-from-home environment, why compromise on the resources that are just local when you can find some of the best talents in India. We can help you find the best technical professionals at about a third of the cost in the US and to be productive 24x7.
-We offer HR management services directly to companies or partner with US and European recruitment firms to be their recruitment arm in India.
-</div>
+                        <img src="PageWiseAssets/Page2/RectBoxes2.png" />
+                        <div> In a changing work from home environment, why compromise on the resources that are just local when you can find some of the best talents in India. We can help you find the best technical professionals at about a third of the cost in the US and to be productive 24x7.
+                            We offer HR management services directly to companies or partner with US and European recruitment firms to be their recruitment arm in India.
+                        </div>
                     </div>
                 </div>
                 <div id="p2s12">
@@ -549,25 +652,25 @@ We offer HR management services directly to companies or partner with US and Eur
             <div id="p2s2">
                 <div class="p2s21">
                     <div class="p2s211">
-                        <img src="PageWiseAssets/Page2/Staffing%20Illustration%20woT.svg"/>
+                        <img src="PageWiseAssets/Page2/Staffing%20Illustration%20woT.svg" />
                         <div class="p2s212">STAFFING<br><br></div>
                     </div>
 
-                    <div class="p2s213" style=" text-align: justify;text-justify:inter-character">We are a fast growing IT staffing company. We  bridge the gap between talent demand and supply using expert search techniques, innovative processes and many years of experience.</div>
+                    <div class="p2s213" style=" text-align: justify;text-justify:inter-character">We are a fast growing IT staffing company. We bridge the gap between talent demand and supply using expert search techniques, innovative processes and many years of experience.</div>
                 </div>
                 <div class="p2s21">
                     <div class="p2s211">
-                        <img src="PageWiseAssets/Page2/HRM%20Illustration%20woT.svg"/>
+                        <img src="PageWiseAssets/Page2/HRM%20Illustration%20woT.svg" />
                         <div class="p2s212">HUMAN RESOURCE MANAGEMENT</div>
                     </div>
                     <div class="p2s213" style=" text-align: justify;text-justify:inter-character">When you outsource your HR, we manage every step of the employment life cycle of your workforce operation. We service from start-ups to large organizations.</div>
                 </div>
                 <div class="p2s21">
                     <div class="p2s211">
-                        <img src="PageWiseAssets/Page2/PEO%20Illustration%20woT.svg"/>
+                        <img src="PageWiseAssets/Page2/PEO%20Illustration%20woT.svg" />
                         <div class="p2s212"> PROFESSIONAL EMPLOYER ORGANIZATION</div>
                     </div>
-                    <div class="p2s213" style=" text-align: justify;text-justify:inter-character">We can be an employer for your outsourcing entity. We perform all essential operational activities needed to manage your  entity in India while your employees stay focused on project deliverables.</div>
+                    <div class="p2s213" style=" text-align: justify;text-justify:inter-character">We can be an employer for your outsourcing entity. We perform all essential operational activities needed to manage your entity in India while your employees stay focused on project deliverables.</div>
                 </div>
             </div>
         </div>
@@ -579,21 +682,21 @@ We offer HR management services directly to companies or partner with US and Eur
             </div>
             <div class="p3s2">
                 <br>
-                <img src="PageWiseAssets/Page2/Orange2.svg"/>
+                <img src="PageWiseAssets/Page2/Orange2.svg" />
             </div>
             <div class="p3s3">
                 <br>
-                <img class="ncc" src="PageWiseAssets/ncc.png"/>
+                <img class="ncc" src="PageWiseAssets/ncc.png" />
             </div>
             <div class="p3s4">
                 <br>
-               <img class="nive" src="PageWiseAssets/client3.png"/>
-            
+                <img class="nive" src="PageWiseAssets/client3.png" />
+
             </div>
             <div class="p3s5">
-                 <img class="inno" src="PageWiseAssets/inno.png"/>
-                
-                </div>
+                <img class="inno" src="PageWiseAssets/inno.png" />
+
+            </div>
         </div>
         <div class="blue" style="background-color:#0D1252 ; height: auto;clear:both; ">
             <div class="p3s1" style="color: white;font-size: 28px">
@@ -601,41 +704,43 @@ We offer HR management services directly to companies or partner with US and Eur
                 Recruitment Focus
 
             </div>
-           <a href="whatwedo.html"> <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="PageWiseAssets/tech.png">
+            <a href="whatwedo.html">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="PageWiseAssets/tech.png">
+                        </div>
+
                     </div>
-                    
                 </div>
-            </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="PageWiseAssets/exe.png" />
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="PageWiseAssets/exe.png" />
+                        </div>
+
                     </div>
-                    
                 </div>
-            </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="PageWiseAssets/supp.png" />
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="PageWiseAssets/supp.png" />
+                        </div>
+
                     </div>
-                   
                 </div>
-            </div></a>
+            </a>
         </div>
         <div class="blue" style="background-color:rgb(12, 20, 117) ; height: auto;clear:both; ">
-             <div class="data footerlinks" >
-                <div >
+            <div class="data footerlinks">
+                <div>
                     <a href="contactus.html">Contact Us</a>
                 </div>
-                <div >
-                    <a  href="hiring.html">Job Seekers</a>
+                <div>
+                    <a href="hiring.html">Job Seekers</a>
                 </div>
                 <div>
-                   <a href="page3.html"> About Us</a>
+                    <a href="page3.html"> About Us</a>
                 </div>
                 <div>
                     <a href="privacypolicy.html">Privacy Policy</a>
@@ -656,46 +761,46 @@ We offer HR management services directly to companies or partner with US and Eur
                             <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon%20awesome-facebook.png" width="30px" height="30px"></a></div>
                     <div class="footer2" id="f22"> <a href="#">
                             <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon%20awesome-linkedin-in.png" width="30px" height="30px">
-    
+
                         </a>
                     </div>
-                    </div>
+                </div>
             </div>
 
             <div class="blue" style="overflow: auto; float: right;width: 20%;background-color:rgb(12, 20, 117)">
                 <img src="PageWiseAssets/Page8/Footer/design.png" style="max-height: 100%;max-width: 100%;" />
             </div>
-        </div> 
         </div>
-    
-    <div class="phone" style="width: 100%;overflow-x: hidden">
-            <img  style="" src="PageWiseAssets/Page2/Orange2.svg"/>
-            <div style="position: absolute;top: 6%; font-family: Playfair Display;color:white;margin-top: 10%;margin-left: 2%; font-size: 20px;font-weight: bold;width: 90%"> 
-            Leading HR Professionals In India<br>
-                for Engineers and Executives
-            </div>
-            <div style="font-family: Poppins;font-size: 12px;margin-left: 2%;position: absolute;top: 20%;color:white"> 
-            
-               	If you require talented resources, <br>we are here to make it happen.<br>
+    </div>
 
-Serving clients from across the world.
-            </div>
-            
-            <img id="home" src="PageWiseAssets/landingpage1.png" style="width: 100%;height: auto">
-     
+    <div class="phone" style="width: 100%;overflow-x: hidden">
+        <img style="" src="PageWiseAssets/Page2/Orange2.svg" />
+        <div style="position: absolute;top: 6%; font-family: Playfair Display;color:white;margin-top: 10%;margin-left: 2%; font-size: 20px;font-weight: bold;width: 90%">
+            Leading HR Professionals In India<br>
+            for Engineers and Executives
+        </div>
+        <div style="font-family: Poppins;font-size: 12px;margin-left: 2%;position: absolute;top: 20%;color:white">
+
+            If you require talented resources, <br>we are here to make it happen.<br>
+
+            Serving clients from across the world.
+        </div>
+
+        <img id="home" src="PageWiseAssets/landingpage1.png" style="width: 100%;height: auto">
+
 
         <div id="p2" style="width: 100%">
             <div id="p2s1">
                 <div id="p2s11">
-                    
+
                     <div id="p2s112" style="width: 100%">
-                        <img src="PageWiseAssets/Page2/RectBoxes2.png"/>
-                        <div  style="width: 5%;left: 10%">
-                        <img src="PageWiseAssets/Page2/Orange2.svg"/>
-                    </div>
+                        <img src="PageWiseAssets/Page2/RectBoxes2.png" />
+                        <div style="width: 5%;left: 10%">
+                            <img src="PageWiseAssets/Page2/Orange2.svg" />
+                        </div>
                         <div style="margin-top: 7%;width: 80%;position: absolute;left: 5%;">In a changing work-from-home environment, why compromise on the resources that are just local when you can find some of the best talents in India. We can help you find the best technical professionals at about a third of the cost in the US and to be productive 24x7.
 
-We offer HR management services directly to companies or partner with US and European recruitment firms to be their recruitment arm in India.</div>
+                            We offer HR management services directly to companies or partner with US and European recruitment firms to be their recruitment arm in India.</div>
                     </div>
                 </div>
                 <div id="p2s12" style="padding-top: 35%">
@@ -705,59 +810,59 @@ We offer HR management services directly to companies or partner with US and Eur
             <div id="p2s2">
                 <div class="p2s21">
                     <div class="p2s211">
-                        <img src="PageWiseAssets/Page2/Staffing%20Illustration%20woT.svg"/>
+                        <img src="PageWiseAssets/Page2/Staffing%20Illustration%20woT.svg" />
                         <div class="p2s212">STAFFING<br><br></div>
                     </div>
 
-                    <div class="p2s213">We are a fast growing IT staffing company. We  bridge the gap between talent demand and supply using expert search techniques, innovative processes and many years of experience.</div>
+                    <div class="p2s213">We are a fast growing IT staffing company. We bridge the gap between talent demand and supply using expert search techniques, innovative processes and many years of experience.</div>
                 </div>
                 <div class="p2s21">
                     <div class="p2s211">
-                        <img src="PageWiseAssets/Page2/HRM%20Illustration%20woT.svg"/>
+                        <img src="PageWiseAssets/Page2/HRM%20Illustration%20woT.svg" />
                         <div class="p2s212">HUMAN RESOURCE MANAGEMENT</div>
                     </div>
                     <div class="p2s213">When you outsource your HR, we manage every step of the employment life cycle of your workforce operation. We service from start-ups to large organizations.</div>
                 </div>
                 <div class="p2s21">
                     <div class="p2s211">
-                        <img src="PageWiseAssets/Page2/PEO%20Illustration%20woT.svg"/>
+                        <img src="PageWiseAssets/Page2/PEO%20Illustration%20woT.svg" />
                         <div class="p2s212"> PROFESSIONAL EMPLOYER ORGANIZATION</div>
                     </div>
-                    <div class="p2s213">We can be an employer for your outsourcing entity. We perform all essential operational activities needed to manage your  entity in India while your employees stay focused on project deliverables.</div>
+                    <div class="p2s213">We can be an employer for your outsourcing entity. We perform all essential operational activities needed to manage your entity in India while your employees stay focused on project deliverables.</div>
                 </div>
             </div>
         </div>
-            <div>
+        <div>
             <div class="p3s1">
-                
+
                 Our Top Clients
 
             </div>
             <div style="width: 5%;margin-left: 47.5%">
                 <br>
-                <img src="PageWiseAssets/Page2/Orange2.svg"/>
+                <img src="PageWiseAssets/Page2/Orange2.svg" />
             </div>
             <div style="width: 100%;margin-top: 5%">
-                <img class="ncc" style="width: 100%;margin-left: 0%;margin-top: 0%;margin-bottom: 0%" src="PageWiseAssets/ncc.png"/>
+                <img class="ncc" style="width: 100%;margin-left: 0%;margin-top: 0%;margin-bottom: 0%" src="PageWiseAssets/ncc.png" />
             </div>
             <div class="p3s4">
-               
-             <img class="nive" style="width: 100%;margin-left: 0%;margin-top: 0%;margin-bottom: 0%" src="PageWiseAssets/client3.png"/>
+
+                <img class="nive" style="width: 100%;margin-left: 0%;margin-top: 0%;margin-bottom: 0%" src="PageWiseAssets/client3.png" />
             </div>
             <div class="p3s5">
-                <img class="inno" style="width: 100%;margin-left: 0%;margin-top: 0%;margin-bottom: 0%" src="PageWiseAssets/inno.png"/>
+                <img class="inno" style="width: 100%;margin-left: 0%;margin-top: 0%;margin-bottom: 0%" src="PageWiseAssets/inno.png" />
             </div>
         </div>
         <div class="blue" style="background-color:rgb(12, 20, 117) ; height: auto;clear:both; ">
-             <div class="data footerlinks" >
-                <div >
+            <div class="data footerlinks">
+                <div>
                     <a href="contactus.html">Contact Us</a>
                 </div>
-                <div >
-                    <a  href="hiring.html">Job Seekers</a>
+                <div>
+                    <a href="hiring.html">Job Seekers</a>
                 </div>
                 <div>
-                   <a href="page3.html"> About Us</a>
+                    <a href="page3.html"> About Us</a>
                 </div>
                 <div>
                     <a href="privacypolicy.html>Privacy Policy</a>
@@ -778,65 +883,67 @@ We offer HR management services directly to companies or partner with US and Eur
                             <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon%20awesome-facebook.png" width="30px" height="30px"></a></div>
                     <div class="footer2" id="f22"> <a href="#">
                             <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon%20awesome-linkedin-in.png" width="30px" height="30px">
-    
+
                         </a>
                     </div>
-                    </div>
+                </div>
             </div>
 
             <div class="blue" style="overflow: auto; float: right;width: 20%;background-color:rgb(12, 20, 117)">
                 <img src="PageWiseAssets/Page8/Footer/design.png" style="max-height: 100%;max-width: 100%;" />
             </div>
-        </div> 
+        </div>
     </div>
-        <script>
-            function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-function my_closeemp1() {
-    if(document.getElementById("dropdown1").style.display == "block"){
-         document.getElementById("dropdown1").style.display = "none";
-    }
-    else
-    {
-       document.getElementById("dropdown1").style.display = "block" ;
-    }
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
 
-}
-function my_closeemp2() {
-    if(document.getElementById("dropdown2").style.display == "block"){
-         document.getElementById("dropdown2").style.display = "none";
-    }
-    else
-    {
-       document.getElementById("dropdown2").style.display = "block" ;
-    }
+        function my_closeemp1() {
+            if (document.getElementById("dropdown1").style.display == "block") {
+                document.getElementById("dropdown1").style.display = "none";
+            } else {
+                document.getElementById("dropdown1").style.display = "block";
+            }
 
-}
-             function change(){
-        var x = document.getElementById("clrbtn"); 
-        var y = document.getElementById("drp");
-        x.style.color="white";
-       
-    }
-    function change3(){
-        var x = document.getElementById("clrbtn"); 
-        
-        x.style.color="white";
-       
-    }
-    function changeback(){
-        var x = document.getElementById("clrbtn"); 
+        }
 
-        x.style.color="#0D1252";
-       
-    }
-function my_open() {
+        function my_closeemp2() {
+            if (document.getElementById("dropdown2").style.display == "block") {
+                document.getElementById("dropdown2").style.display = "none";
+            } else {
+                document.getElementById("dropdown2").style.display = "block";
+            }
+
+        }
+
+        function change() {
+            var x = document.getElementById("clrbtn");
+            var y = document.getElementById("drp");
+            x.style.color = "white";
+
+        }
+
+        function change3() {
+            var x = document.getElementById("clrbtn");
+
+            x.style.color = "white";
+
+        }
+
+        function changeback() {
+            var x = document.getElementById("clrbtn");
+
+            x.style.color = "#0D1252";
+
+        }
+
+        function my_open() {
             if (document.getElementById("mySidebar").style.display == "block") {
                 document.getElementById("mySidebar").style.display = "none";
             } else {
@@ -845,6 +952,7 @@ function my_open() {
             }
         }
 
-        </script>
-    </body>
+    </script>
+</body>
+
 </html>
