@@ -980,6 +980,7 @@ img {
     overflow: auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 #opportunities-container{
     
@@ -992,7 +993,7 @@ img {
     min-height: 7vh;
     font-size: 1em;
     margin: 1%;
-    text-align: center;
+    /* text-align: center; */
     border-radius: 1rem;
     width: 45%;
     position: relative;
