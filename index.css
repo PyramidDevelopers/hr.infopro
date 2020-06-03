@@ -5,7 +5,9 @@
 .big {
     display: block;
 }
-
+a{
+    text-decoration: none;
+}
 /* Style the links inside the navigation bar */
 .topnav a {
     float: left;
@@ -942,26 +944,35 @@ img {
     position: absolute;
     right: 5%;
     top: 7%;
-    height: 3em;
+     height: 3em;
     width: 12em;
-    border-radius: 1em;
+    /* border-radius: 1em;
     background-color: rgb(99, 180, 250);
-    font-weight: bold;
+    font-weight: bold; */
+    border-width: 0;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .6);
+    background-color: rgb(35, 49, 135);
+    color: #ecf0f1;
+    transition: background-color .3s;
     z-index: 2;
-    border-color: black;
+    /* border-color: black;
     border-width: thick;
-    box-shadow: 0 4px black;
+    box-shadow: 0 4px black; */
     cursor: pointer;
 }
 
 .OPApply:hover {
-    background-color: rgb(99, 180, 250)
+    color: rgb(255, 255, 255);
+    background-color: rgb(29, 40, 112);
 }
 
 .OPApply:active {
-    background-color: rgb(99, 180, 250);
-    box-shadow: 0 5px black;
-    transform: translateY(4px);
+    color: rgb(255, 255, 255);
+    background-color: rgb(29, 40, 112);
+    /* box-shadow: 0 5px black;
+    transform: translateY(4px); */
 }
 
 #opportunities {
