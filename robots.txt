@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://hr.infoprosol.com/sitemap.xml
