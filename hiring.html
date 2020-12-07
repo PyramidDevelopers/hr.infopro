@@ -46,6 +46,215 @@
 
     </script>
     <style>
+        .hiring {
+    font-family: "Poppins";
+    background-color: #fff;
+    /* max-width: 75%; */
+    width: 100vw;
+    /* margin: 0 auto; */
+    height: auto;
+    padding: 3rem 7rem;
+}
+
+.hiring-header {
+    text-align: center;
+}
+
+.tab-content-text {
+    width: 50%;
+    float: left;
+    padding-top: 2vh;
+    padding-left: 2vh;
+}
+
+.tab-content-image {
+    width: 50%;
+    float: right;
+}
+
+.tab-content-image > img {
+    width: 90%;
+    height: 25vh;
+}
+
+.hiring-images {
+    margin: 1rem 0;
+    height: 30%;
+    width: 30%;
+}
+
+.tabs {
+    position: relative;
+    margin: 1rem 0 3rem 0;
+    height: auto;
+
+}
+
+.tabs::before,
+.tabs::after {
+    content: "";
+    display: table;
+}
+
+.tabs::after {
+    clear: both;
+}
+
+.tab {
+    float: left;
+    width: 25%;
+}
+
+.tab-switch {
+    display: none;
+}
+
+.tab-label {
+    position: relative;
+    display: block;
+    line-height: 1.5rem;
+    height: 8rem;
+    /* padding: 0 1.618em; */
+    background: rgb(35, 49, 135);
+    color: #fff;
+    cursor: pointer;
+    top: 0;
+    text-align: center;
+    font-size: 1em;
+    /* left:1rem;
+              right:1rem; */
+    transition: all 0.25s;
+    margin: 0.5rem;
+}
+
+.tab-label:hover {
+    top: -0.5vh;
+    transition: all 0.25s;
+    border-top: 0.5rem solid rgba(99, 180, 250, 1);
+    ;
+}
+
+.tab-content {
+    height: auto;
+    position: absolute;
+    z-index: 1;
+    top: 9rem;
+    left: 0;
+    right: 0;
+    padding: 0.5rem;
+    background: rgb(35, 49, 135);
+    color: #fff;
+    opacity: 0;
+    /* transition: all 5s; */
+    margin: 0 0.5rem;
+    display: none;
+}
+
+.sizecheck {
+    height: auto;
+    position: relative;
+    top: 15rem;
+    left: 0;
+    right: 0;
+    padding: 1.618rem;
+    /* transition: all 5s; */
+    margin: 0 0.5rem;
+
+    z-index: -1;
+    visibility: hidden;
+}
+
+.tab-switch:checked + .tab-label {
+    height: 9rem;
+    border-top: 0.5rem solid rgba(99, 180, 250, 1);
+    ;
+    transition: all 0.35s;
+    z-index: 1;
+    /* top: -0.0625rem; */
+}
+
+.tab-switch:checked + label + .tab-content {
+    z-index: 2;
+    opacity: 1;
+    display: block;
+    /* transition: all 0.35s; */
+}
+
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 45%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    height: 85vh;
+    overflow: auto;
+    font-size: 15px;
+}
+
+.JobTitleA {
+    font-size: 2em;
+}
+
+.closeForm {
+    z-index: 1;
+    width: 1.5em;
+    border-radius: 2em;
+    float: right;
+
+}
+
+/* Add styles to the form container */
+.form-container {
+    max-width: 100%;
+    padding: 3%;
+    background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text],
+.form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus,
+.form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+/* APPLY FORM */
+/* Set a style for the submit/login button */
+.form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+    background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+    opacity: 1;
+}
+
+
         .ti1 {
             position: absolute;
             top: 31%;
@@ -63,6 +272,66 @@
         }
 
         @media screen and (max-width: 900px) {
+            
+    .hiring {
+        width: 90vw;
+        height: auto;
+        padding: 0;
+        margin: 6vw;
+    }
+
+    .hiring-header {
+        margin-top: 5em;
+    }
+
+    .tab-label {
+        height: 15vh;
+        font-size: 2vw;
+        padding: 1vw;
+        margin: 1vw;
+    }
+
+    .hiring-images {
+        width: 70%;
+        height: 10vh;
+        margin: auto;
+    }
+
+    .tab-content {
+        margin: 1vw;
+        top: 17.5vh;
+        height: auto;
+        font-size: 0.7em;
+        padding: 3vw;
+    }
+
+    .tab-switch:checked + .tab-label {
+        height: 20vh;
+        border-top: 0.5vh solid #fff;
+        transition: all 0.35s;
+        z-index: 1;
+        /* top: -0.0625rem; */
+    }
+
+    .tab-switch:checked + label + .tab-content {
+        z-index: 2;
+        opacity: 1;
+        transition: top 0.35s;
+    }
+
+    .tab-content-image {
+        width: 85%;
+        height: 50%;
+        margin: auto;
+        float: none;
+    }
+
+    .tab-content-text {
+        width: 85%;
+        margin: auto;
+        float: none;
+    }
+
             .ti1 {
                 position: absolute;
                 top: 21%;

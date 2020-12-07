@@ -732,148 +732,11 @@ img {
 }
 
 #pg8 {
-    /* background-image: url('PageWiseAssets\contactUs.jpg'); */
-    /* background-image: image('PageWiseAssets\contactUs.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%; */
+ 
     position: relative;
 }
 
 /*    Hiring Normal*/
-.hiring {
-    font-family: "Poppins";
-    background-color: #fff;
-    /* max-width: 75%; */
-    width: 100vw;
-    /* margin: 0 auto; */
-    height: auto;
-    padding: 3rem 7rem;
-}
-
-.hiring-header {
-    text-align: center;
-}
-
-.tab-content-text {
-    width: 50%;
-    float: left;
-    padding-top: 2vh;
-    padding-left: 2vh;
-}
-
-.tab-content-image {
-    width: 50%;
-    float: right;
-}
-
-.tab-content-image > img {
-    width: 90%;
-    height: 25vh;
-}
-
-.hiring-images {
-    margin: 1rem 0;
-    height: 30%;
-    width: 30%;
-}
-
-.tabs {
-    position: relative;
-    margin: 1rem 0 3rem 0;
-    height: auto;
-
-}
-
-.tabs::before,
-.tabs::after {
-    content: "";
-    display: table;
-}
-
-.tabs::after {
-    clear: both;
-}
-
-.tab {
-    float: left;
-    width: 25%;
-}
-
-.tab-switch {
-    display: none;
-}
-
-.tab-label {
-    position: relative;
-    display: block;
-    line-height: 1.5rem;
-    height: 8rem;
-    /* padding: 0 1.618em; */
-    background: rgb(35, 49, 135);
-    color: #fff;
-    cursor: pointer;
-    top: 0;
-    text-align: center;
-    font-size: 1em;
-    /* left:1rem;
-              right:1rem; */
-    transition: all 0.25s;
-    margin: 0.5rem;
-}
-
-.tab-label:hover {
-    top: -0.5vh;
-    transition: all 0.25s;
-    border-top: 0.5rem solid rgba(99, 180, 250, 1);
-    ;
-}
-
-.tab-content {
-    height: auto;
-    position: absolute;
-    z-index: 1;
-    top: 9rem;
-    left: 0;
-    right: 0;
-    padding: 0.5rem;
-    background: rgb(35, 49, 135);
-    color: #fff;
-    opacity: 0;
-    /* transition: all 5s; */
-    margin: 0 0.5rem;
-    display: none;
-}
-
-.sizecheck {
-    height: auto;
-    position: relative;
-    top: 15rem;
-    left: 0;
-    right: 0;
-    padding: 1.618rem;
-    /* transition: all 5s; */
-    margin: 0 0.5rem;
-
-    z-index: -1;
-    visibility: hidden;
-}
-
-.tab-switch:checked + .tab-label {
-    height: 9rem;
-    border-top: 0.5rem solid rgba(99, 180, 250, 1);
-    ;
-    transition: all 0.35s;
-    z-index: 1;
-    /* top: -0.0625rem; */
-}
-
-.tab-switch:checked + label + .tab-content {
-    z-index: 2;
-    opacity: 1;
-    display: block;
-    /* transition: all 0.35s; */
-}
 
 #interview > div {
     background-color: white;
@@ -941,9 +804,6 @@ img {
     top: 7%;
      height: 3em;
     width: 12em;
-    /* border-radius: 1em;
-    background-color: rgb(99, 180, 250);
-    font-weight: bold; */
     border-width: 0;
     outline: none;
     border-radius: 10px;
@@ -952,9 +812,6 @@ img {
     color: #ecf0f1;
     transition: background-color .3s;
     z-index: 2;
-    /* border-color: black;
-    border-width: thick;
-    box-shadow: 0 4px black; */
     cursor: pointer;
 }
 
@@ -966,8 +823,7 @@ img {
 .OPApply:active {
     color: rgb(255, 255, 255);
     background-color: rgb(29, 40, 112);
-    /* box-shadow: 0 5px black;
-    transform: translateY(4px); */
+
 }
 
 #opportunities {
@@ -977,9 +833,6 @@ img {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-#opportunities-container{
-    
-}
 
 .opportunities-1 {
 
@@ -988,7 +841,6 @@ img {
     min-height: 7vh;
     font-size: 1em;
     margin: 1%;
-    /* text-align: center; */
     border-radius: 1rem;
     width: 45%;
     position: relative;
@@ -1019,129 +871,7 @@ img {
 
 /* APPLY FORM */
 
-/* The popup form - hidden by default */
-.form-popup {
-    display: none;
-    position: fixed;
-    bottom: 45%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    border: 3px solid #f1f1f1;
-    z-index: 9;
-    height: 85vh;
-    overflow: auto;
-    font-size: 15px;
-}
-
-.JobTitleA {
-    font-size: 2em;
-}
-
-.closeForm {
-    z-index: 1;
-    width: 1.5em;
-    border-radius: 2em;
-    float: right;
-
-}
-
-/* Add styles to the form container */
-.form-container {
-    max-width: 100%;
-    padding: 3%;
-    background-color: white;
-}
-
-/* Full-width input fields */
-.form-container input[type=text],
-.form-container input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
-}
-
-/* When the inputs get focus, do something */
-.form-container input[type=text]:focus,
-.form-container input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
-}
-
-/* Set a style for the submit/login button */
-.form-container .btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom: 10px;
-    opacity: 0.8;
-}
-
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-    background-color: red;
-}
-
-/* Add some hover effects to buttons */
-.form-container .btn:hover,
-.open-button:hover {
-    opacity: 1;
-}
-
 /*    COntat Us*/
-#Contact {
-
-    justify-content: center;
-    font-size: 15px;
-}
-
-/* #Contact > div {
-            display:inline-block;
-          } */
-form {
-    top: 1vh;
-    /* position: relative; */
-    margin: 0;
-    font-family: Poppins;
-    font-size: 1em;
-}
-
-#Contact_Us {
-    /* position: relative; */
-    left: 40vw;
-    top: 8vh;
-    width: 100vw;
-    white-space: nowrap;
-
-    font-family: "Playfair Display";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 3em;
-    color: rgb(12, 20, 117);
-}
-
-.ContactForm {
-    /* position: relative; */
-    /* padding-top: 12vh; */
-    width: 61%;
-    margin: auto;
-    overflow:hidden;
-}
-
-.contact-heading {
-    font-family: Playfair Display black roman;
-    font-size: 3em;
-    font-weight: bolder;
-    color: rgb(12, 20, 117);
-    text-align: center;
-    padding-top: 1.5em;
-    width: 60%;
-    margin: auto;
-}
 
 #Requirement_type {
     position: relative;
@@ -1153,193 +883,6 @@ form {
     font-weight: normal;
     font-size: 1.5em;
     color: rgba(242, 242, 242, 1);
-}
-
-.RbtnAll {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.RBtn {
-    margin: 2vw;
-    margin-bottom: 1.5em;
-}
-
-.RadioButtons {
-    top: -2vh;
-    position: relative;
-    overflow: visible;
-    white-space: nowrap;
-    /* padding-top: 0.5em;
-              padding-bottom: 0.5em; */
-    padding-left: 3em;
-    padding-right: 3vw;
-    /* text-align: left; */
-    /* font-family: Poppins;
-              font-style: normal;
-              font-weight: normal; */
-    font-size: 1.3em;
-    color: rgb(12, 20, 117);
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-
-.RadioButtons input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-
-.Radio {
-    position: absolute;
-    top: 0.1em;
-    left: 0.1em;
-    height: 2em;
-    width: 2em;
-    background-color: white;
-    border-radius: 100%;
-}
-
-.RadioButtons:hover input ~ .Radio {
-    background-color: #ccc;
-}
-
-.RadioButtons input:checked ~ .Radio {
-    background-color: rgb(12, 20, 117);
-    ;
-}
-
-/* Create the indicator (the dot/circle - hidden when not checked) */
-.Radio:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-/* Show the indicator (dot/circle) when checked */
-.RadioButtons input:checked ~ .Radio:after {
-    display: block;
-}
-
-/* Style the indicator (dot/circle) */
-.RadioButtons .Radio:after {
-    top: 0.5em;
-    left: 0.5em;
-    width: 1em;
-    height: 1em;
-    border-radius: 50%;
-    background: white;
-}
-
-.textinput {
-    position: relative;
-    padding-left: 1vw;
-    /* margin-right: 5vw; */
-    height: 3.5em;
-    /* margin-left: 1vw; */
-    width: 100%;
-    font-size: 1em;
-    font-weight: 600;
-    color: rgb(12, 20, 117);
-    border: 0px;
-
-    background-color: white;
-    border-radius: 10px;
-    display: inline-flex;
-    flex-wrap: wrap;
-    font-family: Poppins;
-    position: relative;
-    z-index: 8;
-}
-
-.textbox {
-
-    display: grid;
-    margin-top: -0.5vh;
-    margin-right: 1vw;
-}
-
-
-.textName {
-    /* margin-left: 2.5vw; */
-    overflow: visible;
-    width: 10vw;
-    white-space: nowrap;
-    padding: 1rem 0;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.1em;
-    color: rgba(35, 49, 135, 1);
-}
-
-.Details {
-    padding: 1.5em;
-}
-
-#Details1,
-#Details2,
-#Details3,
-#Details4 {
-    display: flex;
-    width: 100%;
-    /* justify-content: space-around; */
-    align-items: stretch;
-    margin: auto;
-
-}
-
-#Details1 > div,
-#Details2 > div,
-#Details3 > div,
-#Details4 > div {
-    flex: auto;
-    /* margin: 2vw; */
-}
-
-.submit {
-
-    margin: auto;
-    border: 0.1em;
-    padding: 0.1em;
-    height: 2em;
-    width: 9em;
-    background-color: rgba(35, 49, 135, 1);
-    border-radius: 0.5em;
-    color: white;
-    font-size: 1.2em;
-}
-
-.submit:hover {
-    background-color: rgba(35, 49, 135, 1);
-}
-
-.submit:active {
-    background-color: rgba(35, 49, 135, 1);
-
-    transform: translateY(4px);
-}
-
-.Submitbtn {
-
-    /* margin: 1%;
-              display: flex;
-              right: 0;
-              justify-content: flex-end; */
-    padding: 1vw;
-    padding-top: 1.5vw;
-    float: right;
-}
-
-::placeholder {
-    color: rgba(35, 49, 135, 1);
-    opacity: 1;
 }
 
 .footerlinks {
@@ -1367,7 +910,6 @@ form {
 
 .footerlinks2 > div {
     line-height: 0.3em;
-    /* margin-bottom: 1em; */
 }
 
 @media only screen and (max-width: 900px) {
@@ -1699,65 +1241,6 @@ form {
         margin-left: 5%;
     }
 
-    .hiring {
-        width: 90vw;
-        height: auto;
-        padding: 0;
-        margin: 6vw;
-    }
-
-    .hiring-header {
-        margin-top: 5em;
-    }
-
-    .tab-label {
-        height: 15vh;
-        font-size: 2vw;
-        padding: 1vw;
-        margin: 1vw;
-    }
-
-    .hiring-images {
-        width: 70%;
-        height: 10vh;
-        margin: auto;
-    }
-
-    .tab-content {
-        margin: 1vw;
-        top: 17.5vh;
-        height: auto;
-        font-size: 0.7em;
-        padding: 3vw;
-    }
-
-    .tab-switch:checked + .tab-label {
-        height: 20vh;
-        border-top: 0.5vh solid #fff;
-        transition: all 0.35s;
-        z-index: 1;
-        /* top: -0.0625rem; */
-    }
-
-    .tab-switch:checked + label + .tab-content {
-        z-index: 2;
-        opacity: 1;
-        transition: top 0.35s;
-    }
-
-    .tab-content-image {
-        width: 85%;
-        height: 50%;
-        margin: auto;
-        float: none;
-    }
-
-    .tab-content-text {
-        width: 85%;
-        margin: auto;
-        float: none;
-    }
-
     #interview > div {
         margin: 1vh 1vh;
     }
@@ -1804,33 +1287,6 @@ form {
     }
 
 
-    #Contact_Us {
-        position: relative;
-        left: 25vw;
-        top: 0;
-        width: 100vw;
-        white-space: nowrap;
-
-        font-family: Playfair Display;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 2em;
-        color: rgba(242, 242, 242, 1);
-    }
-
-    .ContactForm {
-        width: 90%;
-    }
-
-    .contact-heading {
-        width: 70%;
-        font-size: 2em;
-    }
-
-    .contact-bgimg {
-        height: 100%;
-    }
-
 
     #f11,
     #f12 {
@@ -1841,9 +1297,6 @@ form {
         width: 50%;
     }
 
-    .footerlinks > div {
-        /* font-size: 0.8em; */
-    }
     .footerlinks{
         height:2em;
     }
