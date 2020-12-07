@@ -1134,6 +1134,7 @@ form {
     /* padding-top: 12vh; */
     width: 61%;
     margin: auto;
+    overflow:hidden;
 }
 
 .contact-heading {
