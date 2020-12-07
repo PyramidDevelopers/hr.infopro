@@ -914,11 +914,6 @@ img {
     color:rgb(12, 20, 117);
 }
 
-.OPAnchor {
-    text-decoration: none;
-    font-size: 1em;
-}
-
 .OPName {
     /* font-size: 1.2em; */
     font-weight: bold;
@@ -1808,11 +1803,6 @@ form {
         height: 4em;
     }
 
-    .RbtnAll {
-        display: inline-block;
-        flex-wrap: wrap;
-    }
-
 
     #Contact_Us {
         position: relative;
@@ -1841,33 +1831,6 @@ form {
         height: 100%;
     }
 
-    .textinput {
-        margin-bottom: 1em;
-    }
-
-    #Details3,
-    #Details4 {
-        margin-top: -1em;
-    }
-
-    #Details1,
-    #Details2,
-    #Details3,
-    #Details4 {
-        flex-wrap: wrap;
-    }
-
-    .Submitbtn {
-        float: unset;
-        margin-top: 3vw;
-        text-align: center;
-    }
-
-    .Rbtn {
-        top: 1vh;
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
-    }
 
     #f11,
     #f12 {
