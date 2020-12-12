@@ -305,13 +305,11 @@
         </div> -->
         <div id="lan" style="">
        <img src="PageWiseAssets/landingpage3.png">
-             <div class="ti1" style="
-                    ">
+             <div class="ti1">
             Optimize Efficiency
     
     </div>
-             <div class="ti2" style="
-                    ">
+             <div class="ti2">
             Minimize Cost
     
     </div>
@@ -319,10 +317,21 @@
         <div class="p3s1" style="background-color: white;color:rgb(12, 20, 117)">
             <div class="p3s11" style="margin-top: 0px" >
                
-                <h1>How Can We Help You</h1>
                 <div style="font-size: 16px">Finding highly skilled employees is a global challenge and a time-consuming process. Finding a new job for a candidate can be a frustrating experience as well. Find out how we can help you with fulfilling your hiring needs and job search.</div>
+                <h2>About Us</h2>
+                <p style="text-align: justify;text-justify:inter-character"> InfoPro Solutions started its operation at Bangalore, India in 1997 by developing software products 
+                    for global pharmaceutical companies.  Soon, it grew to a few hundred employees. With about two 
+                    decades of experience & expertise in people management and operations management, InfoPro 
+                    ventured into Human Resource Management Services with staffing, Professional Employer 
+                    Organization (PEO) services.
+                    </p>
+                    <p class="bluep">We believe the growth of any organization needs to be in the hands of a Quality Service Provider, 
+                        and we being your business partner, your success is in trustable hands today and every day.
+                        </p>
+
             </div>
             <div class="p3s12"style="text-align: justify;text-justify:inter-character">
+                
                 <div class="p3s121">
                     <img src="PageWiseAssets/Page3/Group%20323.png" />
                 </div>
@@ -333,7 +342,10 @@
                     <p class="bluep">Today, finding the right people has become a Global Challenge. With our innovative strategies on recruitment, we are committed to customizing our search to the client's specific needs in identifying the right people within the projected time.</p>
                     <p>Our platform leverages technology in many of our operational processes that help our clients derive efficiency and reduce costs through the recruitment life cycle.</p>
                 </div>
+
             </div>
+            <button id="hrm" class="btn" type="button" onclick="location.href='contactus.html'"><span><a href="contactus.html">Get In Touch</a></span></button>
+
             <div class="p3s13">
                 <img src="PageWiseAssets/Page3/Orange1.png" style="overflow: auto" class="orange"/>
                 
@@ -378,28 +390,20 @@
             </div>
 
 
-            <button id="readbtn" class="btn2" type="button" style="font-size: 12px;margin-top: 0px;margin-bottom:0px;padding-bottom: 0px"onclick="readless()"><span>Read More</span></button>
+            <!-- <button id="readbtn" class="btn2" type="button" style="font-size: 12px;margin-top: 0px;margin-bottom:0px;padding-bottom: 0px"onclick="readless()"><span>Read More</span></button> -->
         </div>
 
         <div class="p3s2">
             <div class="p3s21">
-                <h2>About Us</h2>
-                <p style="text-align: justify;text-justify:inter-character"> InfoPro Solutions started its operation at Bangalore, India in 1997 by developing software products 
-                    for global pharmaceutical companies.  Soon, it grew to a few hundred employees. With about two 
-                    decades of experience & expertise in people management and operations management, InfoPro 
-                    ventured into Human Resource Management Services with staffing, Professional Employer 
-                    Organization (PEO) services.
-                    </p>
-                    <p class="bluep">We believe the growth of any organization needs to be in the hands of a Quality Service Provider, 
-                        and we being your business partner, your success is in trustable hands today and every day.
-                        </p>
+               
                 <h2>Our History</h2>
                 <p>We have more than two decades of experience in people management and operations management. Our team has knowledge and expertise in setting up the operations, legal compliances, payroll and management.</p>
             </div>
             <div class="p3s22">
                 <img  src="PageWiseAssets/Page3/Group%20339.png" ?>
             </div>
-            <div></div>
+            <button id="hrm" class="btn" type="button" onclick="location.href='contactus.html'"><span><a href="contactus.html">Get In Touch</a></span></button>
+
         </div>  
         <div class="blue" style="background-color:rgb(12, 20, 117) ; height: auto;clear:both; ">
             <div class="data footerlinks">
@@ -425,7 +429,7 @@
                 <div class="f2">
                     <!-- <div class="footer2" id="f21"><a href="#">
                             <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon%20awesome-facebook.png" width="30px" height="30px"></a></div> -->
-                    <div class="footer2" id="f22"> <a href="https://www.linkedin.com/company/infopro-solutions-pvt-ltd">
+                    <div class="footer2" id="f22"> <a href="https://www.linkedin.com/company/infopro-solutions-pvt-ltd" target="_blank">
                             <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon%20awesome-linkedin-in.png" width="30px" height="30px">
 
                         </a>
@@ -437,6 +441,17 @@
                 <img src="PageWiseAssets/Page8/Footer/design.png" style="max-height: 100%;max-width: 100%;float: right;" />
             </div>
         </div>     
-
+<script>
+    
+    if (window.matchMedia("(max-width: 900px)").matches) {
+            document.getElementsByClassName("p3s12")[0].style.display = "block";
+            document.getElementsByClassName("p3s14")[0].style.display = "block";
+        } else {
+            document.getElementsByClassName("p3s12")[0].style.display = "flex";
+            document.getElementsByClassName("p3s14")[0].style.display = "flex";
+        }
+        document.getElementsByClassName("p3s13")[0].style.display = "block";
+        document.getElementsByClassName("p3s15")[0].style.display = "flex";
+</script>
     <script id="applicationScript" type="text/javascript" src="index.js"></script>
 </body></html>

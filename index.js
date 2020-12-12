@@ -55,39 +55,6 @@ function my_open() {
     }
 }
 
-function readless() {
-    if (document.getElementById("readbtn").textContent == "Read Less") {
-
-
-        document.getElementById("readbtn").textContent = "Read More";
-        document.getElementById("readbtn").style.padding = "10px 10px 10px 10px"
-        document.getElementsByClassName("p3s12")[0].style.display = "none";
-        document.getElementsByClassName("p3s13")[0].style.display = "none";
-        document.getElementsByClassName("p3s14")[0].style.display = "none";
-        document.getElementsByClassName("p3s15")[0].style.display = "none";
-        // document.getElementsByClassName("bgrect")[0].style.display = "none";
-
-
-    } else {
-
-        if (window.matchMedia("(max-width: 900px)").matches) {
-            document.getElementsByClassName("p3s12")[0].style.display = "block";
-            document.getElementsByClassName("p3s14")[0].style.display = "block";
-        } else {
-            document.getElementsByClassName("p3s12")[0].style.display = "flex";
-            document.getElementsByClassName("p3s14")[0].style.display = "flex";
-        }
-
-        document.getElementById("readbtn").style.padding = "10px 10px 10px 10px"
-        document.getElementsByClassName("p3s13")[0].style.display = "block";
-        document.getElementsByClassName("p3s15")[0].style.display = "flex";
-        // document.getElementsByClassName("bgrect")[0].style.display = "block";
-
-        document.getElementById("readbtn").textContent = "Read Less";
-
-    }
-}
-
 function my_close() {
     document.getElementById("mySidebar").style.display = "none";
 }
