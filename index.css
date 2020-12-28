@@ -2,6 +2,10 @@
     display: none;
 }
 
+.img_hover:hover {
+	transform: scale(1.05);
+}
+
 .big {
     display: block;
 }
