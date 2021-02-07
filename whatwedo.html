@@ -18,6 +18,30 @@
 
   gtag('config', 'UA-169649084-1');
 </script>
+<script>
+    function myFunction(x) {
+            if (x.matches) { // If media query matches
+                if (window.location.href.search('EmployerOfRecord')){
+                    window.location.href = 'whatwedo.html#EmployerOfRecord2';
+                }
+                if (window.location.href.search('HumanResourceManagement')){
+                    window.location.href = 'whatwedo.html#HumanResourceManagement2';
+                }
+                if (window.location.href.search('StaffingSolutions')){
+                    window.location.href = 'whatwedo.html#StaffingSolutions2';
+                }
+                
+                
+                }
+            }
+           
+        
+
+        var x = window.matchMedia("(max-width: 900px)");
+        myFunction(x); // Call listener function at run time
+        x.addListener(myFunction); // Attach listener function on state changes
+        //window.location.href = window.location.href;
+</script>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -802,17 +826,17 @@
                     <div class="dropdown">
                         <a href="whatwedo.html"><button style="padding-top: 0px;" onmouseout="changeback()" onmouseover="change3()" onclick="myFunction()" id="clrbtn" class="dropbtn">Employers</button></a>
                         <div id="myDropdown" id="drp" onmouseover="change()" onmouseout="changeback()" class="dropdown-content">
-                            <a href="whatwedo.html#staffing">Staffing Solutions</a>
-                            <a href="whatwedo.html#hrm">Human Resource Management</a>
-                            <a href="whatwedo.html#epo">PEO - Employer of Record</a>
+                            <a href="whatwedo.html#StaffingSolutions">Staffing Solutions</a>
+                            <a href="whatwedo.html#HumanResourceManagement">Human Resource Management</a>
+                            <a href="whatwedo.html#EmployerOfRecord">PEO - Employer of Record</a>
                         </div>
                     </div>
                 </li>
                 <div id="dropdown1" style="display:none">
-                    <a onclick="my_close()" href="whatwedo.html#staffing2" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
+                    <a onclick="my_close()" href="whatwedo.html#StaffingSolutions2" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
 
-                    <a onclick="my_close()" href="whatwedo.html#hrm2" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
-                    <a onclick="my_close()" href="whatwedo.html#epo2" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Professional Employer Organization</a>
+                    <a onclick="my_close()" href="whatwedo.html#HumanResourceManagement2" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
+                    <a onclick="my_close()" href="whatwedo.html#EmployerOfRecord2" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Professional Employer Organization</a>
                 </div>
                 <li><a class="active" href="index.html">Home</a></li>
             </div>
@@ -839,10 +863,10 @@
                     <a onclick="my_close()" href="index.html" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Home</a>
                     <a onclick="my_closeemp2()" class="w3-bar-item w3-button" id="l2" style="width: 100% ;color: white;font-family: Poppins; ">Employers</a>
                     <div id="dropdown2" style="display:none">
-                        <a onclick="my_close()" href="whatwedo.html#staffing2" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
+                        <a onclick="my_close()" href="whatwedo.html#StaffingSolutions2" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
 
-                        <a onclick="my_close()" href="whatwedo.html#hrm2" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
-                        <a onclick="my_close()" href="whatwedo.html#epo2" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Professional Employer Organization</a>
+                        <a onclick="my_close()" href="whatwedo.html#HumanResourceManagement2" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
+                        <a onclick="my_close()" href="whatwedo.html#EmployerOfRecord2" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Professional Employer Organization</a>
                     </div>
 
                     <a onclick="my_close()" href="hiring.html" class="w3-bar-item w3-button" id="l3" style="width: 100% ;color: white;font-family: Poppins">Job Seekers</a>
@@ -894,7 +918,7 @@ Our innovative approach enables us to work with speed to identify the best
                     <div class="flip-card-front">
                         <img src="PageWiseAssets/supp.png" alt="infoprosolutions-administration" />
                     </div>
-                    <div id="staffing" class="flip-card-back">
+                    <div id="StaffingSolutions" class="flip-card-back">
                        Technology companies have their own nuances in running their businesses and administrative staff needs to align accordingly<br><br>
 
 Having the relevant technical knowledge and understanding the landscape around the business has significant advantages<br><br>
@@ -959,7 +983,7 @@ We understand these dynamics very well and will identify the right resources to 
             <div class="last1" style="width: 100%">
                 Let us screen and eliminate the wrong candidates to select the right one for you!
             </div>
-            <button id="hrm" class="btn" type="button" onclick="location.href='contactus.html'"><span><a href="contactus.html">Get in Touch</a></span></button>
+            <button id="HumanResourceManagement" class="btn" type="button" onclick="location.href='contactus.html'"><span><a href="contactus.html">Get in Touch</a></span></button>
         </div>
 
         <div style="float: left;width: 90%;margin-left: 10%;margin-top: 2%;margin-bottom: 5%">
@@ -986,7 +1010,7 @@ We understand these dynamics very well and will identify the right resources to 
             </div>
 
         </div>
-        <button class="btn2" id="epo" type="button" onclick="location.href='contactus.html"><span><a href="contactus.html">Get in Touch</a></span></button>
+        <button class="btn2" id="EmployerOfRecord" type="button" onclick="location.href='contactus.html'"><span><a href="contactus.html">Get in Touch</a></span></button>
         <div style="float: left;width: 90%;margin-left: 10%;margin-top: 2%;margin-bottom: 5%;overflow: auto">
             <img src="PageWiseAssets/diamond.png"  alt="infoprosolutions-tile"	style="width: 2.5%" />
             <div style="font-family: Playfair Display; font-size: 30;color: #0D1252;font-weight: bold;">
@@ -1077,7 +1101,7 @@ We understand these dynamics very well and will identify the right resources to 
         </div>
         <div>
 
-            <div id="staffing2" style="padding: 10%">
+            <div id="StaffingSolutions2" style="padding: 10%">
                 <img src="PageWiseAssets/diamond.png" alt="infoprosolutions-tile" style="width: 5%" />
                 <h2 style="font-family: Playfair Display; font-size: 25px;color: #0D1252;font-weight: bold;">
                     Staffing Solutions<br><br>
@@ -1122,7 +1146,7 @@ We understand these dynamics very well and will identify the right resources to 
                         font-size: 20px;font-weight: bold">
                     Let us screen and eliminate the wrong candidates to select the right one for you!
                 </div>
-                <button class="btnm" id="hrm2" type="button" onclick="location.href='contactus.html"><span><a href="contactus.html">Get in Touch</a></span></button>
+                <button class="btnm" id="HumanResourceManagement2" type="button" onclick="location.href='contactus.html' "><span><a href="contactus.html">Get in Touch</a></span></button>
             </div>
             <div id="new" style="padding: 10%">
                 <img src="PageWiseAssets/diamond.png" style="width: 5%" alt="infoprosolutions-tile"/>
@@ -1144,7 +1168,7 @@ We understand these dynamics very well and will identify the right resources to 
                 <div>
                     <img src="PageWiseAssets/img3.png" alt="infoprosolutions-hrm-services" class="img_hover"/>
                 </div>
-                <button class="btnm" id="epo2" type="button" onclick="location.href='contactus.html"><span><a href="contactus.html">Get in Touch</a></span></button>
+                <button class="btnm" id="EmployerOfRecord2" type="button" onclick="location.href='contactus.html'"><span><a href="contactus.html">Get in Touch</a></span></button>
             </div>
             <div id="new2" style="padding: 10%">
                 <img src="PageWiseAssets/diamond.png" alt="infoprosolutions-tile" style="width: 5%" />
@@ -1212,6 +1236,8 @@ We understand these dynamics very well and will identify the right resources to 
 
 
     <script>
+        
+
         function change() {
             var x = document.getElementById("clrbtn");
             var y = document.getElementById("drp");
