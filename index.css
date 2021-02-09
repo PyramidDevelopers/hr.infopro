@@ -106,7 +106,7 @@ a{
     font-family: Poppins;
     text-align: center;
     display: inline-block;
-    width: 100%;
+    /* width: 100%; */
 }
 
 #f12 {
@@ -114,7 +114,7 @@ a{
     font-family: Poppins;
     text-align: center;
     display: inline-block;
-    width: 25%;
+    /* width: 25%; */
 }
 
 .f2 {
