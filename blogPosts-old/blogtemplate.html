@@ -1,5 +1,12 @@
 <html>
-
+ <!-- Use h1 tag for main blog title 
+       Use h2 for sub-headings
+       Use p tag to put text in a different paragraph
+       Use img tag to add images, link of image in src attribute
+       Add required footnotes in h4 tag inside footnotes div
+       Store all images in the blogImages folder
+       create all blogs as a different page in the blogPosts folder
+       Copying this entire page and replace/edit in the required places inside the template portion of this document -->
 <head>
   <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -30,7 +37,7 @@
 	<meta name="description" content="Expert IT Staffing, IT Recruitment, Human Resource Management, PEO, Employer of Record, manpower-hiring services across the globe. Staffing & Recruitment Agency">
 	<meta name="keywords" content=" Human Resource Consultancy, HR Consultancy, HR Agency, Staffing Services, Recruitment Agency, Staffing Agency, Manpower Consultancy, Recruitment Services">
    
-    <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="index.css" />
+    <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="../index.css" />
     <style>
         html {
             scroll-behavior: smooth;
@@ -161,7 +168,6 @@
                 float: right;
                 display: block;
             }
-            
         }
 
         #space {
@@ -218,7 +224,7 @@
             /* margin-top: 5%; */
             margin:auto;
             position: absolute;
-            top: 48%;
+            top: 45%;
             text-align: center;
             left:0;
             right:0;
@@ -245,6 +251,11 @@
                 width: 40%;
             }
 
+            .main {
+                /* display: none; */
+
+            }
+
             .phone {
                 display: block;
                 overflow: auto;
@@ -268,11 +279,11 @@
 
             .lt1 {
                 font-family: Playfair Display;
-                font-size: 2.5em;
+                font-size: 18;
                 color: rgb(12, 20, 117);
                 font-weight: bolder;
                 margin-left: 10%;
-                margin-top: 10vh;
+                margin-top: 7%;
                 position: absolute;
                 top: 8%
             }
@@ -308,84 +319,50 @@
         background-color: rgb(219, 213, 213);
         }
 
-        /* Blog */
-        .b2{
-            display: flex;
-            flex-wrap: wrap;
+        /* Blog Page */
+        .blog-container{
             margin: auto;
             padding: 5%;
-            justify-content: end;
+            text-align: left;
         }
-        .blog-item-container{
-            width: 30%;
-            margin: 1.5%;
-            padding: 2.5vh;
-            border-radius: 5px;
-            height: 45vh;
-            background-color: rgb(219, 213, 213);
+        .blog-container h1{
+            text-align: center;
+            font-weight: bold;
+            padding: 1em;
+        }
+        .blog-container h2{
+            color:rgb(12, 20, 117) ;
+        }
+        .blog-container h3{
+            font-weight: bold;
+        }
+        .blog-container h4{
 
         }
-        .blog-item-container:hover{
-            background-color: rgb(215, 209, 210);
-            cursor: pointer;
+        .blog-container img{
+            max-height: 50vh;
+            display: block;
+            margin: 2em auto;
         }
-        .blog-item-image{
-            width: 100%;
-            height: 25vh;
-            overflow: hidden;
+        .blog-container p{
+            padding: 0.5em 0;
         }
-        .blog-item-image img{
-            min-height: 100%;
-            min-width: 100%;
-            margin: auto;
-            border-radius: 5px 5px 0 0;
+        .blog-container a{
+            color: blue;
         }
-        .blog-item-title{
-            width: 100%;
-            height: 15vh;
-            overflow: hidden;
-        }
-        .blog-item-title h3{
-            display: flex;
-            flex-wrap: nowrap;
-        }
-        .blog-item-text{
-            width: 90%;
-            overflow: hidden;
-            font-size: 2.7vh;
-        }
-        .blog-item-arrow{
-            padding-top: 0.5em;
-            padding-left: 2%;
-        }
-        .blog-item-image img:hover{
-            transform: scale(1.1);
-            
-        }
-        .blog-item-container a{
-            text-decoration: none;
-            color:  #0D1252;
-        }
-
-        @media screen and (max-width: 1025px) {
-
-        .blog-item-container{
-                width: 47%;
-            }
-        .blog-item-text{
-                font-size: 2.3vh;
-            }
+        .footnotes{
+            padding: 1em;
         }
         @media screen and (max-width: 600px) {
-            .blog-item-container{
-                width: 97%;
+
+            .blog-container h1{
+                padding: 0;
             }
         }
 
-
-
+       
     </style>
-    <link rel="shortcut icon" href="favicon.png">
+    <link rel="shortcut icon" href="../favicon.png">
 
 </head>
 
@@ -402,35 +379,35 @@
 
 
             <div class="big" style="padding-top:10px">
-                <a href="index.html">
-                    <li class="logo"><img src="PageWiseAssets/InfoProLogo.png" style="width: 200px;padding:10px 10px 10px 10px;" alt="infoprosolutions-logo"			></li>
+                <a href="../index.html">
+                    <li class="logo"><img src="../PageWiseAssets/InfoProLogo.png" style="width: 200px;padding:10px 10px 10px 10px;" alt="infoprosolutions-logo"			></li>
                 </a>
-                <li><a href="blogs.html">Blog</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
-                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="../blogs.html">Blog</a></li>
+                <li><a href="../contactus.html">Contact Us</a></li>
+                <li><a href="../about-us.html">About Us</a></li>
 
-                <li><a href="hiring.html">Job Seekers</a></li>
+                <li><a href="../hiring.html">Job Seekers</a></li>
                 <li>
                     <div class="dropdown">
-                        <a href="whatwedo.html"><button style="padding-top: 0px;" onmouseout="changeback()" onmouseover="change3()" onclick="myFunction()" id="clrbtn" class="dropbtn">Employers</button></a>
+                        <a href="../whatwedo.html"><button style="padding-top: 0px;" onmouseout="changeback()" onmouseover="change3()" onclick="myFunction()" id="clrbtn" class="dropbtn">Employers</button></a>
                         <div id="myDropdown" id="drp" onmouseover="change()" onmouseout="changeback()" class="dropdown-content">
-                            <a href="whatwedo.html#StaffingSolutions">Staffing Solutions</a>
-                            <a href="whatwedo.html#HumanResourceManagement">Human Resource Management</a>
-                            <a href="whatwedo.html#EmployerOfRecord">PEO - Employer of Record</a>
+                            <a href="../whatwedo.html#StaffingSolutions">Staffing Solutions</a>
+                            <a href="../whatwedo.html#HumanResourceManagement">Human Resource Management</a>
+                            <a href="../whatwedo.html#EmployerOfRecord">PEO - Employer of Record</a>
                         </div>
                     </div>
                 </li>
                 <div id="dropdown1" style="display:none">
-                    <a onclick="my_close()" href="whatwedo.html#StaffingSolutions" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
+                    <a onclick="my_close()" href="../whatwedo.html#StaffingSolutions" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
 
-                    <a onclick="my_close()" href="whatwedo.html#HumanResourceManagement" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
-                    <a onclick="my_close()" href="whatwedo.html#EmployerOfRecord" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Professional Employer Organization</a>
+                    <a onclick="my_close()" href="../whatwedo.html#HumanResourceManagement" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
+                    <a onclick="my_close()" href="../whatwedo.html#EmployerOfRecord" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Professional Employer Organization</a>
                 </div>
-                <li><a class="active" href="index.html">Home</a></li>
+                <li><a class="active" href="../index.html">Home</a></li>
             </div>
             <div class="small">
                 <div style="width: 100%">
-                    <div style="width: 40%;float: left"><a href="index.html"> <img src="PageWiseAssets/InfoProLogo.png" style="width: 100%;" alt="infoprosolutions-logo"			></a></div>
+                    <div style="width: 40%;float: left"><a href="../index.html"> <img src="../PageWiseAssets/InfoProLogo.png" style="width: 100%;" alt="infoprosolutions-logo"			></a></div>
                     <button onclick="my_open()" style="
                     background-color:rgb(12, 20, 117) ;
                       border: none;
@@ -448,63 +425,64 @@
 
                 <div class="w3-dropdown w3-bar " style="display:none; background-color:rgb(12, 20, 117)" id="mySidebar">
 
-                    <a onclick="my_close()" href="index.html" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Home</a>
+                    <a onclick="my_close()" href="../index.html" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins;">Home</a>
                     <a onclick="my_closeemp2()" class="w3-bar-item w3-button" id="l2" style="width: 100% ;color: white;font-family: Poppins; ">Employers</a>
                     <div id="dropdown2" style="display:none">
-                        <a onclick="my_close()" href="whatwedo.html#StaffingSolutions" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
+                        <a onclick="my_close()" href="../whatwedo.html#StaffingSolutions" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
 
-                        <a onclick="my_close()" href="whatwedo.html#HumanResourceManagement" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
-                        <a onclick="my_close()" href="whatwedo.html#EmployerOfRecord" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Professional Employer Organization</a>
+                        <a onclick="my_close()" href="../whatwedo.html#HumanResourceManagement" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
+                        <a onclick="my_close()" href="../whatwedo.html#EmployerOfRecord" class="w3-bar-item w3-button" id="l1" style="width: 100% ; color: white;font-family: Poppins">Professional Employer Organization</a>
                     </div>
 
-                    <a onclick="my_close()" href="hiring.html" class="w3-bar-item w3-button" id="l3" style="width: 100% ;color: white;font-family: Poppins">Job Seekers</a>
-                    <a onclick="my_close()" href="about-us.html" class="w3-bar-item w3-button" id="l4" style="width: 100% ;color: white;font-family: Poppins">About Us</a>
-                    <a onclick="my_close()" href="contactus.html" class="w3-bar-item w3-button" id="l5" style="width: 100% ;color: white;font-family: Poppins">Contact us</a>
-                    <a onclick="my_close()" href="blogs.html" class="w3-bar-item w3-button" id="l6" style="width: 100% ;color: white;font-family: Poppins">Blog</a>
-
+                    <a onclick="my_close()" href="../hiring.html" class="w3-bar-item w3-button" id="l3" style="width: 100% ;color: white;font-family: Poppins">Job Seekers</a>
+                    <a onclick="my_close()" href="../about-us.html" class="w3-bar-item w3-button" id="l4" style="width: 100% ;color: white;font-family: Poppins">About Us</a>
+                    <a onclick="my_close()" href="../contactus.html" class="w3-bar-item w3-button" id="l5" style="width: 100% ;color: white;font-family: Poppins">Contact us</a>
+                    <a onclick="my_close()" href="../blogs.html" class="w3-bar-item w3-button" id="l6" style="width: 100% ;color: white;font-family: Poppins">Blog</a>
                 </div>
             </div>
         </ul>
     </nav>
 
     <div class="main">
-        <div style="width: 100%;">
-            <img src="PageWiseAssets/bloglanding.jpg" class="big" style="width:100%;height:80%;opacity:0.7;" alt="infoprosolutions-blogpage-title"			>
-            <img src="PageWiseAssets/bloglanding.jpg" class="phone" style="height:25vh;width:100%;" alt="infoprosolutions-blogpage-title"			>
-        </div>
-        <div id="homeparent" style="width: auto;  overflow: hidden;">
-             <h1 class="lt1">
-                InfoPro Blogs
-            </h1>
-            
-            <div id="space"></div> 
 
-        </div>
+      
 
-        <div id="p2" class="b2">
-           
-           <!-- Copy to create blog -->
-            <div class="blog-item-container">
-                <a href="blogPosts/blogpage1.html">
-                    <div class="blog-item-image">
-                        <img src="blogPosts/blogImages/blog1_1.png" alt="">
-                    </div>
-                    <div class="blog-item-title">
-                        <h3>
-                            <div class="blog-item-text">Does physical proximity of talent matter, when you can find better skills at a lower cost working remotely</div>
-                            <div class="blog-item-arrow"> &#x2192 </div>
-                        </h3>
-                    </div>
-                </a>
+       
+        <div class="blog-container">
+            <!-- Template starts here -->
+
+            <h1> --add blog title-- </h1>
+            <p> --add blog text --</p> 
+            <p> --add blog text --</p> 
+            <p> --add blog text --</p> 
+
+            <h2> --add blog sub-heading-- </h2>
+            <img src="blogImages/--addblogimagename--" alt="">
+            <p> --add blog text --</p> 
+            <p> --add blog text --</p> 
+
+            <h2> --add blog sub-heading-- </h2>
+            <img src="blogImages/--addblogimagename--" alt="">
+            <p> --add blog text --</p> 
+            <p> --add blog text --</p> 
+
+            <!-- Brief write-up about InfoPro Solutions -->
+            <h3>About InfoPro Solutions:</h3>
+            <p>InfoPro Solutions with offices in India and US, it provides recruitment service, human resource services, and offers a process driven PEO services for companies based in US and EU that like to make use of the vast technical talent pool that exist in India. 
+            </p>
+            <p>InfoPro has been providing recruitment services for 20 years and since 2018 it has been an employer of record for many companies in the US, managing teams of around 20 resources - their hires, welfare, payrolls, taxes, and exits. 
+            </p>
+            <p>If you want to know more about the services, please visit our website <a href="../index.html">https://hr.infoprosol.com/</a> , or you can contact us through our email hr@infoprosol.com
+            </p>
+
+            <!-- Add footnotes inside div -->
+            <div class="footnotes">
+                <h4> --add footnote--</h4>
+                <h4> --add footnote--</h4>
             </div>
-            <!-- Copy till here - paste after this and edit 1)a href to blog page link 
-                                                            2)image src link
-                                                            3)blog-item-text content to title of blog
-            -->
-            <!-- Paste here -->
 
 
-           
+            <!-- Template ends here -->
 
 
         </div>
@@ -512,29 +490,29 @@
         <div class="blue" style="background-color:rgb(12, 20, 117) ; height: auto;clear:both; ">
             <div class="data footerlinks">
                 <div>
-                    <a href="contactus.html">Contact Us</a>
+                    <a href="../contactus.html">Contact Us</a>
                 </div>
                 <div>
-                    <a href="hiring.html">Job Seekers</a>
+                    <a href="../hiring.html">Job Seekers</a>
                 </div>
                 <div>
-                    <a href="about-us.html"> About Us</a>
+                    <a href="../about-us.html"> About Us</a>
                 </div>
                 <div>
-                    <a href="privacypolicy.html">Privacy Policy</a>
+                    <a href="../privacypolicy.html">Privacy Policy</a>
                 </div>
             </div>
             <div class="blue" style="overflow: auto;float: left;width: 20%;height: 7%;background-color:rgb(12, 20, 117)">
-                <img src="PageWiseAssets/Page8/Footer/design.png" alt="infoprosolutions-footer-design"			style="max-height: 100%;max-width: 100%; " />
+                <img src="../PageWiseAssets/Page8/Footer/design.png" alt="infoprosolutions-footer-design"			style="max-height: 100%;max-width: 100%; " />
             </div>
 
             <div class="blue footerlinks2" style="overflow: auto; float: left;width: 60%; height:auto;background-color:rgb(12, 20, 117)">
                
                 <div class="f2">
                     <!-- <div class="footer2" id="f21"><a href="#">
-                            <img border="0" alt="W3Schools" src="PageWiseAssets\Page8\Footer\Icon%20awesome-facebook.png" width="30px" height="30px"></a></div> -->
+                            <img border="0" alt="W3Schools" src="../PageWiseAssets\Page8\Footer\Icon%20awesome-facebook.png" width="30px" height="30px"></a></div> -->
                     <div class="footer2" id="f22"> <a href="https://www.linkedin.com/company/infopro-solutions-pvt-ltd" target="_blank">
-                            <img border="0" class="img_hover" alt="infoprosolutions-linkedin" src="PageWiseAssets\Page8\Footer\Icon%20awesome-linkedin-in.png" alt="infoprosolutions-footer-design" width="30px" height="30px">
+                            <img border="0" class="img_hover" alt="infoprosolutions-linkedin" src="../PageWiseAssets\Page8\Footer\Icon%20awesome-linkedin-in.png" alt="infoprosolutions-footer-design" width="30px" height="30px">
 
                         </a>
                     </div>
@@ -542,7 +520,7 @@
             </div>
 
             <div class="blue" style="overflow: auto; float: right;width: 20%;background-color:rgb(12, 20, 117); height: 7%;">
-                <img src="PageWiseAssets/Page8/Footer/design.png" alt="infoprosolutions-orange-tile" style="max-height: 100%;max-width: 100%;float: right;" />
+                <img src="../PageWiseAssets/Page8/Footer/design.png" alt="infoprosolutions-orange-tile" style="max-height: 100%;max-width: 100%;float: right;" />
             </div>
         </div>
     </div>

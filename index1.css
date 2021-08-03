@@ -2,16 +2,11 @@
     display: none;
 }
 
-.img_hover:hover {
-	transform: scale(1.05);
-}
 
 .big {
     display: block;
 }
-a{
-    text-decoration: none;
-}
+
 /* Style the links inside the navigation bar */
 .topnav a {
     float: left;
@@ -189,51 +184,17 @@ a{
     background-color: #ffffff;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgb(255, 255, 255);
-}
 
-li {
-    float: right;
-}
 
 .logo {
     float: left;
 }
 
-li a {
-    display: block;
-    color: rgb(12, 20, 117);
-    font-family: 'Poppins';
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    color: rgb(11, 18, 88);
-}
 
 .main {
     margin-top: 30px;
     /* height: 1500px; */
     /* Used in this example to enable scrolling */
-}
-
-body {
-
-    align-items: center;
-    justify-content: center;
-}
-
-
-html {
-    scroll-behavior: smooth;
-
 }
 
 .parent1 {
@@ -259,11 +220,11 @@ html {
     height: auto;
 }
 
-img {
+/* img {
     max-width: 100%;
     height: auto;
 
-}
+} */
 
 .ti2 {
     position: absolute;
@@ -396,11 +357,11 @@ img {
 }
 
 /* Styles, not important */
-*,
+/* *,
 *:before,
 *:after {
     box-sizing: border-box;
-}
+} */
 
 .btn2 {
     position: relative;
@@ -465,11 +426,11 @@ img {
 }
 
 /* Styles, not important */
-*,
+/* *,
 *:before,
 *:after {
     box-sizing: border-box;
-}
+} */
 
 .blue {
     width: 100%;

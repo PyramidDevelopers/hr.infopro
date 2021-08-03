@@ -1,0 +1,853 @@
+<html>
+<!-- Use h1 tag for main blog title 
+       Use h2 for sub-headings
+       Use p tag to put text in a different paragraph
+       Use img tag to add images, link of image in src attribute
+       Store all images in the blogImages folder
+       create all blogs as a different page in the blogPosts folder
+       Copying this entire page and replace/edit in the required places inside the template portion of this document -->
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-524CPFZ');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169649084-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-169649084-1');
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script src="booklet/jquery.easing.1.3.js" type="text/javascript"></script>
+    <script src="booklet/jquery.booklet.1.1.0.min.js" type="text/javascript"></script>
+
+    <link href="booklet/jquery.booklet.1.1.0.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <title>
+        Staffing, Recruitment, Human Resource & PEO Services | InfoPro Solutions
+    </title>
+    <meta name="description"
+        content="Expert IT Staffing, IT Recruitment, Human Resource Management, PEO, Employer of Record, manpower-hiring services across the globe. Staffing & Recruitment Agency">
+    <meta name="keywords"
+        content=" Human Resource Consultancy, HR Consultancy, HR Agency, Staffing Services, Recruitment Agency, Staffing Agency, Manpower Consultancy, Recruitment Services">
+
+    <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="../index1.css" />
+    <style>
+        .booklet {
+            width: 900px;
+            height: 607px;
+            position: relative;
+            margin: 0 auto 10px;
+            -moz-box-shadow: 0px 0px 1px #fff;
+            -webkit-box-shadow: 0px 0px 1px #fff;
+            box-shadow: 0px 0px 1px #fff;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+        }
+
+        .booklet .b-wrap-left {
+            background: #fff url(images/left_bg.jpg) no-repeat top left;
+            -webkit-border-top-left-radius: 10px;
+            -webkit-border-bottom-left-radius: 10px;
+            -moz-border-radius-topleft: 10px;
+            -moz-border-radius-bottomleft: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        .booklet .b-wrap-right {
+            background: #efefef url(images/right_bg.jpg) no-repeat top left;
+            -webkit-border-top-right-radius: 10px;
+            -webkit-border-bottom-right-radius: 10px;
+            -moz-border-radius-topright: 10px;
+            -moz-border-radius-bottomright: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .booklet .b-counter {
+            bottom: 10px;
+            position: absolute;
+            display: block;
+            width: 90%;
+            height: 20px;
+            border-top: 1px solid #ddd;
+            color: #222;
+            text-align: center;
+            font-size: 12px;
+            padding: 5px 0 0;
+            background: transparent;
+            -moz-box-shadow: 0px -1px 1px #fff;
+            -webkit-box-shadow: 0px -1px 1px #fff;
+            box-shadow: 0px -1px 1px #fff;
+            opacity: 0.8;
+        }
+
+        .book_wrapper {
+            margin: 0 auto;
+            padding-top: 50px;
+            width: 905px;
+            height: 540px;
+            position: relative;
+            background: transparent url(images/bg.png) no-repeat 9px 27px;
+        }
+
+        .book_wrapper h1 {
+            color: rgb(12, 20, 117);
+            margin: 5px 5px 5px 15px;
+            font-size: 24px;
+            /* background:transparent url(images/h1.png) no-repeat bottom left; */
+            padding-bottom: 7px;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+
+        .book_wrapper p {
+            font-size: 15px;
+            margin: 5px 5px 5px 15px;
+        }
+
+        .book_wrapper a.article,
+        .book_wrapper a.demo {
+            /* background:transparent url(images/circle.png) no-repeat 50% 0px; */
+            display: block;
+            width: 95px;
+            height: 41px;
+            text-decoration: none;
+            outline: none;
+            font-size: 16px;
+            color: #555;
+            float: left;
+            line-height: 41px;
+            padding-left: 47px;
+        }
+
+        .book_wrapper a.demo {
+            margin-left: 50px;
+        }
+
+        .book_wrapper a.article:hover,
+        .book_wrapper a.demo:hover {
+            background-position: 50% -41px;
+            color: #13386a;
+        }
+
+        .book_wrapper img {
+            margin: 10px 0px 5px 35px;
+            width: 300px;
+            padding: 4px;
+            border: 1px solid #ddd;
+            -moz-box-shadow: 1px 1px 1px #fff;
+            -webkit-box-shadow: 1px 1px 1px #fff;
+            box-shadow: 1px 1px 1px #fff;
+        }
+
+        .booklet .b-wrap-right img {
+            border: 1px solid #E6E3C2;
+        }
+
+        a#next_page_button,
+        a#prev_page_button {
+            display: none;
+            position: absolute;
+            width: 41px;
+            height: 40px;
+            cursor: pointer;
+            margin-top: -20px;
+            top: 50%;
+            background: transparent url(images/buttons.png) no-repeat 0px -40px;
+        }
+
+        a#prev_page_button {
+            left: -30px;
+        }
+
+        a#next_page_button {
+            right: -30px;
+            background-position: -41px -40px;
+        }
+
+        a#next_page_button:hover {
+            background-position: -41px 0px;
+        }
+
+        a#prev_page_button:hover {
+            background-position: 0px 0px;
+        }
+
+
+
+
+
+
+
+        html {
+            scroll-behavior: smooth;
+
+        }
+
+        .topnav {
+
+            overflow: hidden;
+        }
+
+        .main {
+            display: block;
+
+        }
+
+        .phone {
+            display: none;
+        }
+
+        .small {
+            display: none;
+        }
+
+        .big {
+            display: block;
+        }
+
+        /* Style the links inside the navigation bar */
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        #space {
+            height: 10vh;
+        }
+
+        /* Add an active class to highlight the current page */
+        .active {
+
+            color: rgb(12, 20, 117);
+        }
+
+        /* Hide the link that should open and close the topnav on small screens */
+        .topnav .icon {
+            display: none;
+        }
+
+        /* Dropdown container - needed to position the dropdown content */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+
+
+        /* Style the dropdown button to fit inside the topnav */
+        .dropdown .dropbtn {
+            font-size: 15px;
+            border: none;
+            outline: none;
+            color: rgb(12, 20, 117);
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        /* Style the dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Style the links inside the dropdown */
+        .dropdown-content a {
+            float: none;
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        /* Add a dark background on topnav links and the dropdown button on hover */
+        .topnav a:hover,
+        .dropdown:hover {
+            background-color: rgb(12, 20, 117);
+            color: white;
+        }
+
+        .dropbtn:hover {
+            color: white;
+        }
+
+        /* Add a grey background to dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        /* Show the dropdown menu when the user moves the mouse over the dropdown button */
+        .dropdown:hover .dropdown-content {
+            background-color: rgb(12, 20, 117);
+            color: white;
+            display: block;
+        }
+
+        /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+        @media screen and (max-width: 600px) {
+
+            .topnav a:not(:first-child),
+            .dropdown .dropbtn {
+                display: none;
+            }
+
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        #space {
+            height: 0vh;
+        }
+
+        /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            width: 100%;
+            height: 50px;
+            background-color: #ffffff;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(255, 255, 255);
+        }
+
+        li {
+            float: right;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: rgb(12, 20, 117);
+            font-family: 'Poppins';
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            color: rgb(11, 18, 88);
+        }
+
+
+
+        .lt1 {
+            font-family: Playfair Display;
+            font-size: 55;
+            color: black;
+            font-weight: bolder;
+            /* margin-top: 5%; */
+            margin: auto;
+            position: absolute;
+            top: 45%;
+            text-align: center;
+            left: 0;
+            right: 0;
+        }
+
+
+        #p2 {
+            background-color: rgb(240, 240, 240);
+            font-size: 1.7vw;
+            font-family: Poppins;
+            color: #0D1252;
+            padding: 1em;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        @media screen and (max-width: 900px) {
+
+            .logo {
+                width: 40%;
+            }
+
+            .phone {
+                display: block;
+                overflow: auto;
+            }
+
+            .big {
+                display: none;
+            }
+
+            .small {
+                display: block;
+
+            }
+
+            #homeparent {
+                overflow: auto;
+
+
+            }
+
+
+            .lt1 {
+                font-family: Playfair Display;
+                font-size: 18;
+                color: rgb(12, 20, 117);
+                font-weight: bolder;
+                margin-left: 10%;
+                margin-top: 7%;
+                position: absolute;
+                top: 8%
+            }
+
+            #p2 {
+                font-size: 3.7vw;
+            }
+
+
+
+        }
+    </style>
+    <link rel="shortcut icon" href="../favicon.png">
+
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-524CPFZ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+    <nav class="navbar" id="nav">
+
+        <ul>
+
+
+            <div class="big" style="padding-top:10px">
+                <a href="../index.html">
+                    <li class="logo"><img src="../PageWiseAssets/InfoProLogo.png"
+                            style="width: 200px;padding:10px 10px 10px 10px;" alt="infoprosolutions-logo"></li>
+                </a>
+                <li><a href="../blogs.html">Blog</a></li>
+                <li><a href="../contactus.html">Contact Us</a></li>
+                <li><a href="../about-us.html">About Us</a></li>
+
+                <li><a href="../hiring.html">Job Seekers</a></li>
+                <li>
+                    <div class="dropdown">
+                        <a href="../whatwedo.html"><button style="padding-top: 0px;" onmouseout="changeback()"
+                                onmouseover="change3()" onclick="myFunction()" id="clrbtn"
+                                class="dropbtn">Employers</button></a>
+                        <div id="myDropdown" id="drp" onmouseover="change()" onmouseout="changeback()"
+                            class="dropdown-content">
+                            <a href="../whatwedo.html#StaffingSolutions">Staffing Solutions</a>
+                            <a href="../whatwedo.html#HumanResourceManagement">Human Resource Management</a>
+                            <a href="../whatwedo.html#EmployerOfRecord">PEO - Employer of Record</a>
+                        </div>
+                    </div>
+                </li>
+                <div id="dropdown1" style="display:none">
+                    <a onclick="my_close()" href="../whatwedo.html#StaffingSolutions" class="w3-bar-item w3-button"
+                        id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
+
+                    <a onclick="my_close()" href="../whatwedo.html#HumanResourceManagement"
+                        class="w3-bar-item w3-button" id="l1"
+                        style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
+                    <a onclick="my_close()" href="../whatwedo.html#EmployerOfRecord" class="w3-bar-item w3-button"
+                        id="l1" style="width: 100% ; color: white;font-family: Poppins;">Professional Employer
+                        Organization</a>
+                </div>
+                <li><a class="active" href="../index.html">Home</a></li>
+            </div>
+            <div class="small">
+                <div style="width: 100%">
+                    <div style="width: 40%;float: left"><a href="../index.html"> <img
+                                src="../PageWiseAssets/InfoProLogo.png" style="width: 100%;"
+                                alt="infoprosolutions-logo"></a></div>
+                    <button onclick="my_open()" style="
+                    background-color:rgb(12, 20, 117) ;
+                      border: none;
+                      color: white;
+                      padding:15px 15px;
+                      font-size: 16px;
+                           float: right;
+                           width: 20%;
+                           border-radius: 2px;
+                           
+                      cursor: pointer;"><i class="fa fa-bars"></i></button>
+                </div>
+
+
+
+                <div class="w3-dropdown w3-bar " style="display:none; background-color:rgb(12, 20, 117)" id="mySidebar">
+
+                    <a onclick="my_close()" href="../index.html" class="w3-bar-item w3-button" id="l1"
+                        style="width: 100% ; color: white;font-family: Poppins;">Home</a>
+                    <a onclick="my_closeemp2()" class="w3-bar-item w3-button" id="l2"
+                        style="width: 100% ;color: white;font-family: Poppins; ">Employers</a>
+                    <div id="dropdown2" style="display:none">
+                        <a onclick="my_close()" href="../whatwedo.html#StaffingSolutions" class="w3-bar-item w3-button"
+                            id="l1" style="width: 100% ; color: white;font-family: Poppins">Staffing Solutions</a>
+
+                        <a onclick="my_close()" href="../whatwedo.html#HumanResourceManagement"
+                            class="w3-bar-item w3-button" id="l1"
+                            style="width: 100% ; color: white;font-family: Poppins">Human Resource Management</a>
+                        <a onclick="my_close()" href="../whatwedo.html#EmployerOfRecord" class="w3-bar-item w3-button"
+                            id="l1" style="width: 100% ; color: white;font-family: Poppins">Professional Employer
+                            Organization</a>
+                    </div>
+
+                    <a onclick="my_close()" href="../hiring.html" class="w3-bar-item w3-button" id="l3"
+                        style="width: 100% ;color: white;font-family: Poppins">Job Seekers</a>
+                    <a onclick="my_close()" href="../about-us.html" class="w3-bar-item w3-button" id="l4"
+                        style="width: 100% ;color: white;font-family: Poppins">About Us</a>
+                    <a onclick="my_close()" href="../contactus.html" class="w3-bar-item w3-button" id="l5"
+                        style="width: 100% ;color: white;font-family: Poppins">Contact us</a>
+                    <a onclick="my_close()" href="../blogs.html" class="w3-bar-item w3-button" id="l6"
+                        style="width: 100% ;color: white;font-family: Poppins">Blog</a>
+                </div>
+            </div>
+        </ul>
+    </nav>
+
+    <div class="main">
+
+
+
+
+        <br><br><br><br><br>
+
+        <div class="book_wrapper">
+            <a id="next_page_button"></a>
+            <a id="prev_page_button"></a>
+
+            <div id="mybook" style="display:none;">
+                <div class="b-load">
+                    <div>
+                        <!-- <img src="images/1.jpg" alt=""/> -->
+                        <h1>Does physical proximity of talent matter, when you can find better skills at a lower cost working remotely</h1>
+                        <p>In these competitive and fast-paced times, any innovation becomes outdated even before it
+                            gets
+                            executed.</p>
+                        <p>Therefore, many organizations are competing to create an innovation that can widen their
+                            market
+                            base and improve their customer base. To think and implement modern innovative ideas, an
+                            organization will require a strong team to improve their working methodologies.</p>
+                        <p>Since an organization requires a world-class team, they rely on talentsfrom     the global market.
+                            With growing refinement in the telecommunication domain, many companies are daring to
+                            explore
+                            the virtual platform to unite people who are experts in the respective market across the
+                            globe.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="images/blog1_1.png" alt="" />
+                        <h1>Animated Portfolio Gallery</h1>
+                        <p>In simple words, we can define a team as a group of individual people working to achieve a
+                            common predefined goal. </p>
+                        <p>There can be two types of teams, they are </p>
+                        <p>1) Co-located team: this team consists of people who are working in physical proximity inside
+                            an organization </p>
+                        <p>2) Virtual team: this team consists of people working virtually for the organization united
+                            by a shared goal.</p>
+                    </div>
+                    <div>
+                        <!-- <img src="images/3.jpg" alt="" /> -->
+                        <!-- <h1>Annotation Overlay Effect</h1> -->
+                        <p>With the help of the physical proximity of talent, an organization can achieve face to face
+                            discussions on various aspects, which would build strong bonding between employees and the
+                            employer. These events may eventually lead an organization into a success story.</p>
+                        <p>But if you observe, since there is the physical proximity of talent, the organization cannot
+                            leverage world-class or advanced products or services since they are working in a local hub
+                            that restricts them in designing products or services of global standards. </p>
+                    </div>
+                    <div>
+                        <!-- <img src="images/4.jpg" alt="" /> -->
+                        <h1>Disadvantages of choosing physical proximity of talent</h1>
+                        <p>1) Organizations cannot deliver world-class services or products since they work with a complete local team.</p>
+                        <p>2) Consider you are running an organization successfully in your country. So you plan to expand the business in other foreign countries as well. In this situation, you will face complications while hiring for the physical proximity of talent. </p>
+                        <p>Major two problems are:</p>
+                        <p>i) Complications in setting up a new office include, budget for setting up a new office space, employee salaries, office maintenance, ETC.  </p>
+                        <p>ii) Time consuming to find the right resource you can depend on, who can run your organization in the respective country.</p>
+                        <p>To overcome all of these disadvantages, you can adapt to virtual teams. </p>
+                    </div>
+                    <div>
+                        <img src="blogImages/blog1_2.png" alt="">
+                        <h1>How remote workers / virtual team can benefit an organization?</h1>
+                        <p>In this current competitive market, organizations demand agility and flexibility in the delivery of services or products. With modern information and communication technologies, any organization can build and manage virtual teams easily.</p>
+                    </div>
+                    <div>
+                        <!-- <img src="images/6.jpg" alt="" /> -->
+                        <!-- <h1>Custom Animation Banner</h1> -->
+                        <p>Due to heavy competition, organizations strive hard to hire the right resources. A virtual team structure helps an organization to leverage available talents across the globe.</p>
+                        <p>With the help of remote workers, organizations are finding a reduction in operating costs, which was one of the concerns when they opted for physical proximity. Apart from this, an organization would receive an enormous amount of knowledge sharing among the employers promotes organizational learning. </p>
+                        <p>Since virtual teams have people from different parts of the globe, organizations can expand their business 24/7 by utilizing different time zones.</p>
+                        <p>The effectiveness of remote working got recognized during COVID-19 pandemic time. By looking at the productivity of the employees, companies were very much happy. Hence, they are planning to extend remote work culture even after a vaccine is available for this pandemic.</p>
+                        <p>Top companies like USPTO, Tulsa Remote, Tata Consultancy Services, Twitter, Facebook, Shopify, Siemens, State Bank of India, Etc have already planned to continue remote working even after a vaccine is available.[1]</p>
+                    </div>
+                    <div>
+                        <!-- <img src="images/7.jpg" alt="" />
+                        <h1>Full Page Image Gallery</h1> -->
+                        <p>Even though virtual teams mostly rely on communication technologies, it is just not limited to the IT industry. Today industries like manufacturing, healthcare, retail also depend on a virtual team. Nowadays, in any organization, almost all the work related to various departments like sales, R&D, finance, engineering, logistics, HR ETC are handled successfully by virtual teams.</p>
+                        <p>Any organization's success depends on two main factors, i.e., productivity and quality of the service they offer and the product they design. When an organization hires a virtual team, it can sustain global competition since they can quickly learn from people across different geographic locations and quickly develop or provide a world-class service or product. </p>
+                    </div>
+                    <div>
+                        <!-- <img src="images/8.jpg" alt="" /> -->
+                        <h1>How can you find the right resources who can work for you remotely?</h1>
+                        <p>When it comes to finding the right resources, you want to find employees who have the appropriate skills and knowledge.
+                        </p>
+                        <p> But it would be best if you also found the right candidate who can fit with the team and environment and who can take up your business to the next level. That too, if you want to hire a candidate remotely, then it will be a cumbersome task.
+                        </p>
+                        <p>How about if you have a separate team that ultimately manages all your remote people hiring activities? Does this sound good to you?
+                        </p>
+                        <p>Yes, now there is an employer of record called PEO service (Professional Employment Organization), where you can rely on an organization that will completely take care of building your team with appropriate resources.
+                        </p>
+                        <p>In simple words, by opting for this service, an organization enters into a joint-employment relationship with an employer by leasing employees to the employer. 
+                        </p>
+                    </div>
+                    <div>
+                        <!-- <img src="images/9.jpg" alt="" />
+                        <h1>Merging Image Boxes</h1> -->
+                        <p>By opting for PEO services, you as an organization have the following benefits:
+                        </p>
+                        <p>1) No capital investment, allowing companies close down, if the strategy does not work for them.
+                        </p>
+                        <p>2) Spend more time focusing on improving your core business and deriving the productivity from the resource pool.
+                        </p>
+                        <p>3) Companies can be up and running with a team in weeks bypassing many of the statutory and regulatory requirements.
+                        </p>
+                    </div>
+                    <div>
+                        <!-- <img src="images/10.jpg" alt="" /> -->
+                        <h1>Conclusion</h1>
+                        <p>Remote workers and virtual teams are here to stay far beyond the Covid era. With this setup, companies have the opportunity of harnessing the best talent a few miles away or a continent away. 
+                        </p>
+                        <p>But companies are often challenged with hiring and managing of virtual teams along with other statutory hurdles when it comes to hiring resources in foreign countries. In such situations, an arrangement such a PEO service can be a low risk alternative to companies by finding the right talent at a lower cost and without the troubles of managing their welfare.
+                        </p>
+                        <p>P.T.O</p>
+                    </div>
+                    <div>
+                        <!-- <img src="images/11.jpg" alt="" /> -->
+                        <h1>About InfoPro Solutions:</h1>
+                        <p>InfoPro Solutions with offices in India and US, it provides recruitment service, human resource services, and offers a process driven PEO services for companies based in US and EU that like to make use of the vast technical talent pool that exist in India. 
+                        </p>
+                        <p>InfoPro has been providing recruitment services for 20 years and since 2018 it has been an employer of record for many companies in the US, managing teams of around 20 resources - their hires, welfare, payrolls, taxes, and exits. 
+                        </p>
+                        <p>If you want to know more about the services, please visit our website <a href="../index.html">https://hr.infoprosol.com/</a> , or you can contact us through our email hr@infoprosol.com
+                        </p>
+            
+                        <div class="footnotes">
+                        <h5>External Links</h5>    
+                            <p>[1] - <a href="https://www.inc.com/robert-glazer/the-biggest-mistake-ceo-make-by-letting-employees-work-from-anywhere.html"  > https://www.inc.com/robert-glazer/the-biggest-mistake-ceo-make-by-letting-employees-work-from-anywhere.html</a>  </p>
+                        </div>
+            
+                    </div>
+                    <!-- <div>
+                        <img src="images/12.jpg" alt="" />
+                        <h1>Polaroid Photobar Gallery</h1>
+                        <p>In this tutorial we are going to create an image gallery
+                            with a Polaroid look. We will have albums that will expand
+                            to sets of slightly rotated thumbnails that pop out on hover.
+                            The full image will slide in from the bottom once a thumbnail
+                            is clicked. In the full image view the user can navigate
+                            through the pictures or simply choose another thumbnail
+                            to be displayed.</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- Do not edit any lines after this -->
+        <script type="text/javascript">
+            $(function () {
+                var $mybook = $('#mybook');
+                var $bttn_next = $('#next_page_button');
+                var $bttn_prev = $('#prev_page_button');
+                var $loading = $('#loading');
+                var $mybook_images = $mybook.find('img');
+                var cnt_images = $mybook_images.length;
+                var loaded = 0;
+
+                $mybook_images.each(function () {
+                    var $img = $(this);
+                    var source = $img.attr('src');
+                    $('<img/>').load(function () {
+                        ++loaded;
+                        if (loaded == cnt_images) {
+                            $loading.hide();
+                            $bttn_next.show();
+                            $bttn_prev.show();
+                            $mybook.show().booklet({
+                                name: null,                            //  
+                                width: 800,                             //  
+                                height: 500,                             //   
+                                speed: 600,                             //  
+                                direction: 'LTR',                           //  
+                                //  
+                                next: $bttn_next,          			//  
+                                prev: $bttn_prev,          			//  
+
+                            });
+                            Cufon.refresh();
+                        }
+                    }).attr('src', source);
+                });
+
+            });
+        </script>
+
+        <div class="blue" style="margin-top:4rem;background-color:rgb(12, 20, 117) ; height: auto;clear:both; ">
+            <div class="data footerlinks">
+                <div>
+                    <a href="../contactus.html">Contact Us</a>
+                </div>
+                <div>
+                    <a href="../hiring.html">Job Seekers</a>
+                </div>
+                <div>
+                    <a href="../about-us.html"> About Us</a>
+                </div>
+                <div>
+                    <a href="../privacypolicy.html">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="blue"
+                style="overflow: auto;float: left;width: 20%;height: 7%;background-color:rgb(12, 20, 117)">
+                <img src="../PageWiseAssets/Page8/Footer/design.png" alt="infoprosolutions-footer-design"
+                    style="max-height: 100%;max-width: 100%; " />
+            </div>
+
+            <div class="blue footerlinks2"
+                style="overflow: auto; float: left;width: 60%; height:auto;background-color:rgb(12, 20, 117)">
+
+                <div class="f2">
+                    <!-- <div class="footer2" id="f21"><a href="#">
+                            <img border="0" alt="W3Schools" src="../PageWiseAssets\Page8\Footer\Icon%20awesome-facebook.png" width="30px" height="30px"></a></div> -->
+                    <div class="footer2" id="f22"> <a href="https://www.linkedin.com/company/infopro-solutions-pvt-ltd"
+                            target="_blank">
+                            <img border="0" class="img_hover" alt="infoprosolutions-linkedin"
+                                src="../PageWiseAssets\Page8\Footer\Icon%20awesome-linkedin-in.png"
+                                alt="infoprosolutions-footer-design" width="30px" height="30px">
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blue"
+                style="overflow: auto; float: right;width: 20%;background-color:rgb(12, 20, 117); height: 7%;">
+                <img src="../PageWiseAssets/Page8/Footer/design.png" alt="infoprosolutions-orange-tile"
+                    style="max-height: 100%;max-width: 100%;float: right;" />
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        function my_closeemp1() {
+            if (document.getElementById("dropdown1").style.display == "block") {
+                document.getElementById("dropdown1").style.display = "none";
+            } else {
+                document.getElementById("dropdown1").style.display = "block";
+            }
+
+        }
+
+        function my_closeemp2() {
+            if (document.getElementById("dropdown2").style.display == "block") {
+                document.getElementById("dropdown2").style.display = "none";
+            } else {
+                document.getElementById("dropdown2").style.display = "block";
+            }
+
+        }
+
+        function change() {
+            var x = document.getElementById("clrbtn");
+            var y = document.getElementById("drp");
+            x.style.color = "white";
+
+        }
+
+        function change3() {
+            var x = document.getElementById("clrbtn");
+
+            x.style.color = "white";
+
+        }
+
+        function changeback() {
+            var x = document.getElementById("clrbtn");
+
+            x.style.color = "#0D1252";
+
+        }
+
+        function my_open() {
+            if (document.getElementById("mySidebar").style.display == "block") {
+                document.getElementById("mySidebar").style.display = "none";
+            } else {
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("nav").style.height = "auto";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
