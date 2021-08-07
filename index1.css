@@ -19,7 +19,7 @@
 }
 
 /* Add an active class to highlight the current page */
-.active {
+.activeHome {
 
     color: rgb(12, 20, 117);
 }
@@ -192,7 +192,7 @@
 
 
 .main {
-    margin-top: 30px;
+    margin-top: 70px;
     /* height: 1500px; */
     /* Used in this example to enable scrolling */
 }
@@ -890,6 +890,7 @@
     text-align: center;
     color: white;
     font-size: 12px;
+
 }
 
 .footerlinks > div {
@@ -898,6 +899,8 @@
 
 .footerlinks > div > a {
     text-decoration: none;
+    color: #ffffff;
+    font-family: Verdana,sans-serif;
 }
 
 .footerlinks > div > a:visited {
@@ -1316,4 +1319,11 @@
     width: 100%;
 }
 
+}
+@media only screen and (max-width: 1000px)
+{
+    .book_wrapper
+    {
+        margin: 32rem auto !important;
+    }
 }
