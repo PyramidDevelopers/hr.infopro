@@ -290,13 +290,13 @@ img {
 .lan2>img 
 {
     width:100%;
-    height:80%;
+    height:91%;
     opacity:0.4;
 }
 
 #lan>img{
     opacity:0.5;
-    height: 80%;
+    height: 100%;
     width: 100%;
 }
 .container .btn {
@@ -1362,4 +1362,11 @@ img {
     width: 100%;
 }
 
+}
+@media screen and (max-width: 720px)
+{
+    .change1
+    {
+        height: 48% !important;
+    }
 }
