@@ -95,17 +95,19 @@ function changeSize() {
 }
 var JST = document.getElementById('interview');
 var dataFromSheet;
-var URL = 'https://spreadsheets.google.com/feeds/cells/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/osl6nlo/public/basic?alt=json';
+const API_KEY='AIzaSyAXiIjmTGvlwe6TLcMXBxUlrpw5RPDtVB0';
+var URL = `https://sheets.googleapis.com/v4/spreadsheets/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw?key=${API_KEY}`;
+// TODO: Fix the parsing for the google sheet response
 fetch(URL)
     .then(function (response) {
         return response.json();
     })
     .then(function (data) {
-        // console.log(data);
+        console.log(data);
         dataFromSheet = data.feed.entry;
         var fullData = [];
 
-        // console.log(dataFromSheet.filter((item) => item.title['$t'][1] == '1').length);
+        console.log(dataFromSheet.filter((item) => item.title['$t'][1] == '1').length);
 
         var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1' && item.title['$t'][item.title['$t'].length - 2].match(/[a-z]/i)).length;
 
