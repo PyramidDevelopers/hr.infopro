@@ -95,34 +95,18 @@ function changeSize() {
 }
 var JST = document.getElementById('interview');
 var dataFromSheet;
-const API_KEY='AIzaSyAXiIjmTGvlwe6TLcMXBxUlrpw5RPDtVB0';
-var URL = `https://sheets.googleapis.com/v4/spreadsheets/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw?key=${API_KEY}`;
+const API_KEY = 'AIzaSyAXiIjmTGvlwe6TLcMXBxUlrpw5RPDtVB0';
+var URL = `https://sheets.googleapis.com/v4/spreadsheets/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/values/JobSeekerTips?key=${API_KEY}`;
 // TODO: Fix the parsing for the google sheet response
 fetch(URL)
     .then(function (response) {
         return response.json();
     })
     .then(function (data) {
-        console.log(data);
-        dataFromSheet = data.feed.entry;
-        var fullData = [];
-
-        console.log(dataFromSheet.filter((item) => item.title['$t'][1] == '1').length);
-
-        var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1' && item.title['$t'][item.title['$t'].length - 2].match(/[a-z]/i)).length;
-
-        var j = 0;
-        var count = 1;
-        while (fullData.length < dataFromSheet.length / numOfColumns) {
-            var subData = [];
-            var i = dataFromSheet.filter((item) => item.title['$t'].match(/\d+/)[0] == count.toString()).length;
-            while (i--) {
-                subData.push(dataFromSheet[j].content['$t']);
-                j++
-            }
-            fullData.push(subData);
-            count += 1;
-        }
+        dataFromSheet = data.values;
+        var fullData = dataFromSheet;
+ 
+        // console.log(dataFromSheet.filter((item) => item.title['$t'][1] == '1').length);        
 
         var Jload = document.getElementById('JSTloading');
 
@@ -149,37 +133,19 @@ fetch(URL)
 
     })
     .catch(error => console.log(error))
-console.log(dataFromSheet);
 
 var divExist = document.getElementById('openpos');
 
 var dataFromSheet;
-var URL = 'https://spreadsheets.google.com/feeds/cells/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/od6/public/basic?alt=json';
+var URL = `https://sheets.googleapis.com/v4/spreadsheets/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/values/Open Positions?key=${API_KEY}`;
 fetch(URL)
     .then(function (response) {
         return response.json();
     })
     .then(function (data) {
-        // console.log(data);
-        dataFromSheet = data.feed.entry;
-        var fullData = [];
+        dataFromSheet = data.values;
+        var fullData = dataFromSheet;
 
-        // console.log(dataFromSheet.filter((item) => item.title['$t'][1] == '1').length);
-
-        var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1' && item.title['$t'][item.title['$t'].length - 2].match(/[a-z]/i)).length;
-
-        var j = 0;
-        var count = 1;
-        while (fullData.length < dataFromSheet.length / numOfColumns) {
-            var subData = [];
-            var i = dataFromSheet.filter((item) => item.title['$t'].match(/\d+/)[0] == count.toString()).length;
-            while (i--) {
-                subData.push(dataFromSheet[j].content['$t']);
-                j++
-            }
-            fullData.push(subData);
-            count += 1;
-        }
         var OPload = document.getElementById('OpenPosloading');
         for (var i = 1; i < fullData.length; i++) {
             var divNew = document.createElement('div');
@@ -205,31 +171,14 @@ fetch(URL)
                 event.preventDefault();
                 //   window.location.href='Apply.html';
                 var dataFromSheet;
-                var URL = 'https://spreadsheets.google.com/feeds/cells/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/od6/public/basic?alt=json';
+                var URL = `https://sheets.googleapis.com/v4/spreadsheets/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/values/Open Positions?key=${API_KEY}`;
                 fetch(URL)
                     .then(function (response) {
                         return response.json();
                     })
                     .then(function (data) {
-                        dataFromSheet = data.feed.entry;
-                        var fullData = [];
-
-                        // console.log(dataFromSheet.filter((item) => item.title['$t'][1] == '1').length);
-
-                        var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1' && item.title['$t'][item.title['$t'].length - 2].match(/[a-z]/i)).length;
-
-                        var j = 0;
-                        var count = 1;
-                        while (fullData.length < dataFromSheet.length / numOfColumns) {
-                            var subData = [];
-                            var i = dataFromSheet.filter((item) => item.title['$t'].match(/\d+/)[0] == count.toString()).length;
-                            while (i--) {
-                                subData.push(dataFromSheet[j].content['$t']);
-                                j++
-                            }
-                            fullData.push(subData);
-                            count += 1;
-                        }
+                        dataFromSheet = data.values;
+                        var fullData = dataFromSheet;
 
                         var i = localStorage.getItem("i value");
                         document.getElementById("JobTitleA").innerHTML = fullData[localStorage.getItem("i value")][1].toString();
@@ -239,9 +188,9 @@ fetch(URL)
 
 
                     })
-
-
-
+                    .catch(err => {
+                        console.log(err)
+                    })
             });
             OPAnchor.addEventListener('click', function (event) {
                 localStorage.setItem("i value", this.id);
@@ -264,33 +213,25 @@ fetch(URL)
 
     })
     .catch(error => console.log(error))
-console.log(dataFromSheet);
 
 //input values in opportunities
 
 var Opp = document.getElementById('opportunities');
 // var numOfColumns = 3;
 var dataFromSheet;
-var URL = 'https://spreadsheets.google.com/feeds/cells/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/ohut5b9/public/basic?alt=json';
+var URL = `https://sheets.googleapis.com/v4/spreadsheets/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/values/Opportunities?key=${API_KEY}`;
 fetch(URL)
     .then(function (response) {
         return response.json();
     })
     .then(function (data) {
         // console.log(data);
-        dataFromSheet = data.feed.entry;
-        var fullData = [];
+        dataFromSheet = data.values;
+        var fullData = dataFromSheet;
 
         // console.log(dataFromSheet.filter((item) => item.title['$t'][1] == '1').length);
 
-        var numOfColumns = 1;
-        var j = 0;
-        while (fullData.length < dataFromSheet.length / numOfColumns) {
-            fullData.push(dataFromSheet[j].content['$t']);
-            j++;
-        }
         var Oload = document.getElementById('Opportunitiesloading');
-        console.log(fullData);
         for (var i = 1; i < fullData.length; i++) {
             var divNew = document.createElement('div');
             var OSection = document.createElement('div');
@@ -314,74 +255,46 @@ fetch(URL)
             Opp.appendChild(OSection);
             Oload.setAttribute("style", "display:none");
             divNew.innerHTML = "";
-            OApply.addEventListener('click', function () {
+            OApply.addEventListener('click', function (event) {
                 event.preventDefault();
                 //   window.location.href='Apply.html';
                 var dataFromSheet;
-                var URL = 'https://spreadsheets.google.com/feeds/cells/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/ohut5b9/public/basic?alt=json';
+                var URL = `https://sheets.googleapis.com/v4/spreadsheets/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/values/Opportunities?key=${API_KEY}`;
                 fetch(URL)
                     .then(function (response) {
                         return response.json();
                     })
                     .then(function (data) {
-                        dataFromSheet = data.feed.entry;
-                        var fullData = [];
+                        dataFromSheet = data.values;
+                        var fullData = dataFromSheet;
 
                         // console.log(dataFromSheet.filter((item) => item.title['$t'][1] == '1').length);
 
-                        var numOfColumns = 1;
-                        var j = 0;
-                        while (fullData.length < dataFromSheet.length / numOfColumns) {
-                            fullData.push(dataFromSheet[j].content['$t']);
-                            j++;
-                        }
                         var i = localStorage.getItem("i value");
                         document.getElementById("JobTitleA").innerHTML = fullData[localStorage.getItem("i value")].toString();
                         document.getElementById("JobPos").value = fullData[localStorage.getItem("i value")].toString();
                         document.getElementById("myForm").style.display = "block";
-
-
                     })
-
-
             });
-
-
         }
-
     })
     .catch(error => console.log(error))
-console.log(dataFromSheet);
 
 
 
 function loadOPosPage() {
     var dataFromSheet;
-    var URL = 'https://spreadsheets.google.com/feeds/cells/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/od6/public/basic?alt=json';
+    const API_KEY = 'AIzaSyAXiIjmTGvlwe6TLcMXBxUlrpw5RPDtVB0';
+    var URL = `https://sheets.googleapis.com/v4/spreadsheets/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/values/Open Positions?key=${API_KEY}`;
     fetch(URL)
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
-            dataFromSheet = data.feed.entry;
-            var fullData = [];
+            dataFromSheet = data.values;
+            var fullData = dataFromSheet;
 
             // console.log(dataFromSheet.filter((item) => item.title['$t'][1] == '1').length);
-
-            var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1' && item.title['$t'][item.title['$t'].length - 2].match(/[a-z]/i)).length;
-
-            var j = 0;
-            var count = 1;
-            while (fullData.length < dataFromSheet.length / numOfColumns) {
-                var subData = [];
-                var i = dataFromSheet.filter((item) => item.title['$t'].match(/\d+/)[0] == count.toString()).length;
-                while (i--) {
-                    subData.push(dataFromSheet[j].content['$t']);
-                    j++
-                }
-                fullData.push(subData);
-                count += 1;
-            }
 
             var i = localStorage.getItem("i value");
             //   document.getElementsByClassName("I")[0].innerHTML=i;
@@ -417,6 +330,10 @@ function loadOPosPage() {
                 }
 
             }
+ 
+            // const ele = `
+            //     <div>${text}</div>
+            // `            
 
             document.getElementsByClassName("opdesc")[0].innerHTML += fullData[i][7].toString();
             document.getElementsByClassName("oproles")[0].appendChild(ulroles);
@@ -441,31 +358,17 @@ function loadOPosPage() {
         event.preventDefault();
         //   window.location.href='Apply.html';
         var dataFromSheet;
-        var URL = 'https://spreadsheets.google.com/feeds/cells/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/od6/public/basic?alt=json';
+        const API_KEY = 'AIzaSyAXiIjmTGvlwe6TLcMXBxUlrpw5RPDtVB0';
+        var URL = `https://sheets.googleapis.com/v4/spreadsheets/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/values/Open Positions?key=${API_KEY}`;
         fetch(URL)
             .then(function (response) {
                 return response.json();
             })
             .then(function (data) {
-                dataFromSheet = data.feed.entry;
-                var fullData = [];
+                dataFromSheet = data.values;
+                var fullData = dataFromSheet;
 
                 // console.log(dataFromSheet.filter((item) => item.title['$t'][1] == '1').length);
-
-                var numOfColumns = dataFromSheet.filter((item) => item.title['$t'][item.title['$t'].length - 1] == '1' && item.title['$t'][item.title['$t'].length - 2].match(/[a-z]/i)).length;
-
-                var j = 0;
-                var count = 1;
-                while (fullData.length < dataFromSheet.length / numOfColumns) {
-                    var subData = [];
-                    var i = dataFromSheet.filter((item) => item.title['$t'].match(/\d+/)[0] == count.toString()).length;
-                    while (i--) {
-                        subData.push(dataFromSheet[j].content['$t']);
-                        j++
-                    }
-                    fullData.push(subData);
-                    count += 1;
-                }
 
                 var i = localStorage.getItem("i value");
                 document.getElementById("JobTitleA").innerHTML = fullData[localStorage.getItem("i value")][1].toString();
