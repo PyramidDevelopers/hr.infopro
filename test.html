@@ -1,0 +1,8 @@
+
+<script>
+    fetch('https://docs.google.com/spreadsheets/d/1FYp8w0c-_DKlRc2xV-REbsHlWQqaZRoWkIrpJ91eSHw/gviz/tq?tqx=out:json')
+    .then(res => res.text())
+    .then(text => {
+        const json = JSON.parse(text.substr(47).slice(0, -2))
+    })
+</script>

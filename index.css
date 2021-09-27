@@ -271,32 +271,37 @@ img {
 
 .ti2 {
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 8%;
     text-align: center;
     color: #152668;
     font-family: Playfair Display;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: bolder;
 }
 
 .lan>img 
 {
-    width:100%;
-    height:auto;
-    opacity:0.5;
+    opacity: 0.5;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
 }
 
 .lan2>img 
 {
     width:100%;
-    height:91%;
+    height:45%;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position:center ;
     opacity:0.4;
 }
 
 #lan>img{
     opacity:0.5;
-    height: 100%;
+    height: 60%;
     width: 100%;
 }
 .container .btn {
@@ -1358,7 +1363,7 @@ img {
 
 #lan>img {
     opacity: 0.5;
-    height: 70%;
+    height: 54%;
     width: 100%;
 }
 
@@ -1367,6 +1372,6 @@ img {
 {
     .change1
     {
-        height: 48% !important;
+        height: 47% !important;
     }
 }
